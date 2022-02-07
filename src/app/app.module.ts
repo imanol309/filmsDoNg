@@ -7,12 +7,10 @@ import { HomeComponent } from './pages/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
     appRoutingModule,
-    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
