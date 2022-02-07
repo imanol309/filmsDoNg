@@ -1,0 +1,17 @@
+.NavbarContainer {
+    background: darkmagenta;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.ulNavBar {
+    display: flex;
+    justify-content: center;
+}
+
+.ulNavBar li {
+    padding: 1%;
+    list-style: none;
+}
