@@ -1,17 +1,29 @@
 .NavbarContainer {
-    background: darkmagenta;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
 }
 
-.ulNavBar {
+.navBarUl {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.ulNavBar li {
-    padding: 1%;
+.navBarUl li {
+    padding: 0.8%;
     list-style: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-family: 'Rowdies', cursive;
+    cursor: pointer;
+}
+
+
+.navBarImgLogo{
+    width: 70px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
 }
