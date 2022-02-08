@@ -1,0 +1,8 @@
+.carouselContainer {
+    min-height: 400px;
+    width: 100%;
+    background-image: url('../../../../../assets/img/carousel/que-leon-movie.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
