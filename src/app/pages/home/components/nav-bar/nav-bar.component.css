@@ -15,11 +15,10 @@
     padding: 0.8%;
     list-style: none;
     font-size: 15px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: 'Rowdies', cursive;
     cursor: pointer;
 }
-
 
 .navBarImgLogo{
     width: 70px;

@@ -1,9 +1,0 @@
-.homeContainer {
-    position: absolute;
-    height: 500px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('../../../assets/img/carousel/que-leon-movie.jpg');
-}
