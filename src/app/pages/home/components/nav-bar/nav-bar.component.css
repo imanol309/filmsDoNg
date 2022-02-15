@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Rowdies&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap');
+
 .NavbarPrincipal {
     position: absolute;
     left: 0;
@@ -9,12 +10,23 @@
     background-color: rgb(20, 20, 20);
 }
 
+.navBarViendo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgb(255, 255, 255);
+    font-size: 75%;
+    margin-left: 3%;
+    font-family: IBM Plex Sans,sans-serif;
+}
+
 .NavbarContainer {
     display: flex;
-    width: 80%;
+    width: 95%;
     justify-content: flex-start;
     flex-direction: column;
     margin-left: 3%;
+    margin-top: 7%;
 }
 
 .navBarImg {
@@ -37,9 +49,14 @@
     font-family: 'Rowdies', cursive;
     font-size: 400%;
     cursor: pointer;
+    padding: 0;
+    margin: 0;
 }
 
 .navBarTexto {
     color: rgb(255, 255, 255);
     font-family: 'Asap', sans-serif;
+    font-size: 120%;
+    padding: 0;
+    margin: 0;
 }
