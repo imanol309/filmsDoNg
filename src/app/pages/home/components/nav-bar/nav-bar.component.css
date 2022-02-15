@@ -1,28 +1,45 @@
-.NavbarContainer {
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap');
+.NavbarPrincipal {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(20, 20, 20);
 }
 
-.navBarUl {
+.NavbarContainer {
     display: flex;
+    width: 80%;
     justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    margin-left: 3%;
 }
 
-.navBarUl li {
-    padding: 0.8%;
-    list-style: none;
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    font-family: 'Rowdies', cursive;
-    cursor: pointer;
+.navBarImg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .navBarImgLogo{
-    width: 70px;
+    width: 50%;
+    height: 50%;
     cursor: pointer;
-    padding: 0;
-    margin: 0;
+}
+
+.navBarTitulo {
+    color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
+    font-family: 'Rowdies', cursive;
+    font-size: 400%;
+    cursor: pointer;
+}
+
+.navBarTexto {
+    color: rgb(255, 255, 255);
+    font-family: 'Asap', sans-serif;
 }
