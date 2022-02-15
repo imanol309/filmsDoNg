@@ -74,3 +74,8 @@
     cursor: pointer;
     padding: 1%;
 }
+
+
+.imgRedes:hover {
+    filter: opacity(0.8) drop-shadow(0 0 0 rgb(0, 84, 241)); 
+}
