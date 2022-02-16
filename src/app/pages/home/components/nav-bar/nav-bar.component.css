@@ -51,8 +51,22 @@
   cursor: pointer;
   padding: 0;
   margin: 0;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
+@keyframes slidein {
+    from {
+        font-size: 400%;
+    }
+  
+    to {
+        font-size: 480%;
+    }
+}
+  
 .navBarTexto {
   color: rgb(255, 255, 255);
   font-family: "Asap", sans-serif;
@@ -63,23 +77,21 @@
 
 .navBarRedes {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   margin-top: 3%;
 }
 
 .imgRedes {
-  width: 5%;
-  height: 5%;
+  height: 80%;
   cursor: pointer;
-  padding: 1%;
 }
 
-.imgApi {
-    width: 5%;
-    height: 5%;
+.imgA {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .imgRedes:hover {
-  filter: opacity(0.8) drop-shadow(0 0 0 rgb(0, 84, 241));
+  filter: opacity(0.4) drop-shadow(0 0 0 rgb(42, 255, 35));
 }
