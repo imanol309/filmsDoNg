@@ -1,81 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rowdies&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Rowdies&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap");
 
 .NavbarPrincipal {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 30%;
-    height: 100%;
-    background-color: rgb(20, 20, 20);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
 }
 
 .navBarViendo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: rgb(255, 255, 255);
-    font-size: 75%;
-    margin-left: 3%;
-    font-family: IBM Plex Sans,sans-serif;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(255, 255, 255);
+  font-size: 75%;
+  margin-left: 3%;
+  font-family: IBM Plex Sans, sans-serif;
 }
 
 .NavbarContainer {
-    display: flex;
-    width: 95%;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-left: 3%;
-    margin-top: 7%;
+  display: flex;
+  width: 95%;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 3%;
+  margin-top: 7%;
 }
 
 .navBarImg {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.navBarImgLogo{
-    width: 60%;
-    height: 60%;
-    cursor: pointer;
+.navBarImgLogo {
+  width: 60%;
+  height: 60%;
+  cursor: pointer;
 }
 
 .navBarTitulo {
-    color: rgb(255, 255, 255);
-    font-family: 'Anton', sans-serif;
-    font-family: 'Rowdies', cursive;
-    font-size: 400%;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: "Anton", sans-serif;
+  font-family: "Rowdies", cursive;
+  font-size: 400%;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 .navBarTexto {
-    color: rgb(255, 255, 255);
-    font-family: 'Asap', sans-serif;
-    font-size: 120%;
-    padding: 0;
-    margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: "Asap", sans-serif;
+  font-size: 120%;
+  padding: 0;
+  margin: 0;
 }
 
 .navBarRedes {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 3%;
 }
 
 .imgRedes {
-    width: 5%;
-    height: 5%;
-    cursor: pointer;
-    padding: 1%;
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+  padding: 1%;
 }
 
-
 .imgRedes:hover {
-    filter: opacity(0.8) drop-shadow(0 0 0 rgb(0, 84, 241)); 
+  filter: opacity(0.8) drop-shadow(0 0 0 rgb(0, 84, 241));
 }
