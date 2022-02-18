@@ -27,8 +27,10 @@
     </div>
     <div class="containerPelisInfo">
         <div class="containerCarh" *ngFor="let item of datos">
-             <img src={{item.img}} alt="" height="300">
-             <h4>{{item.titulo}}</h4>
+             <img [src]="item.img" alt="" height="300" class="carhImg">
+             <div class="carhCuadroTitulo">
+                <h4 class="carhTitulo">{{item.titulo}}</h4>
+             </div>
         </div>
     </div>
 </div>

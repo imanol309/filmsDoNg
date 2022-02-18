@@ -19,6 +19,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    /* overflow:scroll */
 }
 
 .aSecciones {
@@ -45,13 +46,37 @@
 .containerPelisInfo {
     width: 100%;
     height: 95%;
-    /* background: forestgreen; */
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
+    overflow:scroll
 }
 
 
 .containerCarh {
     margin: 3%;
+}
+
+.carhImg {
+    border-radius: 5%;
+    padding: 0;
+    margin: 0;
+}
+
+.carhCuadroTitulo {
+    background: rgb(20, 20, 20);;
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.carhTitulo {
+    padding: 0;
+    margin: 0;
+    font-size: 90%;
+    color: rgb(255, 255, 255);
+    font-family: IBM Plex Sans, sans-serif;
 }
