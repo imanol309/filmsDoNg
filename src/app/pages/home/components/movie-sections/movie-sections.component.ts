@@ -7,16 +7,17 @@ import { HomeService } from '../../services/home.service';
   styleUrls: ['./movie-sections.component.css'],
 })
 export class MovieSectionsComponent implements OnInit {
+  datos = null;
   constructor(private homeServices: HomeService) {}
   ngOnInit(): void {
-    this.verDatos()
+    this.verDatos();
   }
 
   verDatos() {
     this.homeServices
-    .getPelis()
-    .subscribe((arg) => {
-      console.log(arg)
-    });
+      .getPelis()
+      .subscribe((arg) => {
+        this.datos = arg
+      })
   }
 }

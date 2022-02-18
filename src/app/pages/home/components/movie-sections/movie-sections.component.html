@@ -26,9 +26,9 @@
         </a>
     </div>
     <div class="containerPelisInfo">
-        <div class="containerCarh">
-             <img src="../../../../../assets/img/Afiche.jpg" alt="" height="300">
-             <h4>Black Pnther</h4>
+        <div class="containerCarh" *ngFor="let item of datos">
+             <img src={{item.img}} alt="" height="300">
+             <h4>{{item.titulo}}</h4>
         </div>
     </div>
 </div>
