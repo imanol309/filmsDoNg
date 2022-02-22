@@ -18,6 +18,7 @@ export class MovieSectionsComponent implements OnInit {
       .getPelis()
       .subscribe((arg) => {
         this.datos = arg
+        console.table(arg)
       })
   }
 }
