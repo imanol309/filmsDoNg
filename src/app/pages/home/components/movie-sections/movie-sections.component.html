@@ -28,6 +28,9 @@
     <div class="containerPelisInfo">
         <div class="containerCarh" *ngFor="let item of datos">
             <img [src]="item.img" alt="" height="310" width="210" class="carhImg">
+            <div class="containerText">
+                <p class="text">{{item.titulo}}</p>
+            </div>
         </div>
     </div>
 </div>

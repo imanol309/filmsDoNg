@@ -52,6 +52,7 @@
     flex-wrap: wrap;
     overflow:auto;
     gap: 20px;
+
 }
 
 .containerCarh {
@@ -59,14 +60,42 @@
     padding: 0;
     margin: 0;
     height: 310px;
-    background: darkcyan;
+    /* background: darkcyan; */
     border-radius: 5%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
 }
 
 .carhImg {
     border-radius: 5%;
     padding: 0;
     margin: 0;
+}
+
+.containerCarh:hover .carhImg {
+    opacity: 0.5;
+}
+
+.containerText {
+    text-align: center;
+    position: absolute;
+}
+
+
+.text {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all .3s;
+    transform: scale(1.5);
+}
+
+.containerCarh:hover .text {
+    transform: scale(1);
+    opacity: 1;
 }
 
 /* .carhCuadroTitulo {
