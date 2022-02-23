@@ -11,7 +11,7 @@ export class HomeService {
 
   getPelis() {
     return this.httpClient
-      .get(`https://api-peliculas-do.herokuapp.com/api/verPelis`)
+      .get(`${process.env.URL_API}/api/verPelis`)
       .pipe(catchError((err) => throwError(err)));
   }
 }
