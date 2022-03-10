@@ -9,6 +9,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #222425;
 }
 
 .containerSeccionesPelis{
@@ -20,14 +21,15 @@
     justify-content: flex-start;
     align-items: center;
     overflow: none;
-    /* background-color: rgb(20, 20, 20); */
+    background-color: #161717;
+
 }
 
 .aSecciones {
     text-decoration: none;
     font-family: IBM Plex Sans, sans-serif;
-    font-size: 105%;
-    color: black;
+    font-size: 105%; 
+    color: rgb(255, 255, 255);
     padding-inline-start: 6%;
     display: flex;
     flex-direction: row;
@@ -46,7 +48,7 @@
 
 .containerPelisInfo {
     width: 100%;
-    height: 95%;
+    /* height: 100%; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -54,8 +56,6 @@
     overflow:auto;
     gap: 20px;
     margin-top: 2%;
-
-    /* background-color: rgb(30, 70, 102); */
 
 }
 
@@ -69,9 +69,10 @@
     position: relative;
     align-items: center;
     cursor: pointer;
+    
     box-shadow:
        inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255, 214, 100),
+             0 0  0 2px rgb(80, 42, 94),
              0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
