@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap");
 
-
 .movieSectionsContainer {
     position: absolute;
     right: 0;
@@ -29,7 +28,7 @@
     text-decoration: none;
     font-family: IBM Plex Sans, sans-serif;
     font-size: 105%; 
-    color: rgb(255, 255, 255);
+    color: rgb(219, 118, 255);
     padding-inline-start: 6%;
     display: flex;
     flex-direction: row;
@@ -48,15 +47,23 @@
 
 .containerPelisInfo {
     width: 100%;
-    /* height: 100%; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    overflow:auto;
+    overflow-y: scroll;
+    scrollbar-color: yellow #800080;
+    scrollbar-width: 10px;
     gap: 20px;
-    margin-top: 2%;
+}
 
+.containerPelisInfo::-webkit-scrollbar {
+    background: #161717;
+    width: 7px;
+}
+
+.containerPelisInfo::-webkit-scrollbar-thumb {
+    background: #8e9494;
 }
 
 .containerCarh {
@@ -69,7 +76,7 @@
     position: relative;
     align-items: center;
     cursor: pointer;
-    
+    /* margin-top: 2%; */
     box-shadow:
        inset 0 -3em 3em rgba(0,0,0,0.1),
              0 0  0 2px rgb(80, 42, 94),
@@ -83,7 +90,7 @@
 }
 
 .containerCarh:hover .carhImg {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .containerText {
@@ -93,7 +100,7 @@
 
 
 .text {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     font-size: 18px;
     opacity: 0;
