@@ -28,7 +28,7 @@
     text-decoration: none;
     font-family: IBM Plex Sans, sans-serif;
     font-size: 105%; 
-    color: rgb(219, 118, 255);
+    color: rgb(255, 255, 255);
     padding-inline-start: 6%;
     display: flex;
     flex-direction: row;
@@ -52,8 +52,6 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     overflow-y: scroll;
-    scrollbar-color: yellow #800080;
-    scrollbar-width: 10px;
     gap: 20px;
 }
 
@@ -76,7 +74,6 @@
     position: relative;
     align-items: center;
     cursor: pointer;
-    /* margin-top: 2%; */
     box-shadow:
        inset 0 -3em 3em rgba(0,0,0,0.1),
              0 0  0 2px rgb(80, 42, 94),
