@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './home/components/nav-bar/nav-bar.component';
+import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 import { MovieSectionsComponent } from './home/components/movie-sections/movie-sections.component';
 
 
