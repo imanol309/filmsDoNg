@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Fredoka:wght@300&family=Rowdies:wght@300;400;700&display=swap');
+.containerSeccionesPelis {
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: none;
+  background-color: #161717;
+}
+
+.aSecciones {
+  text-decoration: none;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 105%;
+  color: rgb(255, 255, 255);
+  padding-inline-start: 6%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  filter: opacity(0.7);
+}
+
+.imgSecciones {
+  height: 20%;
+  width: 20%;
+  padding-inline-end: 15%;
+}
+

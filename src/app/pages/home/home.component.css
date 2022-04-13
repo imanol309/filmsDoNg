@@ -1,0 +1,75 @@
+.movieSectionsContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #222425;
+}
+
+/* Container pelis informacion */
+
+.containerPelisInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  gap: 20px;
+}
+
+.containerPelisInfo::-webkit-scrollbar {
+  background: #161717;
+  width: 7px;
+}
+
+.containerPelisInfo::-webkit-scrollbar-thumb {
+  background: #8e9494;
+}
+
+.containerCarh {
+  margin: 5%;
+  padding: 0;
+  margin: 0;
+  height: 310px;
+  border-radius: 5%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(80, 42, 94),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.carhImg {
+  border-radius: 5%;
+  padding: 0;
+  margin: 0;
+}
+
+.containerCarh:hover .carhImg {
+  opacity: 0.3;
+}
+
+.containerText {
+  position: absolute;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: scale(0.9);
+  font-family: "Asap", sans-serif;
+  font-family: "Fredoka", sans-serif;
+  font-family: "Rowdies", cursive;
+}
+
+.containerCarh:hover .text {
+  transform: scale(1);
+  opacity: 1;
+}
