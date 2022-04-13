@@ -26,10 +26,10 @@
         </a>
     </div>
     <div class="containerPelisInfo">
-        <div class="containerCarh" *ngFor="let item of datos" routerLink="/ViewingMovies">
+        <div class="containerCarh" *ngFor="let item of datos" routerLink="/ViewingMovies" routerLink="/app/movies">
             <img [src]="item.img" alt="" height="310" width="210" class="carhImg">
             <div class="containerText">
-                <a [routerLink]="['/Movies']" class="text">{{item.titulo}}</a>
+                <p class="text">{{item.titulo}}<p>
             </div>
         </div>
     </div>
