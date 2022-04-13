@@ -29,7 +29,7 @@
         <div class="containerCarh" *ngFor="let item of datos" routerLink="/ViewingMovies">
             <img [src]="item.img" alt="" height="310" width="210" class="carhImg">
             <div class="containerText">
-                <p class="text">{{item.titulo}}</p>
+                <a [routerLink]="['/Movies']" class="text">{{item.titulo}}</a>
             </div>
         </div>
     </div>

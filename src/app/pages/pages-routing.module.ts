@@ -3,15 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ViewingMoviesComponent } from './viewing-movies/viewing-movies.component'
 
+
 const routes: Routes = [
   {
     path: '',
     children: [
       {
-        path: 'home', component: HomeComponent
+        path: 'home', 
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'ViewingMovies', component: ViewingMoviesComponent
+        path: 'Movies', 
+        loadChildren: () =>
+          import('./viewing-movies/viewing-movies.module').then((m) => m.ViewingMoviesModule),
       },
       {
         path: '**', redirectTo: 'home'
@@ -24,4 +29,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class pagesRoutingModule { }
