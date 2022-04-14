@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subs.sink = this.homeServices
       .getPelis()
       .subscribe((arg: HomeDateMovie) => {
+        console.log(arg)
         this.datos = arg;
       });
   }
