@@ -16,6 +16,11 @@ const routes: Routes = [
           import('./viewing-movies/viewing-movies.module').then((m) => m.ViewingMoviesModule),
       },
       {
+        path: 'genre/:parameter', 
+        loadChildren: () =>
+          import('./genre/genre.module').then((m) => m.GenreModule),
+      },
+      {
         path: '**', redirectTo: 'home'
       }
     ]

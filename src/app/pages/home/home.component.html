@@ -3,7 +3,7 @@
     <div class="movieSectionsContainer">
         <app-movie-sections></app-movie-sections>
         <div class="containerPelisInfo">
-            <div class="containerCarh" *ngFor="let item of datos" routerLink="/ViewingMovies" routerLink="/app/movies">
+            <div class="containerCarh" *ngFor="let item of datos" routerLink="/pelis/movies">
                 <img [src]="item.img" alt="" height="310" width="210" class="carhImg">
                 <div class="containerText">
                     <p class="text">{{item.titulo}}<p>
