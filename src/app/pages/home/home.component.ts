@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.verDatos();
   }
-
+  
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }

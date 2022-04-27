@@ -14,7 +14,7 @@
 .pSecciones {
   font-family: IBM Plex Sans, sans-serif;
   font-size: 105%;
-  width: 10%;
+  padding-left: 5%;
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
