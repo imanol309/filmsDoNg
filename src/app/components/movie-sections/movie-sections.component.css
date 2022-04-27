@@ -21,4 +21,5 @@
   flex-direction: row;
   align-items: center;
   filter: opacity(0.7);
+  cursor: pointer;
 }
