@@ -14,11 +14,11 @@ export class GenreComponent implements OnInit {
     this.genre = {
       parameter: this.rutaActiva.snapshot.params.parameter,
     };
-    this.rutaActiva.params.subscribe(
-      (params: Params) => {
-        this.genre.parameter = params.parameter;
-      }
-    );
+    // this.rutaActiva.params.subscribe(
+    //   (params: Params) => {
+    //     this.genre.parameter = params.parameter;
+    //   }
+    // );
     console.log(this.genre.parameter)
   }
 
