@@ -9,7 +9,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #222425;
+  background-color: #26272c;
   overflow-y: scroll;
 }
 
@@ -31,10 +31,6 @@
 
 .movieSectionsContainer::-webkit-scrollbar-thumb {
   background: #8e9494;
-}
-
-.containerCarh {
-  /* width: 100%; */
 }
 
 .Carh {
@@ -80,5 +76,26 @@
 
 
 .containerInfo {
-  
+  cursor: pointer;
+}
+
+.tituloCarh {
+  color: #f3f3f4;
+  font-size: 15px;
+  width: 70%;
+  font-family: "Asap", sans-serif;
+  font-family: "Fredoka", sans-serif;
+  font-family: "Rowdies", cursive;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.tituloCarh:hover {
+  color: #e34c16;
+}
+
+.generoCarh {
+  color: #8a898e
 }
