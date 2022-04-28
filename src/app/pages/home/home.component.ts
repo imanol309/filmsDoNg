@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeDateMovie } from './models/home.model';
 import { SubSink } from 'subsink';
 import { HomeService } from './services/home.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,7 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.verDatos();
   }
-  
+
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }

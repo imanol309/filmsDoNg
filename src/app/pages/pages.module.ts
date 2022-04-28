@@ -13,7 +13,7 @@ import { GenreComponent } from './genre/genre.component';
   declarations: [HomeComponent, NavBarComponent, MovieSectionsComponent, ViewingMoviesComponent, GenreComponent],
   imports: [
     CommonModule,
-    pagesRoutingModule
+    pagesRoutingModule,
   ]
 })
 export class pagesModule { }

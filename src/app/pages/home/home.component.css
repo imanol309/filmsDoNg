@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Asap&family=Fredoka:wght@300&family=Rowdies:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Fredoka:wght@300&family=Rowdies:wght@300;400;700&display=swap");
 
 .movieSectionsContainer {
   position: absolute;
@@ -58,24 +58,19 @@
   opacity: 0.3;
 }
 
-.containerText {
+.containerIcon {
   position: absolute;
-  text-align: center;
-  align-items: center;
 }
 
-.text {
-  color: rgb(255, 255, 255);
-  font-size: 18px;
+.iconImg {
+  height: 50px;
+  font-size: 50px;
   opacity: 0;
-  transition: all 0.3s;
-  transform: scale(0.9);
-  font-family: "Asap", sans-serif;
-  font-family: "Fredoka", sans-serif;
-  font-family: "Rowdies", cursive;
+  transition: height 1s ease;
 }
 
-.Carh:hover .text {
+.Carh:hover .iconImg {
   transform: scale(1);
   opacity: 1;
+  height: 80px;
 }
