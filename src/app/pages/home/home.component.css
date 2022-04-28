@@ -18,6 +18,10 @@
 .containerPelisInfo {
   margin-top: 1%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .movieSectionsContainer::-webkit-scrollbar {
@@ -30,11 +34,7 @@
 }
 
 .containerCarh {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  /* width: 100%; */
 }
 
 .Carh {
@@ -60,6 +60,9 @@
 
 .containerIcon {
   position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .iconImg {
@@ -73,4 +76,9 @@
   transform: scale(1);
   opacity: 1;
   height: 80px;
+}
+
+
+.containerInfo {
+  
 }

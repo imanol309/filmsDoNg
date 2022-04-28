@@ -3,12 +3,16 @@
     <div class="movieSectionsContainer">
         <app-movie-sections></app-movie-sections>
         <div class="containerPelisInfo">
-            <div class="containerCarh">
-                <div class="Carh" *ngFor="let item of datos" routerLink="/pelis/movies">
+            <div class="containerCarh" *ngFor="let item of datos">
+                <div class="Carh"  routerLink="/pelis/movies">
                     <img [src]="item.img" alt="" class="carhImg">
                     <div class="containerIcon">
-                        <img src="../../../assets/img/icon/boton-de-play.png" alt="" class="iconImg" >
+                        <img src="../../../assets/img/icon/boton-de-play (1).png" alt="" class="iconImg" >
                     </div>
+                </div>
+                <div class="containerInfo">
+                    <p>{{item?.titulo}}</p>
+                    <p>{{item?.genero}}</p>
                 </div>
             </div>
         </div>
