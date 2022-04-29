@@ -7,19 +7,12 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
-  genre: {parameter: string}
   constructor(private rutaActiva: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.genre = {
-      parameter: this.rutaActiva.snapshot.params.parameter,
-    };
-    // this.rutaActiva.params.subscribe(
-    //   (params: Params) => {
-    //     this.genre.parameter = params.parameter;
-    //   }
-    // );
-    console.log(this.genre.parameter)
+    this.rutaActiva.paramMap.subscribe(params => {
+      const genre = params.get('parameter')
+    })
   }
 
 }

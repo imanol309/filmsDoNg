@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-sections',
@@ -6,7 +7,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./movie-sections.component.css'],
 })
 export class MovieSectionsComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  routerGenre(genre) {
+    this.router.navigate(['/pelis/genre/'], genre);
+  }
 }

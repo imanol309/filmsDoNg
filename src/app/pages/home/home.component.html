@@ -4,7 +4,7 @@
         <app-movie-sections></app-movie-sections>
         <div class="containerPelisInfo">
             <div class="containerCarh"  *ngFor="let item of datos">
-                <div class="Carh"  routerLink="/pelis/movies">
+                <div class="Carh" (click)="dataPelisOne(item)">
                     <img [src]="item.img" alt="" class="carhImg">
                     <div class="containerIcon">
                         <img src="../../../assets/img/icon/boton-de-play (1).png" alt="" class="iconImg" >
