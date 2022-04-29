@@ -30,8 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
   }
 
-  routerMovies(titulo: String, db: any) {
+  routerMovies(titulo: String) {
     this.router.navigate(['/pelis/movies/'+titulo]);
-    console.log(db)
   }
 }

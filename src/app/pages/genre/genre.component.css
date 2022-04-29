@@ -1,14 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
+
+
 .movieSectionsContainer {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 75%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #222425;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #26272c;
+}
+
+.containerGenre {
+  width: 100%;
 }
 
 .tituloGenre {
-  
+  color: #fafafa;
+  font-size: 22px;
+  margin-left: 4%;
+  font-family: "Fredoka", sans-serif;
+  letter-spacing: 0.10em;
 }
