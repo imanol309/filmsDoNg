@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Rowdies:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Asap&family=Fredoka:wght@300&family=Rowdies:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
 
 .movieSectionsContainer {
   position: absolute;
@@ -13,6 +12,15 @@
   overflow-y: scroll;
 }
 
+.movieSectionsContainer::-webkit-scrollbar {
+  background: #161717;
+  width: 9px;
+}
+
+.movieSectionsContainer::-webkit-scrollbar-thumb {
+  background: #8e9494;
+}
+
 /* Container pelis informacion */
 
 .containerPelisInfo {
@@ -24,13 +32,9 @@
   flex-wrap: wrap;
 }
 
-.movieSectionsContainer::-webkit-scrollbar {
-  background: #161717;
-  width: 9px;
-}
-
-.movieSectionsContainer::-webkit-scrollbar-thumb {
-  background: #8e9494;
+.containerCarh {
+  height: 500px;
+  width: 250px;
 }
 
 .Carh {
@@ -68,28 +72,34 @@
   transition: height 1s ease;
 }
 
+.iconImg:hover {
+  filter: opacity(0.4) drop-shadow(0 0 0 red);
+}
+
 .Carh:hover .iconImg {
   transform: scale(1);
   opacity: 1;
   height: 80px;
 }
 
-
 .containerInfo {
-  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 .tituloCarh {
-  color: #f3f3f4;
-  font-size: 15px;
+  color: #fafafa;
+  font-size: 17px;
   width: 70%;
-  font-family: "Asap", sans-serif;
   font-family: "Fredoka", sans-serif;
-  font-family: "Rowdies", cursive;
-  white-space: nowrap; 
+  letter-spacing: 0.10em;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   transition: color 0.2s ease;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .tituloCarh:hover {
@@ -97,5 +107,8 @@
 }
 
 .generoCarh {
-  color: #8a898e
+  color: #8a898e;
+  font-size: 15px;
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
+    monospace;
 }
