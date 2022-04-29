@@ -10,23 +10,13 @@
   background-color: #161717;
 }
 
-.navBarViendo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: rgb(255, 255, 255);
-  font-size: 75%;
-  margin-left: 3%;
-  font-family: IBM Plex Sans, sans-serif;
-}
-
 .NavbarContainer {
   display: flex;
   width: 95%;
   justify-content: flex-start;
   flex-direction: column;
   margin-left: 3%;
-  margin-top: 12%;
+  margin-top: 5%;
 }
 
 .navBarImg {
