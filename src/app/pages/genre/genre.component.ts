@@ -14,6 +14,7 @@ export class GenreComponent implements OnInit {
     this.rutaActiva.paramMap.subscribe(params => {
       this.genre = params.get('parameter')
     })
+    this.genre =  this.genre.replace(/,/g, '/')
   }
-
+  
 }
