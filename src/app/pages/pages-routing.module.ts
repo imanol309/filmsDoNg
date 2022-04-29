@@ -11,7 +11,7 @@ const routes: Routes = [
           import('./home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'movies', 
+        path: 'movies/:idpeli', 
         loadChildren: () =>
           import('./viewing-movies/viewing-movies.module').then((m) => m.ViewingMoviesModule),
       },

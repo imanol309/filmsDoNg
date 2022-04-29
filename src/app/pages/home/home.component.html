@@ -3,15 +3,15 @@
     <div class="movieSectionsContainer">
         <app-movie-sections></app-movie-sections>
         <div class="containerPelisInfo">
-            <div class="containerCarh"  *ngFor="let item of datos">
-                <div class="Carh" (click)="dataPelisOne(item)">
+            <div class="containerCarh" *ngFor="let item of datos">
+                <div class="Carh" (click)="routerMovies(item.titulo, item)">
                     <img [src]="item.img" alt="" class="carhImg">
                     <div class="containerIcon">
                         <img src="../../../assets/img/icon/boton-de-play (1).png" alt="" class="iconImg" >
                     </div>
                 </div>
                 <div class="containerInfo">
-                    <p class="tituloCarh" routerLink="/pelis/movies">{{item?.titulo}}</p>
+                    <p class="tituloCarh" (click)="routerMovies(item.titulo, item)">{{item?.titulo}}</p>
                     <div class="genero">
                         <p class="generoCarh">{{item?.genero}},</p>
                         <p class="generoCarh">({{years}})</p>

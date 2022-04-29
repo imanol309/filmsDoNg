@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-viewing-movies',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./viewing-movies.component.css']
 })
 export class ViewingMoviesComponent implements OnInit {
-
-  constructor() { }
+  peliDato: any;
+  constructor(private rutaActiva: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.rutaActiva.paramMap.subscribe(params => {
+      this.peliDato = params.get('idpeli')
+    })
   }
 
 }
