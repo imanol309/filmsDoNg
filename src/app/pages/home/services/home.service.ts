@@ -11,9 +11,9 @@ import { HomeDateMovie } from '../models/home.model';
 export class HomeService {
   constructor(private httpClient: HttpClient) {}
 
-  getPelis(): Observable<{}> {
+  getPelis(): Observable<HomeDateMovie> {
     return this.httpClient
-      .get(`${environment.URL_API}/api/verPelis`)
+      .get<HomeDateMovie>(`${environment.URL_API}/api/verPelis`)
       .pipe(catchError((err) => throwError(err)));
   }
 }

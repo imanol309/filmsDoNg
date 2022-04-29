@@ -106,9 +106,17 @@
   color: #e34c16;
 }
 
+.genero {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .generoCarh {
   color: #8a898e;
   font-size: 15px;
+  padding-top: 5%;
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
 }

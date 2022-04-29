@@ -12,7 +12,10 @@
                 </div>
                 <div class="containerInfo">
                     <p class="tituloCarh" routerLink="/pelis/movies">{{item?.titulo}}</p>
-                    <p class="generoCarh">{{item?.genero}}</p>
+                    <div class="genero">
+                        <p class="generoCarh">{{item?.genero}},</p>
+                        <p class="generoCarh">({{years}})</p>
+                    </div>
                 </div>
             </div>
         </div>

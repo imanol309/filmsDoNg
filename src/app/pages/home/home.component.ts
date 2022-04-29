@@ -10,23 +10,21 @@ import { HomeService } from './services/home.service';
 export class HomeComponent implements OnInit, OnDestroy {
   datos: HomeDateMovie;
   subs = new SubSink();
-  years: string;
   constructor(private homeServices: HomeService) {}
 
   ngOnInit(): void {
-    this.verDatos();
+    this.GetDatos();
   }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
 
-  verDatos(): void {
+  GetDatos(): void {
     this.subs.sink = this.homeServices
       .getPelis()
-      .subscribe((arg: HomeDateMovie) => {
-        this.datos = arg;
-        console.log(this.datos)
+      .subscribe((datosPelis: HomeDateMovie) => {
+        this.datos = datosPelis;
       });
   }
 }
