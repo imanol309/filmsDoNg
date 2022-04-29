@@ -11,7 +11,7 @@ export class MovieSectionsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  routerGenre(genre) {
-    this.router.navigate(['/pelis/genre/'], genre);
+  routerGenre(genre: any) {
+    this.router.navigate(['/pelis/genre/'+genre]);
   }
 }

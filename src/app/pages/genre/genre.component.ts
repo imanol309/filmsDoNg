@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-genre',
@@ -7,11 +7,12 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./genre.component.css']
 })
 export class GenreComponent implements OnInit {
+  genre: any;
   constructor(private rutaActiva: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.rutaActiva.paramMap.subscribe(params => {
-      const genre = params.get('parameter')
+      this.genre = params.get('parameter')
     })
   }
 
