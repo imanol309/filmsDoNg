@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeDateMovie } from './models/home.model';
 import { SubSink } from 'subsink';
 import { HomeService } from './services/home.service';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,7 +11,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   datos: HomeDateMovie;
   subs = new SubSink();
 
-  constructor(private homeServices: HomeService, private router: Router) {}
+  constructor(private homeServices: HomeService) {}
 
   ngOnInit(): void {
     this.GetDatos();
@@ -28,9 +27,5 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe((datosPelis: HomeDateMovie) => {
         this.datos = datosPelis;
       });
-  }
-
-  routerMovies(titulo: String) {
-    this.router.navigate(['/pelis/movies/'+titulo]);
   }
 }

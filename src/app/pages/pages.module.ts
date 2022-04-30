@@ -7,13 +7,17 @@ import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 import { MovieSectionsComponent } from '../components/movie-sections/movie-sections.component';
 import { ViewingMoviesComponent } from './viewing-movies/viewing-movies.component';
 import { GenreComponent } from './genre/genre.component';
-
+import { ViewCrashComponent } from '../components/view-crash/view-crash.component';
 
 @NgModule({
-  declarations: [HomeComponent, NavBarComponent, MovieSectionsComponent, ViewingMoviesComponent, GenreComponent],
-  imports: [
-    CommonModule,
-    pagesRoutingModule,
-  ]
+  declarations: [
+    HomeComponent,
+    NavBarComponent,
+    MovieSectionsComponent,
+    ViewingMoviesComponent,
+    GenreComponent,
+    ViewCrashComponent
+  ],
+  imports: [CommonModule, pagesRoutingModule],
 })
-export class pagesModule { }
+export class pagesModule {}
