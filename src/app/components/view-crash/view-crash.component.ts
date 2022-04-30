@@ -9,29 +9,6 @@ import { HomeDateMovie } from 'src/app/pages/home/models/home.model';
 })
 export class ViewCrashComponent implements OnInit {
   @Input() datosPelicula: HomeDateMovie;
-  ojt: {}[]= [
-    {
-      id: '99kkdd',
-      titulo: 'Iron main',
-      img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
-      genero: 'accion',
-      years: '2016',
-    },
-    {
-      id: '99kkdd',
-      titulo: 'Iron main',
-      img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
-      genero: 'accion',
-      years: '2016',
-    },
-    {
-      id: '99kkdd',
-      titulo: 'Iron main',
-      img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
-      genero: 'accion',
-      years: '2016',
-    },
-  ];
   constructor(private router: Router) {}
 
   ngOnInit(): void {
