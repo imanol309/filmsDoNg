@@ -8,7 +8,7 @@ import { HomeService } from './services/home.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  datos: HomeDateMovie;
+  datosObjPelicula: HomeDateMovie;
   subs = new SubSink();
 
   constructor(private homeServices: HomeService) {}
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subs.sink = this.homeServices
       .getPelis()
       .subscribe((datosPelis: HomeDateMovie) => {
-        this.datos = datosPelis;
+        this.datosObjPelicula = datosPelis;
       });
   }
 }

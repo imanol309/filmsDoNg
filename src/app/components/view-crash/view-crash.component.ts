@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeDateMovie } from 'src/app/pages/home/models/home.model';
 
 @Component({
   selector: 'app-view-crash',
@@ -7,33 +8,33 @@ import { Router } from '@angular/router';
   styleUrls: ['./view-crash.component.css'],
 })
 export class ViewCrashComponent implements OnInit {
-  datos: any;
+  @Input() datosPelicula: HomeDateMovie;
+  ojt: {}[]= [
+    {
+      id: '99kkdd',
+      titulo: 'Iron main',
+      img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
+      genero: 'accion',
+      years: '2016',
+    },
+    {
+      id: '99kkdd',
+      titulo: 'Iron main',
+      img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
+      genero: 'accion',
+      years: '2016',
+    },
+    {
+      id: '99kkdd',
+      titulo: 'Iron main',
+      img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
+      genero: 'accion',
+      years: '2016',
+    },
+  ];
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.datos = [
-      {
-        id: '99kkdd',
-        titulo: 'Iron main',
-        img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
-        genero: 'accion',
-        years: '2016',
-      },
-      {
-        id: '99kkdd',
-        titulo: 'Iron main',
-        img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
-        genero: 'accion',
-        years: '2016',
-      },
-      {
-        id: '99kkdd',
-        titulo: 'Iron main',
-        img: 'https://www.cinemascomics.com/wp-content/uploads/2013/04/Ironman3-poster.jpg',
-        genero: 'accion',
-        years: '2016',
-      },
-    ];
   }
 
   routerMovies(titulo: String) {
