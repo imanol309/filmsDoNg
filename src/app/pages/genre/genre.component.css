@@ -12,8 +12,6 @@
   background-color: #161717;
   overflow-y: scroll;
   border-left: 1px solid #ffffffc2;
-
-
 }
 
 .movieSectionsContainer::-webkit-scrollbar {
@@ -27,12 +25,24 @@
 
 .containerGenre {
   width: 100%;
+  align-items: center;
 }
 
 .tituloGenre {
-  color: #fafafa;
-  font-size: 22px;
-  margin-left: 4%;
+  color: #ffffff;
+  font-size: 30px;
+  /* margin-left: 4%; */
   font-family: "Fredoka", sans-serif;
   letter-spacing: 0.10em;
+  margin-bottom: 0;
+}
+
+
+.descriptionGenre {
+  width: 80%;
+  color: #8a898e;
+  font-size: 22px;
+  font-family: "Fredoka", sans-serif;
+  border-bottom: 1px solid #ffffffc2;
+  padding-bottom: 3%;
 }
