@@ -6,11 +6,11 @@
                 <img src="../../../assets/img/icon/boton-de-play (1).png" alt="" class="iconImg" >
             </div>
         </div>
-        <div class="containerInfo">
-            <p class="tituloCarh" (click)="routerMovies(item.titulo)">{{item?.titulo}}</p>
+        <div class="containerInfo" (click)="routerMovies(item.titulo)">
+            <p class="tituloCarh">{{item?.titulo}}</p>
             <div class="genero">
+                <p class="generoCarh generoYears">2013 - 1 hr 25 min</p>
                 <p class="generoCarh">{{item?.genero.split('_').join('· ')}}</p>
-                <p class="generoCarh generoYears">(2013)</p>
             </div>
         </div>
     </div>
