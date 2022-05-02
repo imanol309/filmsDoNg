@@ -8,6 +8,8 @@
     flex-direction: column;
     background-color: #161717;
     overflow-y: scroll;
+    border-left: 1px solid #ffffffc2;
+
 }
 
 .movieSectionsContainer::-webkit-scrollbar {
