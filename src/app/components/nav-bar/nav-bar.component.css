@@ -5,14 +5,14 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 25%;
+  width: 20%;
   height: 100%;
   background-color: #161717;
 }
 
 .NavbarContainer {
   display: flex;
-  width: 95%;
+  width: 100%;
   justify-content: flex-start;
   flex-direction: column;
   margin-left: 3%;
@@ -37,11 +37,10 @@
   color: rgb(255, 255, 255);
   font-family: "Anton", sans-serif;
   font-family: "Rowdies", cursive;
-  font-size: 480%;
+  font-size: 430%;
   cursor: pointer;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 
 .navBarSecciones {

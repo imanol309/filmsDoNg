@@ -7,9 +7,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  row-gap: 10px;
+  gap: 12px;
 }
 
 .containerCarh {
@@ -19,7 +18,7 @@
 
 .Carh {
   margin-bottom: 2%;
-  height: 390px;
+  height: 370px;
   width: 250px;
   display: flex;
   position: relative;
