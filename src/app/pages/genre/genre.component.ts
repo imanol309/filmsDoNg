@@ -33,7 +33,7 @@ export class GenreComponent implements OnInit, OnDestroy {
       this.genre = params.get('parameter');
       this.getGenre(this.genre.replace(/,/g, '_'));
     });
-    this.genre = this.genre.replace(/,/g, '/');
+    this.genre = this.genre.replace(/· /g, '/');
   }
 
   getGenre(genre) {
