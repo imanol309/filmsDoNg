@@ -18,3 +18,11 @@
 .movieSectionsContainer::-webkit-scrollbar-thumb {
   background: #8e9494;
 }
+
+.tituloGenre {
+  color: #fafafa;
+  font-size: 22px;
+  margin-left: 4%;
+  font-family: "Fredoka", sans-serif;
+  letter-spacing: 0.10em;
+}

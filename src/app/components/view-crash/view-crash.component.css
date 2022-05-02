@@ -101,8 +101,12 @@
 
 .generoCarh {
   color: #8a898e;
+  margin-top: 10%;
   font-size: 15px;
-  padding-top: 5%;
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter,
     monospace;
+}
+
+.generoYears {
+  color: #e34c16;
 }

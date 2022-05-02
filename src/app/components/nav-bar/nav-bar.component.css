@@ -37,7 +37,7 @@
   color: rgb(255, 255, 255);
   font-family: "Anton", sans-serif;
   font-family: "Rowdies", cursive;
-  font-size: 400%;
+  font-size: 480%;
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -45,16 +45,7 @@
   animation-name: slidein;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-}
-
-@keyframes slidein {
-    from {
-        font-size: 400%;
-    }
-  
-    to {
-        font-size: 480%;
-    }
+  text-align: center;
 }
   
 .navBarTexto {
