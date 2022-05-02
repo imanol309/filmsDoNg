@@ -7,7 +7,7 @@
   top: 0;
   width: 20%;
   height: 100%;
-  background-color: #161717;
+  background-color: #000000;
 }
 
 .NavbarContainer {
@@ -54,8 +54,17 @@
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: IBM Plex Sans, sans-serif;
+  margin: 15px 0;
   cursor: pointer;
   margin-left: 10%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.secciones:hover {
+  color: #e34c16;
 }
 
 .navBarContacto {
@@ -84,10 +93,10 @@
 }
 
 .imgA {
-    width: 31px;
-    height: 31px;
-    padding: 0;
-    margin: 1%;
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  margin: 1%;
 }
 
 .imgRedes:hover {
