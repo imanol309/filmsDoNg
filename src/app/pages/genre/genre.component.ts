@@ -1,33 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HomeDateMovie } from '../home/models/home.model';
+import { GenreService } from './services/genre.service';
+import { SubSink } from 'subsink';
 
 @Component({
   selector: 'app-genre',
   templateUrl: './genre.component.html',
-  styleUrls: ['./genre.component.css']
+  styleUrls: ['./genre.component.css'],
 })
-export class GenreComponent implements OnInit {
+export class GenreComponent implements OnInit, OnDestroy {
   genre: any;
   datosGenre: HomeDateMovie;
-  constructor(private rutaActiva: ActivatedRoute) { 
-    this.paramsRutas()
+  subs = new SubSink();
+
+  constructor(
+    private rutaActiva: ActivatedRoute,
+    private genreService: GenreService
+  ) {
+    this.paramsRutas();
   }
 
   ngOnInit(): void {
+  }
 
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
   }
 
   paramsRutas() {
-    this.rutaActiva.paramMap.subscribe(params => {
-      this.genre = params.get('parameter')
-    })
-    this.genre = this.genre.replace(/,/g, '/')
+    this.rutaActiva.paramMap.subscribe((params) => {
+      this.genre = params.get('parameter');
+      this.genre = this.genre.replace(/,/g, '_');
+      console.log(this.genre)
+      this.getGenre(this.genre);
+    });
+    this.genre = this.genre.replace(/,/g, '/');
   }
 
-
-  getGenre() {
+  getGenre(genre) {
+    this.subs.sink = this.genreService
+      .getGenre(genre)
+      .subscribe((datosGenre) => {
+        this.datosGenre = datosGenre;
+      });
   }
-
-  
 }
