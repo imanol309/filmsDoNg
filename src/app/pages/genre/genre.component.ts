@@ -31,9 +31,7 @@ export class GenreComponent implements OnInit, OnDestroy {
   paramsRutas() {
     this.rutaActiva.paramMap.subscribe((params) => {
       this.genre = params.get('parameter');
-      this.genre = this.genre.replace(/,/g, '_');
-      console.log(this.genre)
-      this.getGenre(this.genre);
+      this.getGenre(this.genre.replace(/,/g, '_'));
     });
     this.genre = this.genre.replace(/,/g, '/');
   }

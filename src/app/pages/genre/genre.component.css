@@ -10,6 +10,17 @@
   display: flex;
   flex-direction: column;
   background-color: #26272c;
+  overflow-y: scroll;
+
+}
+
+.movieSectionsContainer::-webkit-scrollbar {
+  background: #161717;
+  width: 9px;
+}
+
+.movieSectionsContainer::-webkit-scrollbar-thumb {
+  background: #8e9494;
 }
 
 .containerGenre {
