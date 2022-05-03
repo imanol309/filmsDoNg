@@ -29,10 +29,12 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 1%;
+  margin-top: 4%;
 }
 
 .infoGenre {
   width: 90%;
+  padding-bottom: 2%;
   border-bottom: 1px solid #ffffffc2;
 }
 
@@ -41,7 +43,6 @@
   font-size: 30px;
   font-family: "Fredoka", sans-serif;
   letter-spacing: 0.10em;
-  margin-bottom: 0;
 }
 
 
