@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { appRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     appRoutingModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
