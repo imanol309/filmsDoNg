@@ -16,4 +16,10 @@ export class HomeService {
       .get<HomeDateMovie>(`${environment.URL_API}/api/verPelis`)
       .pipe(catchError((err) => throwError(err)));
   }
+
+  getPelisTitulo(titulo: String): Observable<HomeDateMovie> {
+    return this.httpClient
+      .get<HomeDateMovie>(`${environment.URL_API}/api/verPelis/titulo/${titulo}`)
+      .pipe(catchError((err) => throwError(err)));
+  }
 }

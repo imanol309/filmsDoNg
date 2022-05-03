@@ -6,5 +6,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 mat-dialog-container {
     background-color: black !important;
     padding: 0px 0px 0px 0px !important;
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
 }

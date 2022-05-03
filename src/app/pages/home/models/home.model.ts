@@ -1,4 +1,5 @@
 export interface HomeDateMovie {
+  filter(arg0: (item: any) => boolean): any;
 	Director: string;
 	Reparto: string;
 	año: Date;

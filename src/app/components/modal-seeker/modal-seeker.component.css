@@ -62,3 +62,8 @@
 .containerCLose:hover .imgClose {
     filter: opacity(0.4) drop-shadow(0 0 0 red);
 }
+
+li {
+    color: aliceblue;
+    font-size: 40PX;
+}
