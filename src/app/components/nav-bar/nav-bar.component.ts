@@ -16,7 +16,8 @@ export class NavBarComponent implements OnInit {
 
   openModalSeeker(): void {
     const dialogRef = this.matDialog.open(ModalSeekerComponent, {
-      width: '250px',
+      width: '90vw',
+      height: '50vw',
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
