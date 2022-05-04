@@ -1,12 +1,12 @@
 <div class="{{Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart'}}">
-    <div class="containerCarh" *ngFor="let item of datosPelicula | slice:0:15">
-        <div class="Carh" (click)="routerMovies(item?.titulo)">
+    <div class="containerCarh" *ngFor="let item of datosPelicula | slice:0:15" >
+        <div class="Carh" (click)="routerMovies(item?.titulo)" *ngIf="item" >
             <img src={{item?.img}} alt="" class="carhImg">
-            <div class="containerIcon">
+            <div class="containerIcon" *ngIf="item">
                 <img src="../../../assets/img/icon/boton-de-play (1).png" alt="" class="iconImg" >
             </div>
         </div>
-        <div class="containerInfo" (click)="routerMovies(item?.titulo)">
+        <div class="containerInfo" (click)="routerMovies(item?.titulo)" *ngIf="item">
             <p class="tituloCarh">{{item?.titulo}}</p>
             <div class="genero">
                 <p class="generoCarh generoYears">2013 - 1 hr 25 min</p>
