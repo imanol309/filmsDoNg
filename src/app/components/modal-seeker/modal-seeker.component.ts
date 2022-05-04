@@ -3,9 +3,6 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { HomeService } from 'src/app/pages/home/services/home.service';
 import { SubSink } from 'subsink';
 import { HomeDateMovie } from '../../pages/home/models/home.model';
-import { Subject } from 'rxjs';
-import { FormControl } from '@angular/forms';
-import { finalize, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-modal-seeker',
@@ -45,7 +42,6 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
     }
     this.isloading = true;
     this.subs.sink = this.homeServices.getPelisTitulo(capitalizeWords(value)).subscribe((datos) => {
-      console.log(datos)
       this.data$ = datos;
     });
   }
