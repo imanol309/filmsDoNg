@@ -4,7 +4,16 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
 mat-dialog-container {
-    background-color: black !important;
-    padding: 0px 0px 0px 0px !important;
-    /* overflow: hidden !important; */
+  background-color: black !important;
+  padding: 0px 0px 0px 0px !important;
+  overflow-y: scroll;
+}
+
+mat-dialog-container::-webkit-scrollbar {
+  background: #161717;
+  width: 9px;
+}
+
+mat-dialog-container::-webkit-scrollbar-thumb {
+  background: #8e9494;
 }
