@@ -10,7 +10,7 @@ import { HomeService } from './services/home.service';
 export class HomeComponent implements OnInit, OnDestroy {
   datosObjPelicula: HomeDateMovie;
   subs = new SubSink();
-
+  css: boolean = true
   constructor(private homeServices: HomeService) {}
 
   ngOnInit(): void {

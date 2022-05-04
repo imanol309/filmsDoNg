@@ -14,6 +14,7 @@ export class GenreComponent implements OnInit, OnDestroy {
   datosGenre: HomeDateMovie;
   subs = new SubSink();
   description: String;
+  css: boolean = true
   constructor(
     private rutaActiva: ActivatedRoute,
     private genreService: GenreService

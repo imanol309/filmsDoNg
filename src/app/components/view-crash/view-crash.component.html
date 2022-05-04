@@ -1,4 +1,4 @@
-<div class="containerPelisInfo">
+<div class="{{Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart'}}">
     <div class="containerCarh" *ngFor="let item of datosPelicula">
         <div class="Carh" (click)="routerMovies(item?.titulo)">
             <img src={{item?.img}} alt="" class="carhImg">

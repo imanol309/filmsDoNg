@@ -9,6 +9,7 @@ import { HomeDateMovie } from 'src/app/pages/home/models/home.model';
 })
 export class ViewCrashComponent implements OnInit {
   @Input() datosPelicula: HomeDateMovie;
+  @Input() Css: boolean;
   constructor(private router: Router) {}
 
   ngOnInit(): void {

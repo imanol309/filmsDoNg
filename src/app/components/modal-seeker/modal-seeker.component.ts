@@ -18,6 +18,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   data$: any;
   isloading = false
   src: String;
+  css: boolean = false
   constructor(
     public dialogRef: MatDialogRef<ModalSeekerComponent>,
     private homeServices: HomeService

@@ -2,11 +2,20 @@
 
 /* Container pelis informacion */
 
-.containerPelisInfo {
+.containerPelisInfoCenter {
   margin-top: 1%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.containerPelisInfoStart {
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
 }
