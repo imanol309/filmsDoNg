@@ -10,7 +10,7 @@ import { ViewingMoviesComponent } from './viewing-movies/viewing-movies.componen
 import { GenreComponent } from './genre/genre.component';
 import { ViewCrashComponent } from '../components/view-crash/view-crash.component';
 import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -21,6 +21,6 @@ import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.co
     ViewCrashComponent,
     ModalSeekerComponent
   ],
-  imports: [CommonModule, pagesRoutingModule],
+  imports: [CommonModule, pagesRoutingModule, FormsModule],
 })
 export class pagesModule {}

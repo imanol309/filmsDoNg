@@ -3,13 +3,13 @@
     <input
       placeholder="Busca Aquí tu pelicula"
       class="input"
-      name="text"
       type="text"
-      (keyup)="searchTerm$.next($event.target.value)"
+      (ngModelChange)="search($event)"
+      [(ngModel)]="src"
     />
     <div class="containerCLose" (click)="onNoClick()">
       <img src="../../../assets/img/icon/x.png" alt="" class="imgClose" />
     </div>
   </div>
-  <app-view-crash [datosPelicula]="listFiltered"></app-view-crash>
+  <app-view-crash [datosPelicula]="data$"></app-view-crash>
 </div>
