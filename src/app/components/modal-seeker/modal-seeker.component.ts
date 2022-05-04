@@ -16,16 +16,15 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   subs = new SubSink();
   datosObjPelicula: HomeDateMovie;
   data$: any;
-  isloading = false
+  isloading = false;
   src: String;
-  css: boolean = false
+  css: boolean = false;
   constructor(
     public dialogRef: MatDialogRef<ModalSeekerComponent>,
     private homeServices: HomeService
   ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
@@ -36,17 +35,18 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   }
 
   search(value: any): any {
-    console.log(value)
-    this.isloading = true
-    this.homeServices.getPelisTitulo(value).subscribe((datos) => {
+    function capitalizeWords(val) {
+      return val
+        .toLowerCase()
+        .trim()
+        .split(' ')
+        .map((v) => v[0].toUpperCase() + v.substr(1))
+        .join(' ');
+    }
+    this.isloading = true;
+    this.subs.sink = this.homeServices.getPelisTitulo(capitalizeWords(value)).subscribe((datos) => {
       console.log(datos)
-      this.data$ = datos
-    })
-      // .pipe(
-      //   map((datos) => datos),
-      //   finalize(() => this.isloading = false)
-      // )
+      this.data$ = datos;
+    });
   }
-
-
 }
