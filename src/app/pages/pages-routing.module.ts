@@ -21,6 +21,11 @@ const routes: Routes = [
           import('./genre/genre.module').then((m) => m.GenreModule),
       },
       {
+        path: 'moreView', 
+        loadChildren: () =>
+          import('./more-view/more-view.module').then((m) => m.MoreViewModule),
+      },
+      {
         path: '**', redirectTo: 'home'
       }
     ]

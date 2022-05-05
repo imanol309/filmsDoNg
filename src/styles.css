@@ -17,3 +17,25 @@ mat-dialog-container::-webkit-scrollbar {
 mat-dialog-container::-webkit-scrollbar-thumb {
   background: #8e9494;
 }
+
+.movieSectionsContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #161717;
+  overflow-y: scroll;
+  border-left: 1px solid #ffffffc2;
+}
+
+.movieSectionsContainer::-webkit-scrollbar {
+  background: #161717;
+  width: 9px;
+}
+
+.movieSectionsContainer::-webkit-scrollbar-thumb {
+  background: #8e9494;
+}
