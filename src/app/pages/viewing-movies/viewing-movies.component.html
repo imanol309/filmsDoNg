@@ -4,25 +4,27 @@
     <app-movie-sections></app-movie-sections>
     <div class="containerCarhView" *ngFor="let datos of peliDato">
       <div class="containerTexto">
-        <h4>{{ datos?.titulo }}</h4>
-        <h4>⭐⭐⭐⭐⭐</h4>
-        <h4>90 Min</h4>
-        <h4>2009</h4>
-        <h4>
+        <h4 class="titulo">{{ datos?.titulo }}</h4>
+        <div class="containerValoracion colorGris">
+            <h4 class="estrella">⭐⭐⭐⭐⭐</h4>
+            <h4>90 Min</h4>
+            <h4>(2009)</h4>
+        </div>
+        <p class="sinopsis">
           Eddy vive una doble vida: cristiano en el templo y fuera de él oculta
           su fe buscando disfrutar de diversiones que su religión no le permite.
           Al conocer a Débora, multiplica sus mentiras, provocando una divertida
           y aleccionadora cadena de enredos.
-        </h4>
-        <div>
-            <div>
-                <h4>Direcion</h4>
-                <h4>Elenco</h4>
-                <h4>Generos</h4>
-                <h4>Subtitulos</h4>
-                <h4>Idiomas de audio</h4>
+        </p>
+        <div class="containerDirector ">
+            <div class="containerDirectorOne">
+                <h4 class="colorGris">Direccion</h4>
+                <h4 class="colorGris">Elenco</h4>
+                <h4 class="colorGris">Generos</h4>
+                <h4 class="colorGris">Subtitulos</h4>
+                <h4 class="colorGris">Idiomas de audio</h4>
             </div>
-            <div>
+            <div class="containerDirectorTwo">
                 <h4>{{datos?.Director}}</h4>
                 <h4>{{datos?.Reparto}}</h4>
                 <h4>{{datos?.genero}}</h4>
