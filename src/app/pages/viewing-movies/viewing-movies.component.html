@@ -1,10 +1,59 @@
 <div class="containerView">
-    <app-nav-bar></app-nav-bar>
-    <div class="movieSectionsContainer">
-        <app-movie-sections></app-movie-sections>
+  <app-nav-bar></app-nav-bar>
+  <div class="movieSectionsContainer">
+    <app-movie-sections></app-movie-sections>
+    <div class="" *ngFor="let datos of peliDato">
+      <div>
+        <h3>{{ datos?.titulo }}</h3>
+        <h3>⭐⭐⭐⭐⭐</h3>
+        <h4>90 Min</h4>
+        <h4>2009</h4>
+        <h4>
+          Eddy vive una doble vida: cristiano en el templo y fuera de él oculta
+          su fe buscando disfrutar de diversiones que su religión no le permite.
+          Al conocer a Débora, multiplica sus mentiras, provocando una divertida
+          y aleccionadora cadena de enredos.
+        </h4>
         <div>
-            <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b1887707ef3db1f4fad10ba485ae446e752429ce8c0665b5d2a9d136e8733863._UY500_UX667_RI_V_TTW_SX329_.jpg" alt="" srcset="">
+            <div>
+                <h4>Direcion</h4>
+                <h4>Elenco</h4>
+                <h4>Generos</h4>
+                <h4>Subtitulos</h4>
+                <h4>Idiomas de audio</h4>
+            </div>
+            <div>
+                <h4>{{datos?.Director}}</h4>
+                <h4>{{datos?.Reparto}}</h4>
+                <h4>{{datos?.genero}}</h4>
+                <h4>Opcional</h4>
+                <h4>Español</h4>
+            </div>
         </div>
-        <iframe src="https://streamtape.com/e/rAwkbPbqJrfbv7y" width="90%" height="100%" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        <div>
+            <img src="../../../assets/img/view-movies/boton-de-play.png" alt="" srcset="">
+            <img src="../../../assets/img/view-movies/marcador.png" alt="" srcset="">
+            <img src="../../../assets/img/view-movies/me-gusta.png" alt="" srcset="">
+            <img src="../../../assets/img/view-movies/disgusto.png" alt="" srcset="">
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b1887707ef3db1f4fad10ba485ae446e752429ce8c0665b5d2a9d136e8733863._UY500_UX667_RI_V_TTW_SX329_.jpg"
+          alt=""
+          srcset=""
+        />
+      </div>
     </div>
+    <iframe
+      src="https://streamtape.com/e/rAwkbPbqJrfbv7y"
+      width="90%"
+      height="100%"
+      allowfullscreen
+      allowtransparency
+      allow="autoplay"
+      scrolling="no"
+      frameborder="0"
+    ></iframe>
+  </div>
 </div>

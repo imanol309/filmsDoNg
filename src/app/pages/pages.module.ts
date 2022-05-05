@@ -11,6 +11,7 @@ import { ViewCrashComponent } from '../components/view-crash/view-crash.componen
 import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.component';
 import { FormsModule } from '@angular/forms';
 import { MoreViewComponent } from './more-view/more-view.component';
+import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -20,7 +21,8 @@ import { MoreViewComponent } from './more-view/more-view.component';
     GenreComponent,
     ViewCrashComponent,
     ModalSeekerComponent,
-    MoreViewComponent
+    MoreViewComponent,
+    ViewCrashRowComponent
   ],
   imports: [CommonModule, pagesRoutingModule, FormsModule],
 })
