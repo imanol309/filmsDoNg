@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { pagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +10,7 @@ import { GenreComponent } from './genre/genre.component';
 import { ViewCrashComponent } from '../components/view-crash/view-crash.component';
 import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.component';
 import { FormsModule } from '@angular/forms';
+import { MoreViewComponent } from './more-view/more-view.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     ViewingMoviesComponent,
     GenreComponent,
     ViewCrashComponent,
-    ModalSeekerComponent
+    ModalSeekerComponent,
+    MoreViewComponent
   ],
   imports: [CommonModule, pagesRoutingModule, FormsModule],
 })
