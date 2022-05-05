@@ -2,10 +2,10 @@
   <app-nav-bar></app-nav-bar>
   <div class="movieSectionsContainer">
     <app-movie-sections></app-movie-sections>
-    <div class="" *ngFor="let datos of peliDato">
-      <div>
-        <h3>{{ datos?.titulo }}</h3>
-        <h3>⭐⭐⭐⭐⭐</h3>
+    <div class="containerCarhView" *ngFor="let datos of peliDato">
+      <div class="containerTexto">
+        <h4>{{ datos?.titulo }}</h4>
+        <h4>⭐⭐⭐⭐⭐</h4>
         <h4>90 Min</h4>
         <h4>2009</h4>
         <h4>
@@ -30,22 +30,25 @@
                 <h4>Español</h4>
             </div>
         </div>
-        <div>
-            <img src="../../../assets/img/view-movies/boton-de-play.png" alt="" srcset="">
-            <img src="../../../assets/img/view-movies/marcador.png" alt="" srcset="">
-            <img src="../../../assets/img/view-movies/me-gusta.png" alt="" srcset="">
-            <img src="../../../assets/img/view-movies/disgusto.png" alt="" srcset="">
+      </div>
+      <div class="containerImg">
+        <div class="containerImgCaratula">
+            <img
+              src="{{datos?.img}}"
+              alt=""
+              srcset=""
+              class="imgCaratula"
+            />
+        </div>
+        <div class="containerImgOpciones">
+            <img src="../../../assets/img/view-movies/boton-de-play.png" alt="" srcset="" class="imgOpciones">
+            <img src="../../../assets/img/view-movies/marcador.png" alt="" srcset="" class="imgOpciones">
+            <img src="../../../assets/img/view-movies/me-gusta.png" alt="" srcset="" class="imgOpciones">
+            <img src="../../../assets/img/view-movies/disgusto.png" alt="" srcset="" class="imgOpciones">
         </div>
       </div>
-      <div>
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/b1887707ef3db1f4fad10ba485ae446e752429ce8c0665b5d2a9d136e8733863._UY500_UX667_RI_V_TTW_SX329_.jpg"
-          alt=""
-          srcset=""
-        />
-      </div>
     </div>
-    <iframe
+    <!-- <iframe
       src="https://streamtape.com/e/rAwkbPbqJrfbv7y"
       width="90%"
       height="100%"
@@ -54,6 +57,6 @@
       allow="autoplay"
       scrolling="no"
       frameborder="0"
-    ></iframe>
+    ></iframe> -->
   </div>
 </div>
