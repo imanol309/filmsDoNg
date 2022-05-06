@@ -3,24 +3,18 @@ h4 {
   padding: 0;
   font-size: 130%;
   color: #afafaf;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .containerCarhView {
   margin: 0;
   padding: 0;
-  height: 600px;
+  height: 800px;
   max-width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
 .containerMovies {
@@ -36,22 +30,20 @@ h4 {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;;
+  align-items: center;
 }
 
 .colorGris {
   color: white;
+  width: 20%;
 }
 
 .containerTexto {
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 13px;
-}
-
-.reparto {
-  width: 55%;
 }
 
 .titulo {
@@ -70,19 +62,29 @@ h4 {
 
 .containerValoracion {
   display: flex;
+  width: 50%;
   gap: 8px;
 }
 
 .containerDirector {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
   font-size: 95%;
+}
+
+.containerInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
 
 .containerImgOpciones {
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -98,24 +100,37 @@ h4 {
 
 .containerImg {
   width: 20%;
-}
-
-.containerImgCaratula {
-  height: 400px;
-  width: 300px;
-  background-image: url(../../../assets/img/view-movies/fondos/liquid-marbling-paint-texture-background-fluid-painting-abstract-texture-intensive-color-mix-wallpaper.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 5px 5px 40px; */
+  flex-direction: column;
+}
+
+.containerImgCaratula {
+  height: 350px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0.5px solid white;
 }
 
 .imgCaratula {
-  height: 350px;
+  height: 300px;
   box-shadow: 5px 5px 40px wheat;
   cursor: pointer;
+}
+
+.containerDirectorTwo {
+  display: flex;
+  flex-direction: column;
+}
+
+.reparto {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #afafaf;
+  font-size: 130%;
 }
