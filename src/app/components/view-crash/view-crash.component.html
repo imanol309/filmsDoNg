@@ -1,5 +1,5 @@
 <div class="{{Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart'}}">
-    <div class="containerCarh" *ngFor="let item of datosPelicula | slice:0:num" >
+    <div class="containerCarh" *ngFor="let item of datosPelicula | slice:0:numSlice" >
         <div class="Carh" (click)="routerMovies(item?.titulo)" *ngIf="item" >
             <img src={{item?.img}} alt="" class="carhImg">
             <div class="containerIcon" *ngIf="item">
@@ -16,5 +16,5 @@
     </div>
 </div>
 <div class="containerBtn" *ngIf="datosPelicula">
-    <h4 class="btnCargar" (click)="cargarMas()">Cargar Mas</h4>
+    <h4 class="btnCargar" (click)="cargarMas()" *ngIf="cssVer">{{ShitMore}}</h4>
 </div>
