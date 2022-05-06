@@ -13,9 +13,10 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   subs = new SubSink();
   datosObjPelicula: HomeDateMovie;
   data$: any;
-  isloading = false;
+  pelisRandom: any;
   src: String;
-  css: boolean = false;
+  verInfo: boolean = false;
+
   constructor(
     public dialogRef: MatDialogRef<ModalSeekerComponent>,
     private homeServices: HomeService
@@ -40,9 +41,22 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
         .map((v) => v[0].toUpperCase() + v.substr(1))
         .join(' ');
     }
-    this.isloading = true;
-    this.subs.sink = this.homeServices.getPelisTitulo(capitalizeWords(value)).subscribe((datos) => {
-      this.data$ = datos;
+    this.subs.sink = this.homeServices
+      .getPelisTitulo(capitalizeWords(value))
+      .subscribe((datos) => {
+        this.data$ = datos;
+        if (this.data$[0] !== null) {
+          this.verInfo = true;
+          setTimeout(() => {
+            this.getPelis();
+          }, 1000);
+        }
+      });
+  }
+
+  getPelis(): void {
+    this.subs.sink = this.homeServices.getPelis().subscribe((datos) => {
+      this.pelisRandom = datos;
     });
   }
 }
