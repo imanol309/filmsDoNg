@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
 /* Container pelis informacion */
 
 .containerPelisInfoCenter {
@@ -28,9 +28,9 @@
 
 @keyframes square-animation {
   0% {
-   margin-top: 10%;
+    margin-top: 10%;
   }
- 
+
   100% {
     margin-top: 0;
   }
@@ -97,7 +97,7 @@
   font-size: 17px;
   width: 70%;
   font-family: "Fredoka", sans-serif;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -130,4 +130,28 @@
 .generoYears {
   color: #e34c16;
   font-size: 13px;
+}
+
+.containerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+}
+
+.btnCargar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-family: Monospace;
+  cursor: pointer;
+  font-size: 15px;
+  width: 15%;
+  height: 35%;
+  background-color: #fafafa;
+  font-family: "Archivo Black", sans-serif;
+  font-family: "Fredoka", sans-serif;
+  font-family: "Rowdies", cursive;
 }

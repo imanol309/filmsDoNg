@@ -12,15 +12,18 @@ import { ModalSeekerComponent } from '../modal-seeker/modal-seeker.component';
 export class ViewCrashComponent implements OnInit {
   @Input() datosPelicula: HomeDateMovie;
   @Input() Css: boolean;
-  constructor(
-    private router: Router,
-    // public dialogRef: MatDialogRef
-  ) {}
+  num: number = 15;
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   routerMovies(titulo: String) {
     // this.dialogRef.close();
     this.router.navigate(['/pelis/movies/' + titulo]);
+  }
+
+  cargarMas() {
+    this.num = this.num + 15;
   }
 }
