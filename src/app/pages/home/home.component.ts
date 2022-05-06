@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .getPelis()
       .subscribe((datosPelis: HomeDateMovie) => {
         this.datosObjPelicula = datosPelis;
+        this.datosObjPelicula.sort((a,b) => Math.random() - 0.5)
       });
   }
 }

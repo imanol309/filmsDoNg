@@ -57,6 +57,11 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   getPelis(): void {
     this.subs.sink = this.homeServices.getPelis().subscribe((datos) => {
       this.pelisRandom = datos;
+      // const randomIndex = Math.floor(
+      //   Math.random() * this.pelisRandom.length
+      // )
+      // console.log(this.pelisRandom[randomIndex])
+      this.pelisRandom.sort((a,b) => Math.random() - 0.5)
     });
   }
 }

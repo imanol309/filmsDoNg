@@ -1,7 +1,7 @@
 export interface HomeDateMovie {
-  shift();
-  length(length: any);
-  filter(arg0: (item: any) => boolean): any;
+  sort(arg0: (a: any, b: any) => number);
+  random(): any;
+  length: any;
 	Director: string;
 	Reparto: string;
 	año: Date;

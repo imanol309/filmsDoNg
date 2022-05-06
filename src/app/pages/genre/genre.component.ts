@@ -42,6 +42,7 @@ export class GenreComponent implements OnInit, OnDestroy {
       .getGenre(genre)
       .subscribe((datosGenre) => {
         this.datosGenre = datosGenre;
+        this.datosGenre.sort((a,b) => Math.random() - 0.5)
       });
   }
 
