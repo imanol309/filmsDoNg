@@ -1,6 +1,12 @@
+.containerGenre {
+  width: 100%;
+  text-align: left;
+}
+
+
 .tituloGenre {
   color: #fafafa;
-  font-size: 22px;
+  font-size: 25px;
   margin-left: 4%;
   margin-top: 4%;
   font-family: "Fredoka", sans-serif;
