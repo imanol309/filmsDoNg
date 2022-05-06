@@ -38,7 +38,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
         .toLowerCase()
         .trim()
         .split(' ')
-        .map((v) => v[0].toUpperCase() + v.substr(1))
+        .map((v) => v[0]?.toUpperCase() + v.substr(1))
         .join(' ');
     }
     this.subs.sink = this.homeServices
