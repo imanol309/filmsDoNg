@@ -21,8 +21,8 @@
 }
 
 .containerCarh {
-  height: 500px;
-  width: 250px;
+  height: 100%;
+  width: 18%;
   animation: square-animation 1s ease-in;
 }
 
@@ -38,14 +38,14 @@
 
 .Carh {
   margin-bottom: 2%;
-  height: 370px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  
+  flex-wrap: wrap;
 }
 
 .carhImg {

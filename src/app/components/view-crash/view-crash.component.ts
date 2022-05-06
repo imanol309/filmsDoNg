@@ -12,6 +12,57 @@ import { ModalSeekerComponent } from '../modal-seeker/modal-seeker.component';
 export class ViewCrashComponent implements OnInit {
   @Input() datosPelicula: HomeDateMovie;
   @Input() Css: boolean;
+  array = [
+    {
+      titulo: 'hola',
+      genero: 'comedia',
+      img: '../../../assets/img/carousel/ratatouille-cover-caratula-dvd-disney-pixar.jpg',
+      year: "2012",
+
+    },
+    {
+      titulo: 'hola',
+      genero: 'comedia',
+      img: '../../../assets/img/carousel/ratatouille-cover-caratula-dvd-disney-pixar.jpg',
+      year: "2012",
+      
+    },
+    {
+      titulo: 'hola',
+      genero: 'comedia',
+      img: '../../../assets/img/carousel/ratatouille-cover-caratula-dvd-disney-pixar.jpg',
+      year: "2012",
+      
+    },
+    {
+      titulo: 'hola',
+      genero: 'comedia',
+      img: '../../../assets/img/carousel/ratatouille-cover-caratula-dvd-disney-pixar.jpg',
+      year: "2012",
+      
+    },
+    {
+      titulo: 'hola',
+      genero: 'comedia',
+      img: '../../../assets/img/carousel/ratatouille-cover-caratula-dvd-disney-pixar.jpg',
+      year: "2012",
+      
+    },
+    {
+      titulo: 'hola',
+      genero: 'comedia',
+      img: '../../../assets/img/carousel/ratatouille-cover-caratula-dvd-disney-pixar.jpg',
+      year: "2012",
+      
+    },
+    {
+      titulo: 'hola',
+      genero: 'comedia',
+      img: '../../../assets/img/carousel/ratatouille-cover-caratula-dvd-disney-pixar.jpg',
+      year: "2012",
+      
+    }
+  ]
   constructor(
     private router: Router,
     // public dialogRef: MatDialogRef

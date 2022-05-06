@@ -1,5 +1,5 @@
 <div class="{{Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart'}}">
-    <div class="containerCarh" *ngFor="let item of datosPelicula | slice:0:15" >
+    <div class="containerCarh" *ngFor="let item of array | slice:0:15" >
         <div class="Carh" (click)="routerMovies(item?.titulo)" *ngIf="item" >
             <img src={{item?.img}} alt="" class="carhImg">
             <div class="containerIcon" *ngIf="item">
