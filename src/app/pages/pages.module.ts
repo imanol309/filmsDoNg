@@ -12,6 +12,9 @@ import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.co
 import { FormsModule } from '@angular/forms';
 import { MoreViewComponent } from './more-view/more-view.component';
 import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
+import { LoginComponent } from '../components/login/login.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -22,8 +25,9 @@ import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-r
     ViewCrashComponent,
     ModalSeekerComponent,
     MoreViewComponent,
-    ViewCrashRowComponent
+    ViewCrashRowComponent,
+    LoginComponent
   ],
-  imports: [CommonModule, pagesRoutingModule, FormsModule],
+  imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
 })
 export class pagesModule {}
