@@ -2,20 +2,19 @@
   <app-nav-bar></app-nav-bar>
   <div class="movieSectionsContainer">
     <app-movie-sections></app-movie-sections>
-    <div class="containerMovies">
+    <div class="containerMovies" *ngFor="let datos of peliDato">
       <div class="containerIframe">
-        <iframe
-          src="https://streamtape.com/e/lWY0ayxGJRT7K8z/"
-          width="100%"
-          height="700px"
-          allowfullscreen
-          allowtransparency
+        <iframe src="{{datos?.video}}" 
+          width="100%" 
+          height="700px" 
+          allowfullscreen 
+          allowtransparency 
           allow="autoplay"
-          scrolling="no"
-          frameborder="0"
-        ></iframe>
+          scrolling="no" 
+          frameborder="0">
+        </iframe>
       </div>
-      <div class="containerCarhView" *ngFor="let datos of peliDato">
+      <div class="containerCarhView">
         <div class="containerTexto">
           <h4 class="titulo">{{ datos?.titulo }}</h4>
           <div class="containerValoracion">
@@ -57,9 +56,9 @@
             <img src="{{ datos?.img }}" alt="" srcset="" class="imgCaratula" />
           </div>
           <div class="containerImgOpciones">
-              <img src="../../../assets/img/view-movies/boton-de-play.png" alt="" srcset="" class="imgOpciones">
-              <img src="../../../assets/img/view-movies/marcador.png" alt="" srcset="" class="imgOpciones">
-              <img src="../../../assets/img/view-movies/me-gusta.png" alt="" srcset="" class="imgOpciones">
+            <img src="../../../assets/img/view-movies/boton-de-play.png" alt="" srcset="" class="imgOpciones">
+            <img src="../../../assets/img/view-movies/marcador.png" alt="" srcset="" class="imgOpciones">
+            <img src="../../../assets/img/view-movies/me-gusta.png" alt="" srcset="" class="imgOpciones">
           </div>
         </div>
       </div>
