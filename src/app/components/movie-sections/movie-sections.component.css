@@ -42,12 +42,28 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.2s ease;
+  transition: background 0.2s ease-out;
+  margin: 0;
+  padding: 1%;
+}
+
+.pCuenta {
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  filter: opacity(0.7);
   margin: 0;
 }
 
+.pCuenta:hover {
+  filter: opacity(1);
+}
+
 .pSecciones:hover {
-  color: #e34c16;
+  background-color: rgb(51, 53, 53);
+  border-radius: 4px;
+  filter: opacity(1);
 }
 
 .seccionesCuenta {
@@ -67,17 +83,13 @@
 }
 
 .seccioneUsuario:hover .imgUsuario {
-  filter: opacity(0.4) drop-shadow(0 0 0 #e34c16);
-}
-
-.seccioneUsuario:hover .pSecciones {
-  color: #e34c16;
-  opacity: 0.4px;
+  filter: opacity(1) drop-shadow(0 0 0 #ffffff);
 }
 
 .imgUsuario {
   height: 30px;
   transition: filter 0.2s ease;
+  filter: opacity(0.4) drop-shadow(0 0 0 #c4c4c4);
 }
 
 .sideRigth {
