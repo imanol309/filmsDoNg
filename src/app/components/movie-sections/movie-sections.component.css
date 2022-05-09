@@ -80,6 +80,12 @@
   transition: filter 0.2s ease;
 }
 
-mat-sidenav {
+.sideRigth {
   width: 25%;
+  background-color: #000000;
+}
+
+.sideLeft {
+  width: 20%;
+  background-color: #000000;
 }

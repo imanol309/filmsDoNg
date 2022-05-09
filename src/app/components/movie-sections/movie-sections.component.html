@@ -25,10 +25,10 @@
   </div>
 </div>
 <mat-sidenav-container >
-  <mat-sidenav #sideRight position="end" mode="over">
+  <mat-sidenav #sideRight position="end" mode="over" class="sideRigth">
     <app-login (closeSidenav)="sideRight.close()"> </app-login>
   </mat-sidenav>
-  <mat-sidenav #sideLeft position="start" mode="over">
+  <mat-sidenav #sideLeft position="start" mode="over" class="sideLeft">
     <app-nav-bar (closeSidenav)="sideLeft.close()"> </app-nav-bar>
   </mat-sidenav>
   <mat-sidenav-content style="height: 95vh">
