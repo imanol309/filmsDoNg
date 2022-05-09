@@ -10,12 +10,12 @@ import { HomeService } from './services/home.service';
 export class HomeComponent implements OnInit, OnDestroy {
   datosObjPelicula: HomeDateMovie;
   subs = new SubSink();
-  css: boolean = true
-  constructor(private homeServices: HomeService) {}
-
-  ngOnInit(): void {
+  css: boolean = true;
+  constructor(private homeServices: HomeService) {
     this.GetDatos();
   }
+
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .getPelis()
       .subscribe((datosPelis: HomeDateMovie) => {
         this.datosObjPelicula = datosPelis;
-        this.datosObjPelicula.sort((a,b) => Math.random() - 0.5)
+        this.datosObjPelicula.sort((a, b) => Math.random() - 0.5);
       });
   }
 }

@@ -11,11 +11,13 @@
       <img src="../../../assets/img/icon/x.png" alt="" class="imgClose" />
     </div>
   </div>
-  <div class="containerTest" *ngIf="verInfo">
-    <h4 class="textResult">Este es el resultado de tu busqueda :</h4>
+  <div *ngIf="verInfo" class="containerIAlsoLike">
+    <div class="containerTest">
+      <h4 class="textResult">Tu resultado :</h4>
+    </div>
+    <app-view-crash [datosPelicula]="data$" [Css]="false" (click)="onNoClick()"></app-view-crash>
   </div>
-  <app-view-crash [datosPelicula]="data$" [Css]="false" (click)="onNoClick()"></app-view-crash>
-  <div *ngIf="verInfo">
+  <div *ngIf="verInfo" class="containerIAlsoLike">
     <div class="containerTest">
       <h4 class="textResult" >Puede que tambien te guste</h4>
     </div>

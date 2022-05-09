@@ -13,14 +13,14 @@ export class ViewingMoviesComponent implements OnInit {
   subs = new SubSink();
 
   constructor(private rutaActiva: ActivatedRoute,
-    private viewingMoviesService: ViewingMoviesService) { }
+    private viewingMoviesService: ViewingMoviesService) { 
+      this.rutaActiva.paramMap.subscribe(params => {
+        this.peliDato = params.get('idpeli')
+      })
+      this.datosUnicos(this.peliDato)
+    }
 
-  ngOnInit(): void {
-    this.rutaActiva.paramMap.subscribe(params => {
-      this.peliDato = params.get('idpeli')
-    })
-    this.datosUnicos(this.peliDato)
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();

@@ -5,7 +5,7 @@
   padding: 0;
   display: flex;
   flex-direction: row;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .input {
@@ -23,9 +23,11 @@
   letter-spacing: 1px;
   font-size: 20px;
 }
+
 .input::placeholder {
   font-size: 20px;
 }
+
 .input:focus {
   border: 2px solid #fa4753;
   caret-color: #fa4753;
@@ -42,10 +44,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  border-left: 2px solid #3f3f3f;
-  border-bottom: 2px solid #3f3f3f;
-  border-top: 2px solid #3f3f3f;
-  border-right: 2px solid #3f3f3f;
+  border: 2px solid #3f3f3f;
   transition: 0.5s linear;
 }
 
@@ -55,10 +54,7 @@
 }
 
 .containerCLose:hover {
-  border-left: 3px solid #fa4753;
-  border-bottom: 2px solid #fa4753;
-  border-top: 2px solid #fa4753;
-  border-right: 2px solid #fa4753;
+  border: 2px solid #fa4753;
   filter: opacity(0.4) drop-shadow(0 0 0 red);
 }
 
@@ -71,9 +67,14 @@ li {
   font-size: 40px;
 }
 
+.containerIAlsoLike {
+  padding: 0;
+  margin: 0;
+}
+
 .containerTest {
   width: 100%;
-  height: 40px;
+  height: 30px;
 }
 
 .textResult {
