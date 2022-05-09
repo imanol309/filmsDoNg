@@ -1,5 +1,4 @@
-import { Component,  OnInit, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { Component,  OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./movie-sections.component.css'],
 })
 export class MovieSectionsComponent implements OnInit {
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
+  
   constructor(private router: Router) {}
 
   ngOnInit(): void {}

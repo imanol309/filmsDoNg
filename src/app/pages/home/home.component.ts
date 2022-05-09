@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { HomeDateMovie } from './models/home.model';
 import { SubSink } from 'subsink';
 import { HomeService } from './services/home.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

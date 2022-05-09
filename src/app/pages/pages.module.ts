@@ -13,21 +13,24 @@ import { FormsModule } from '@angular/forms';
 import { MoreViewComponent } from './more-view/more-view.component';
 import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
 import { LoginComponent } from '../components/login/login.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    LoginComponent,
+    ViewCrashComponent,
     NavBarComponent,
     MovieSectionsComponent,
-    ViewingMoviesComponent,
-    GenreComponent,
-    ViewCrashComponent,
     ModalSeekerComponent,
-    MoreViewComponent,
     ViewCrashRowComponent,
-    LoginComponent
   ],
-  imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
+  imports: [CommonModule, pagesRoutingModule, FormsModule],
+  exports: [
+    LoginComponent,
+    ViewCrashComponent,
+    NavBarComponent,
+    MovieSectionsComponent,
+    ModalSeekerComponent,
+    ViewCrashRowComponent,
+  ],
 })
 export class pagesModule {}

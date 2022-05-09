@@ -1,13 +1,24 @@
-<div>
-    <app-nav-bar></app-nav-bar>
-    <div class="movieSectionsContainer">
+<mat-sidenav-container>
+  <mat-sidenav position="end" mode="over">
+    <app-login (closeSidenav)="sidenav.close()"> </app-login>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div>
+      <app-nav-bar></app-nav-bar>
+      <div class="movieSectionsContainer">
         <app-movie-sections></app-movie-sections>
         <div class="containerGenre">
-            <div class="infoGenre">
-                <h4 class="tituloGenre">{{genre}}</h4>
-                <p class="descriptionGenre">{{description}}</p>
-            </div>
+          <div class="infoGenre">
+            <h4 class="tituloGenre" (click)="sidenav.open()" >{{ genre }}</h4>
+            <p class="descriptionGenre">{{ description }}</p>
+          </div>
         </div>
-        <app-view-crash [datosPelicula]="datosGenre" [Css]="css" ></app-view-crash>
+        <app-view-crash
+          [datosPelicula]="datosGenre"
+          [Css]="css"
+        ></app-view-crash>
+      </div>
     </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,8 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HomeDateMovie } from '../home/models/home.model';
 import { GenreService } from './services/genre.service';
 import { SubSink } from 'subsink';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-genre',
@@ -15,6 +16,7 @@ export class GenreComponent implements OnInit, OnDestroy {
   subs = new SubSink();
   description: String;
   css: boolean = true
+  @ViewChild(MatSidenav) sidenav: MatSidenav;
   constructor(
     private rutaActiva: ActivatedRoute,
     private genreService: GenreService

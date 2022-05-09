@@ -1,27 +1,18 @@
-<mat-sidenav-container>
-  <mat-sidenav position="end" mode="over">
-    <app-login (closeSidenav)="sidenav.close()">
-    </app-login>
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <div class="containerSeccionesPelis">
-      <div class="SeccionesPelis">
-        <p href="" class="pSecciones" routerLink="/pelis/genre/Acción,Drama">Accion</p>
-        <p href="" class="pSecciones" routerLink="/pelis/genre/Comedia">Comedia</p>
-        <p href="" class="pSecciones" routerLink="/pelis/genre/Drama,Suspenso">Drama</p>
-        <p href="" class="pSecciones" routerLink="/pelis/genre/Suspenso,Acción">Suspenso</p>
-        <p href="" class="pSecciones" routerLink="/pelis/genre/Suspenso,Terror">Terror</p>
-        <p href="" class="pSecciones" routerLink="/pelis/genre/Documental">
-          Documental
-        </p>
-      </div>
-      <div class="seccionesCuenta">
-        <div class="seccioneUsuario">
-          <img src="../../../assets/img/icon/usuario.png" alt="" class="imgUsuario">
-          <p class="pSecciones" (click)="sidenav.open()">Cuenta</p>
-        </div>
-      </div>
+<div class="containerSeccionesPelis">
+  <div class="SeccionesPelis">
+    <p href="" class="pSecciones" routerLink="/pelis/genre/Acción,Drama">Accion</p>
+    <p href="" class="pSecciones" routerLink="/pelis/genre/Comedia">Comedia</p>
+    <p href="" class="pSecciones" routerLink="/pelis/genre/Drama,Suspenso">Drama</p>
+    <p href="" class="pSecciones" routerLink="/pelis/genre/Suspenso,Acción">Suspenso</p>
+    <p href="" class="pSecciones" routerLink="/pelis/genre/Suspenso,Terror">Terror</p>
+    <p href="" class="pSecciones" routerLink="/pelis/genre/Documental">
+      Documental
+    </p>
+  </div>
+  <div class="seccionesCuenta">
+    <div class="seccioneUsuario">
+      <img src="../../../assets/img/icon/usuario.png" alt="" class="imgUsuario">
+      <p class="pSecciones">Cuenta</p>
     </div>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+</div>

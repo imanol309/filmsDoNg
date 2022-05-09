@@ -1,10 +1,13 @@
 <div class="homeContainer">
-    <app-nav-bar></app-nav-bar>
-    <div class="movieSectionsContainer">
-        <app-movie-sections></app-movie-sections>
-        <div class="containerGenre">
-            <h4 class="tituloGenre">INICIO</h4>
-        </div>
-        <app-view-crash [datosPelicula]="datosObjPelicula" [Css] ="css"></app-view-crash>
+  <app-nav-bar></app-nav-bar>
+  <div class="movieSectionsContainer">
+    <app-movie-sections></app-movie-sections>
+    <div class="containerGenre">
+      <h4 class="tituloGenre">INICIO</h4>
     </div>
+    <app-view-crash
+      [datosPelicula]="datosObjPelicula"
+      [Css]="css"
+    ></app-view-crash>
+  </div>
 </div>
