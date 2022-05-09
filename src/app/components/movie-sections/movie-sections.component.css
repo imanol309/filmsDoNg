@@ -79,3 +79,7 @@
   height: 30px;
   transition: filter 0.2s ease;
 }
+
+mat-sidenav {
+  width: 25%;
+}

@@ -40,7 +40,6 @@ mat-dialog-container::-webkit-scrollbar-thumb {
   flex-direction: column;
   background-color: #000000;
   overflow-y: scroll;
-  border-left: 1px solid #ffffffc2;
 }
 
 .movieSectionsContainer::-webkit-scrollbar {
