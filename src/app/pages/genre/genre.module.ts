@@ -10,7 +10,6 @@ import { pagesModule } from '../pages.module';
   imports: [
     CommonModule,
     GenreRoutingModule,
-    MatSidenavModule,
     pagesModule
   ]
 })

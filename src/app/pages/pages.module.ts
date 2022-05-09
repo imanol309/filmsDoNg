@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MoreViewComponent } from './more-view/more-view.component';
 import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
 import { LoginComponent } from '../components/login/login.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { LoginComponent } from '../components/login/login.component';
     ModalSeekerComponent,
     ViewCrashRowComponent,
   ],
-  imports: [CommonModule, pagesRoutingModule, FormsModule],
+  imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
   exports: [
     LoginComponent,
     ViewCrashComponent,
@@ -31,6 +32,7 @@ import { LoginComponent } from '../components/login/login.component';
     MovieSectionsComponent,
     ModalSeekerComponent,
     ViewCrashRowComponent,
+    MatSidenavModule
   ],
 })
 export class pagesModule {}
