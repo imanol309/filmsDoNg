@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./movie-sections.component.css'],
 })
 export class MovieSectionsComponent implements OnInit {
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
+  @ViewChild(MatSidenav) sideRight: MatSidenav;
+  @ViewChild(MatSidenav) sideLeft: MatSidenav;
   constructor(private router: Router) {}
 
   ngOnInit(): void {}

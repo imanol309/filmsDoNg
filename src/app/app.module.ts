@@ -14,7 +14,7 @@ import { ViewCrashRowComponent } from './components/view-crash-row/view-crash-ro
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
-  declarations: [AppComponent, MovieSectionsComponent, LoginComponent],
+  declarations: [AppComponent, MovieSectionsComponent, LoginComponent, NavBarComponent],
   imports: [
     BrowserModule,
     appRoutingModule,

@@ -1,6 +1,11 @@
 <div class="containerSeccionesPelis">
   <div class="seccionesImg">
-    <img src="../../../assets/img/icon/google-play.png" alt="" class="imgLogo">
+    <img 
+    src="../../../assets/img/icon/google-play.png" 
+    alt="" 
+    class="imgLogo" 
+    (click)="sideLeft.open()"
+    >
   </div>
   <div class="seccionesPelis">
     <p href="" class="pSecciones" routerLink="/pelis/genre/Acción,Drama">Accion</p>
@@ -13,15 +18,18 @@
     </p>
   </div>
   <div class="seccionesCuenta">
-    <div class="seccioneUsuario" (click)="sidenav.open()">
+    <div class="seccioneUsuario" (click)="sideRight.open()">
       <img src="../../../assets/img/icon/usuario.png" alt="" class="imgUsuario">
       <p class="pSecciones">Cuenta</p>
     </div>
   </div>
 </div>
 <mat-sidenav-container >
-  <mat-sidenav #sidenav position="end" mode="over">
-    <app-login (closeSidenav)="sidenav.close()"> </app-login>
+  <mat-sidenav #sideRight position="end" mode="over">
+    <app-login (closeSidenav)="sideRight.close()"> </app-login>
+  </mat-sidenav>
+  <mat-sidenav #sideLeft position="start" mode="over">
+    <app-nav-bar (closeSidenav)="sideLeft.close()"> </app-nav-bar>
   </mat-sidenav>
   <mat-sidenav-content style="height: 95vh">
     <router-outlet></router-outlet>
