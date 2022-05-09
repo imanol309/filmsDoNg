@@ -11,15 +11,17 @@ import { ViewCrashComponent } from './components/view-crash/view-crash.component
 import { LoginComponent } from './components/login/login.component';
 import { ModalSeekerComponent } from './components/modal-seeker/modal-seeker.component';
 import { ViewCrashRowComponent } from './components/view-crash-row/view-crash-row.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MovieSectionsComponent, LoginComponent],
   imports: [
     BrowserModule,
     appRoutingModule,
     HttpClientModule,
     MatDialogModule,
     BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],

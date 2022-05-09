@@ -16,7 +16,7 @@ export class GenreComponent implements OnInit, OnDestroy {
   subs = new SubSink();
   description: String;
   css: boolean = true
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
+  
   constructor(
     private rutaActiva: ActivatedRoute,
     private genreService: GenreService

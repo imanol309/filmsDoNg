@@ -8,9 +8,7 @@ import { ModalSeekerComponent } from '../modal-seeker/modal-seeker.component';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
-  constructor(
-    private matDialog: MatDialog,
-  ) {}
+  constructor(private matDialog: MatDialog) {}
 
   ngOnInit(): void {}
 

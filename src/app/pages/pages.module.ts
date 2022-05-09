@@ -17,22 +17,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
-    LoginComponent,
     ViewCrashComponent,
     NavBarComponent,
-    MovieSectionsComponent,
     ModalSeekerComponent,
     ViewCrashRowComponent,
   ],
   imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
   exports: [
-    LoginComponent,
     ViewCrashComponent,
     NavBarComponent,
-    MovieSectionsComponent,
     ModalSeekerComponent,
     ViewCrashRowComponent,
-    MatSidenavModule
+    MatSidenavModule,
   ],
 })
 export class pagesModule {}
