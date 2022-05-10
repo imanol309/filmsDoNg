@@ -13,8 +13,8 @@
   height: 50px;
   border: 1px solid transparent;
   outline: none;
-  border-bottom: 2px solid #3f3f3f;
-  caret-color: #3f3f3f;
+  border-bottom: 1px solid #e6e4e4;
+  caret-color: #ffffff;
   color: white;
   background-color: black;
   padding: 5px;
@@ -26,17 +26,18 @@
 
 .input::placeholder {
   font-size: 20px;
+  color: #ffffff;
 }
 
 .input:focus {
-  border: 2px solid #fa4753;
-  caret-color: #fa4753;
-  color: #fa4753;
+  border: 2px solid #17c3b2;
+  caret-color: #17c3b2;
+  color: #17c3b2;
   box-shadow: 4px 4px 10px #070707;
 }
 
 .input:focus::placeholder {
-  color: #fa4753;
+  color: #17c3b2;
 }
 
 .containerCLose {
@@ -44,7 +45,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  border: 2px solid #3f3f3f;
+  border: 1px solid #ffffff;
   transition: 0.5s linear;
 }
 
@@ -80,9 +81,7 @@ li {
 .textResult {
   color: white;
   font-size: 20px;
-  font-family: "Archivo Black", sans-serif;
-  font-family: "Fredoka", sans-serif;
-  font-family: "Rowdies", cursive;
+  font-family: monospace;
   letter-spacing: 0.1em;
 }
 
