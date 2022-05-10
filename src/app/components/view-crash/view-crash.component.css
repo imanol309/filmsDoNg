@@ -21,7 +21,7 @@
 }
 
 .containerCarh {
-  height: 20%;
+  height: 30%;
   width: 15%;
   animation: square-animation 1s ease-in;
   padding-bottom: 3%;
@@ -55,7 +55,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 390px;
+  height: 420px;
   transition-duration: 1s;
 }
 
