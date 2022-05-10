@@ -1,3 +1,184 @@
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+h4{
+    font-family: monospace;
+}
+
 .containerLogin {
-    width: 20%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerImg {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.playImg {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.Bienvenido {
+  font-size: 35px;
+  font-family: monospace;
+}
+
+/* Iniciar seccion por email */
+
+.containerIniciar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  /* background-color: rebeccapurple; */
+}
+
+.IniciarSeccion {
+  font-size: 20px;
+  padding-bottom: 2%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.685);
+}
+
+.contianerInputs {
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.input {
+  max-width: 80%;
+  width: 100%;
+  height: 50px;
+  border: 1px solid transparent;
+  outline: none;
+  border-bottom: 1px solid #e6e4e4;
+  caret-color: #ffffff;
+  background-color: #ffffff00;
+  padding: 5px;
+  transition: 0.5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.input::placeholder {
+  color: #ffffff;
+}
+
+.input:focus {
+  border: 2px solid #17c3b2;
+  caret-color: #17c3b2;
+  color: #17c3b2;
+  box-shadow: 4px 4px 10px #070707;
+}
+
+.input:focus::placeholder {
+  color: #17c3b2;
+}
+
+.button {
+  width: 100%;
+  padding-top: 6%;
+  align-items: center;
+  text-align: center;
+}
+
+/* From uiverse.io by @nikk7007 */
+
+button {
+  padding: 0.8em 1.8em;
+  border: 2px solid #17c3b2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: monospace;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ffffff;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 105%;
+}
+
+button:hover {
+  color: #111;
+}
+
+/* Contenedor para los terminos y condiciones */
+
+.containerCondiciones {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.containerNoTienes {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+  font-size: 19px;
+}
+
+.pregunta {
+  color: #a9a9a9;
+}
+
+.registrate {
+  cursor: pointer;
+}
+
+.Terminos {
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  text-align: center;
+}
+
+p {
+  color: #a9a9a9;
+  font-size: 12px;
+  font-family: monospace;
 }
