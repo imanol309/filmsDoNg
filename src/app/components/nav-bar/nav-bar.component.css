@@ -28,18 +28,26 @@
 .secciones {
   color: rgb(255, 255, 255);
   font-size: 22px;
-  font-family: IBM Plex Sans, sans-serif;
-  margin: 15px 0;
+  font-family: monospace;
   cursor: pointer;
   margin-left: 10%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.2s ease;
+  border: 1px solid #17c3b200;
+  padding: 2%;
+  transition: 0.5s linear;
+}
+
+.auto:focus {
+  color: #17c3b2;
+  border: 1px solid #17c3b2;
 }
 
 .secciones:hover {
-  color: #e34c16;
+  color: #17c3b2;
+  border: 1px solid #17c3b2;
+  background-color: #e34d1600;
 }
 
 .navBarContacto {
@@ -47,6 +55,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding-top: 2%;
 }
 
 .navBarTexto {
