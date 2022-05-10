@@ -14,12 +14,14 @@ import { MoreViewComponent } from './more-view/more-view.component';
 import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
 import { LoginComponent } from '../components/login/login.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-loading.component';
 
 @NgModule({
   declarations: [
     ViewCrashComponent,
     ModalSeekerComponent,
     ViewCrashRowComponent,
+    SpinnerLoadingComponent
   ],
   imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
   exports: [
@@ -27,6 +29,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     ModalSeekerComponent,
     ViewCrashRowComponent,
     MatSidenavModule,
+    SpinnerLoadingComponent
   ],
 })
 export class pagesModule {}

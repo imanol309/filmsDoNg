@@ -16,7 +16,7 @@ export class GenreComponent implements OnInit, OnDestroy {
   subs = new SubSink();
   description: String;
   css: boolean = true
-  
+  loanding: boolean = false
   constructor(
     private rutaActiva: ActivatedRoute,
     private genreService: GenreService
@@ -24,7 +24,9 @@ export class GenreComponent implements OnInit, OnDestroy {
     this.paramsRutas();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loanding = true
+  }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
@@ -44,6 +46,7 @@ export class GenreComponent implements OnInit, OnDestroy {
       .getGenre(genre)
       .subscribe((datosGenre) => {
         this.datosGenre = datosGenre;
+        this.loanding = false
         this.datosGenre.sort((a,b) => Math.random() - 0.5)
       });
   }

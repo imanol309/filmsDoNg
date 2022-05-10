@@ -85,3 +85,11 @@ li {
   font-family: "Rowdies", cursive;
   letter-spacing: 0.1em;
 }
+
+.containerViewLo {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

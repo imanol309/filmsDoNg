@@ -15,12 +15,16 @@
     <div class="containerTest">
       <h4 class="textResult">Tu resultado :</h4>
     </div>
+    <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
     <app-view-crash [datosPelicula]="data$" [Css]="false" (click)="onNoClick()"></app-view-crash>
   </div>
   <div *ngIf="verInfo" class="containerIAlsoLike">
     <div class="containerTest">
       <h4 class="textResult" >Puede que tambien te guste</h4>
     </div>
-    <app-view-crash [datosPelicula]="pelisRandom" [Css]="true" (click)="onNoClick()"></app-view-crash>
+    <div class="containerViewLo">
+      <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
+      <app-view-crash [datosPelicula]="pelisRandom" [Css]="true" (click)="onNoClick()"></app-view-crash>
+    </div>
   </div>
 </div>

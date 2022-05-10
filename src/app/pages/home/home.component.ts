@@ -12,11 +12,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   datosObjPelicula: HomeDateMovie;
   subs = new SubSink();
   css: boolean = true;
+  loanding: boolean = false
+  
   constructor(private homeServices: HomeService) {
     this.GetDatos();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loanding = true
+  }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
@@ -28,6 +32,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe((datosPelis: HomeDateMovie) => {
         this.datosObjPelicula = datosPelis;
         this.datosObjPelicula.sort((a, b) => Math.random() - 0.5);
+        this.loanding = false
       });
   }
 }

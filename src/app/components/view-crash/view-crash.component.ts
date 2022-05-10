@@ -10,6 +10,7 @@ import { HomeDateMovie } from 'src/app/pages/home/models/home.model';
 export class ViewCrashComponent implements OnInit, OnDestroy {
   @Input() datosPelicula: HomeDateMovie;
   @Input() Css: boolean;
+  @Input() loanding: boolean;
   numSlice: any = 15;
   ShitMore: String = "Ver mas"
   cssVer: boolean = true

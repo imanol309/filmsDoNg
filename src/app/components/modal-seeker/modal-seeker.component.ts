@@ -16,13 +16,16 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   pelisRandom: any;
   src: String;
   verInfo: boolean = false;
+  loanding: boolean = false
 
   constructor(
     public dialogRef: MatDialogRef<ModalSeekerComponent>,
     private homeServices: HomeService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loanding = true
+  }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
@@ -45,6 +48,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
       .getPelisTitulo(capitalizeWords(value))
       .subscribe((datos) => {
         this.data$ = datos;
+        this.loanding = false
         if (this.data$[0] !== null) {
           this.verInfo = true;
           setTimeout(() => {
@@ -57,6 +61,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   getPelis(): void {
     this.subs.sink = this.homeServices.getPelis().subscribe((datos) => {
       this.pelisRandom = datos;
+      this.loanding = false
       this.pelisRandom.sort((a,b) => Math.random() - 0.5)
     });
   }
