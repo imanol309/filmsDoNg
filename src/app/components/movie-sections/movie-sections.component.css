@@ -63,7 +63,6 @@
 
 .pSecciones:hover {
   background-color: #e34d1600;
-  /* border-radius: 4px; */
   filter: opacity(1);
   border: 1px solid #17c3b2;
 }
