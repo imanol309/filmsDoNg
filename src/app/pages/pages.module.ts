@@ -15,13 +15,15 @@ import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-r
 import { LoginComponent } from '../components/login/login.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-loading.component';
+import { SafePipe } from '../pipe/seguridad-url.pipe';
 
 @NgModule({
   declarations: [
     ViewCrashComponent,
     ModalSeekerComponent,
     ViewCrashRowComponent,
-    SpinnerLoadingComponent
+    SpinnerLoadingComponent,
+    SafePipe
   ],
   imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
   exports: [
@@ -29,7 +31,8 @@ import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-l
     ModalSeekerComponent,
     ViewCrashRowComponent,
     MatSidenavModule,
-    SpinnerLoadingComponent
+    SpinnerLoadingComponent,
+    SafePipe
   ],
 })
 export class pagesModule {}
