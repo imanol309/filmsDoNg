@@ -12,7 +12,6 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   @Input() Css: boolean;
   @Input() loanding: boolean;
   numSlice: any = 15;
-  ShitMore: String = "Ver mas"
   cssVer: boolean = true
 
   constructor(private router: Router) {}

@@ -99,7 +99,8 @@
   color: #fafafa;
   font-size: 17px;
   width: 70%;
-  font-family: "Fredoka", sans-serif;
+  font-family: monospace;
+  transition: 0.5s linear;
   letter-spacing: 0.1em;
   white-space: nowrap;
   overflow: hidden;
@@ -110,7 +111,7 @@
 }
 
 .tituloCarh:hover {
-  color: #e34c16;
+  color: #17c3b2;
 }
 
 .genero {
@@ -154,7 +155,13 @@
   width: 15%;
   height: 35%;
   background-color: #fafafa;
-  font-family: "Archivo Black", sans-serif;
-  font-family: "Fredoka", sans-serif;
-  font-family: "Rowdies", cursive;
+  font-family: monospace;
+  border: 1px solid #17c3b200;
+  transition: 0.5s linear;
+}
+
+.btnCargar:hover {
+  background-color: #fafafa00;
+  color: white;
+  border: 1px solid #17c3b2;
 }

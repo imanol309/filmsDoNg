@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
+
 .containerSidenav {
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@
 .tituloGenre {
   color: #ffffff;
   font-size: 30px;
-  font-family: "Fredoka", sans-serif;
+  font-family: monospace;
   letter-spacing: 0.10em;
 }
 
@@ -32,5 +33,5 @@
   width: 80%;
   color: #8a898e;
   font-size: 18px;
-  font-family: "Fredoka", sans-serif;
+  font-family: monospace;
 }
