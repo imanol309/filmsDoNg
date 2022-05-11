@@ -4,7 +4,7 @@
       <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
       <div class="containerIframe">
         <iframe
-          src="{{ datos?.video | safe: 'url' }}"
+          [src]='transform(datos?.video)'
           width="100%"
           height="700px"
           allowfullscreen
