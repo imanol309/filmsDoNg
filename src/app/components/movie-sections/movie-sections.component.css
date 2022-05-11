@@ -170,11 +170,11 @@
   }
 
   .sideRigth {
-    width: 60%;
+    width: 80%;
   }
 
   .sideLeft {
-    width: 60%;
+    width: 80%;
   }
 
   .seccionesImg {
@@ -209,10 +209,12 @@
 
   .sideRigth {
     width: 100%;
+    border-left: 0px solid white;
   }
 
   .sideLeft {
     width: 100%;
+    border-right: 0px solid white;
   }
 
   .seccionesImg {
@@ -247,10 +249,12 @@
 
   .sideRigth {
     width: 100%;
+    border-left: 0px solid white;
   }
 
   .sideLeft {
     width: 100%;
+    border-right: 0px solid white;
   }
 
   .seccionesImg {

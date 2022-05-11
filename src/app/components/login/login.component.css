@@ -184,3 +184,117 @@ p {
   font-size: 12px;
   font-family: monospace;
 }
+
+
+/* Para 960px */  
+@media only screen and (max-width: 980px) and (min-width: 821px) {  
+  .Bienvenido {
+    font-size: 32px;
+  }
+  .IniciarSeccion {
+    font-size: 19px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+}  
+  
+/* Para 800px */  
+@media only screen and (max-width: 820px) and (min-width: 621px) {  
+  .Bienvenido {
+    font-size: 30px;
+  }
+
+  .IniciarSeccion {
+    font-size: 17px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+}  
+  
+/* Para 600px */  
+@media only screen and (max-width: 620px) and (min-width: 501px) {  
+  .Bienvenido {
+    font-size: 28px;
+  }
+  .IniciarSeccion {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  .Terminos {
+    width: 45%;
+  }
+
+  .pregunta {
+    font-size: 14px;
+  }
+
+  .registrate {
+    font-size: 14px;
+  }
+}  
+  
+/* Para 480px */  
+@media only screen and (max-width: 500px) and (min-width: 341px) {  
+  .Bienvenido {
+    font-size: 25px;
+  }
+  .IniciarSeccion {
+    font-size: 15px;
+  }
+  button {
+    font-size: 11px;
+  }
+
+  .Terminos {
+    width: 50%;
+  }
+
+  .pregunta {
+    font-size: 12px;
+  }
+
+  .registrate {
+    font-size: 12px;
+  }
+
+}  
+  
+/* Para 320px */  
+@media only screen and (max-width: 340px) and (min-width: 5px)  {  
+  .Bienvenido {
+    font-size: 21px;
+  }
+  .IniciarSeccion {
+    font-size: 11px;
+  }
+
+  button {
+    font-size: 9px;
+  }
+
+  .playImg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .Terminos {
+    width: 60%;
+  }
+
+  .pregunta {
+    font-size: 10px;
+  }
+
+  .registrate {
+    font-size: 10px;
+  }
+
+} 
