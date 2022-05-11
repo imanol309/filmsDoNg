@@ -102,7 +102,7 @@
   border-right: 1px solid white;
 }
 
-/* Para 960px */
+/* Para 1300px */
 @media only screen and (max-width: 1300px) and (min-width: 980px) {
   .seccionesPelis {
     width: 60%;
