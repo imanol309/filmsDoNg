@@ -21,7 +21,7 @@
 }
 
 .containerCarh {
-  height: 30%;
+  height: 20%;
   width: 15%;
   animation: square-animation 1s ease-in;
   padding-bottom: 3%;
@@ -166,6 +166,29 @@
   border: 1px solid #17c3b2;
 }
 
+.carh650 {
+  height: 220px;
+}
+
+.conatainer650 {
+  width: 25%;
+}
+
+.carh500 {
+  height: 200px;
+}
+
+.conatainer500 {
+  width: 30%;
+}
+
+.carh350 {
+  height: 150px;
+}
+
+.conatainer350{
+  width: 40%;
+}
 
 /* Media screen para crear el diseño para pantalla mas pequeña */
 
