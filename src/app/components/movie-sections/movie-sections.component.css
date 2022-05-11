@@ -176,6 +176,26 @@
   .sideLeft {
     width: 60%;
   }
+
+  .seccionesImg {
+    width: 20%;
+  }
+
+  .seccionesCuenta {
+    width: 40%;
+  }
+
+  .imgLogo {
+    height: 30px;
+  }
+
+  .imgUsuario {
+    height: 25px;
+  }
+
+  .pCuenta {
+    font-size: 15px;
+  }
 }
 
 /* Para 480px */
@@ -194,6 +214,26 @@
   .sideLeft {
     width: 100%;
   }
+
+  .seccionesImg {
+    width: 20%;
+  }
+
+  .seccionesCuenta {
+    width: 40%;
+  }
+
+  .imgLogo {
+    height: 30px;
+  }
+
+  .imgUsuario {
+    height: 25px;
+  }
+
+  .pCuenta {
+    font-size: 13px;
+  }
 }
 
 /* Para 320px */
@@ -211,5 +251,25 @@
 
   .sideLeft {
     width: 100%;
+  }
+
+  .seccionesImg {
+    width: 20%;
+  }
+
+  .seccionesCuenta {
+    width: 40%;
+  }
+
+  .imgLogo {
+    height: 25px;
+  }
+
+  .imgUsuario {
+    height: 20px;
+  }
+
+  .pCuenta {
+    font-size: 11px;
   }
 }
