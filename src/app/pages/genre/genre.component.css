@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
-
 .containerSidenav {
   margin: 0;
   padding: 0;
@@ -67,6 +65,7 @@
 
   .descriptionGenre {
     width: 100%;
+    background-color: darkcyan;
     font-size: 12px;
   }
 }
@@ -96,6 +95,7 @@
 
   .descriptionGenre {
     width: 100%;
+    background-color: darkcyan;
     font-size: 8px;
   }
 
