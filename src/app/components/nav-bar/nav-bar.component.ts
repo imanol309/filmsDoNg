@@ -10,12 +10,13 @@ import { ModalSeekerComponent } from '../modal-seeker/modal-seeker.component';
 export class NavBarComponent implements OnInit {
   constructor(private matDialog: MatDialog) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   openModalSeeker(): void {
     const dialogRef = this.matDialog.open(ModalSeekerComponent, {
-      width: '90vw',
-      height: '50vw',
+      width: '100%',
+      height: '90%',
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
