@@ -111,6 +111,14 @@
   .pSecciones {
     font-size: 14px;
   }
+
+  .sideRigth {
+    width: 30%;
+  }
+
+  .sideLeft {
+    width: 30%;
+  }
 }
 
 /* Para 960px */
@@ -121,6 +129,14 @@
 
   .pSecciones {
     font-size: 14px;
+  }
+
+  .sideRigth {
+    width: 40%;
+  }
+
+  .sideLeft {
+    width: 40%;
   }
 }
 
@@ -133,6 +149,14 @@
   .pSecciones {
     font-size: 14px;
   }
+
+  .sideRigth {
+    width: 50%;
+  }
+
+  .sideLeft {
+    width: 50%;
+  }
 }
 
 /* Para 600px */
@@ -144,6 +168,14 @@
   .containerSeccionesPelis {
     justify-content: space-between;
   }
+
+  .sideRigth {
+    width: 60%;
+  }
+
+  .sideLeft {
+    width: 60%;
+  }
 }
 
 /* Para 480px */
@@ -154,6 +186,14 @@
   .containerSeccionesPelis {
     justify-content: space-between;
   }
+
+  .sideRigth {
+    width: 100%;
+  }
+
+  .sideLeft {
+    width: 100%;
+  }
 }
 
 /* Para 320px */
@@ -163,5 +203,13 @@
   }
   .containerSeccionesPelis {
     justify-content: space-between;
+  }
+
+  .sideRigth {
+    width: 100%;
+  }
+
+  .sideLeft {
+    width: 100%;
   }
 }
