@@ -23,7 +23,7 @@ import { SafePipe } from '../pipe/seguridad-url.pipe';
     ModalSeekerComponent,
     ViewCrashRowComponent,
     SpinnerLoadingComponent,
-    SafePipe
+    SafePipe,
   ],
   imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
   exports: [

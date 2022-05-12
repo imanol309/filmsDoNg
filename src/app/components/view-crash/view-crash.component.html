@@ -10,7 +10,7 @@
         <div class="containerInfo" (click)="routerMovies(item?.titulo)" *ngIf="item">
             <p class="tituloCarh">{{item?.titulo}}</p>
             <div class="genero">
-                <p class="generoCarh generoYears">{{item?.year || '2013'}} - 90Min</p>
+                <p class="generoCarh generoYears">{{item?.year || '2013'}} - {{item?.time || '90M'}}Min</p>
                 <p class="generoCarh">{{item?.genero.split('_').join('· ')}}</p>
             </div>
         </div>
