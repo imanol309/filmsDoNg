@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
 
+/* .ContainerLoading {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 /* Container pelis informacion */
 .containerPelisInfoCenter {
+  margin: 0;
   margin-top: 1%;
   display: flex;
   flex-direction: row;
