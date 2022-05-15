@@ -22,7 +22,7 @@
 
 .containerCarh {
   height: 20%;
-  width: 15%;
+  width: 18%;
   animation: square-animation 1s ease-in;
   padding-bottom: 3%;
 }
@@ -39,7 +39,7 @@
 
 .Carh {
   margin-bottom: 2%;
-  width: 100%;
+  width: 95%;
   height: 100%;
   display: flex;
   position: relative;
@@ -55,7 +55,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 400px;
+  height: 380px;
   transition-duration: 1s;
 }
 
@@ -90,6 +90,7 @@
 }
 
 .containerInfo {
+  width: 95%;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -171,13 +172,13 @@
 /* Para 1250px */  
 @media only screen and (max-width: 1250px) and (min-width: 980px) {  
   .containerCarh {
-    height: 25%;
+    height: 20%;
     width: 18%;
   }
 
   .carhImg {
     width: 100%;
-    height: 320px;
+    height: 290px;
   }
 } 
 
@@ -239,7 +240,7 @@
 @media only screen and (max-width: 620px) and (min-width: 501px) {  
   .containerCarh {
     height: 20%;
-    width: 25%;
+    width: 30%;
   }
 
   .carhImg {
@@ -268,12 +269,12 @@
 @media only screen and (max-width: 500px) and (min-width: 341px) {  
   .containerCarh {
     height: 20%;
-    width: 30%;
+    width: 40%;
   }
 
   .carhImg {
     width: 100%;
-    height: 200px;
+    height: 220px;
   }
 
   .genero {
