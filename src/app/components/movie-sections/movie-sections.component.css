@@ -92,12 +92,14 @@
 
 .sideRigth {
   width: 25%;
+  height: 95vh;
   background-color: #000000;
   border-left: 1px solid white;
 }
 
 .sideLeft {
   width: 20%;
+  height: 95vh;
   background-color: #000000;
   border-right: 1px solid white;
 }

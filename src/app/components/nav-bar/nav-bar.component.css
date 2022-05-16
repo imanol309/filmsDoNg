@@ -1,11 +1,15 @@
 .NavbarPrincipal {
   left: 0;
   top: 0;
-  height: 100%;
+  height: 90%;
   min-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .NavbarContainer {
+  margin-top: 2%;
   display: flex;
   width: 100%;
   justify-content: flex-start;
@@ -13,7 +17,6 @@
 }
 
 .navBarSecciones {
-  margin-top: 5%;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -24,12 +27,11 @@
   font-size: 18px;
   font-family: monospace;
   cursor: pointer;
-  margin-left: 10%;
+  margin-left: 8%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border: 1px solid #17c3b200;
-  padding: 2%;
   transition: 0.5s linear;
 }
 
@@ -45,17 +47,14 @@
 }
 
 .navBarContacto {
-  border-top: 1px solid #ffffffc2;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   padding-top: 2%;
+  border-top: 1px solid #ffffffc2;
+  width: 100%;
 }
 
 /* adding the genre bar when it reaches the mobile level */
 .seccionesPelis {
-  margin-top: 5%;
-  padding-top: 4%;
+  padding-top: 2%;
   border-top: 1px solid #ffffffc2;
   display: none;
   width: 100%;
