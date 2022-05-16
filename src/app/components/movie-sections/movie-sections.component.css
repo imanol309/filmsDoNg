@@ -162,10 +162,6 @@
     width: 80%;
   }
 
-  /* .sideLeft {
-    width: 80%;
-  } */
-
   .seccionesImg {
     width: 20%;
   }
@@ -202,7 +198,7 @@
   }
 
   .sideLeft {
-    width: 25%;
+    width: 40%;
     border-right: 1px solid white;
   }
 
@@ -242,7 +238,7 @@
   }
 
   .sideLeft {
-    width: 25%;
+    width: 40%;
     border-right: 1px solid white;
   }
 
