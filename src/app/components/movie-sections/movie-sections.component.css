@@ -87,7 +87,6 @@
 .imgUsuario {
   height: 30px;
   transition: filter 0.2s ease;
-  filter: opacity(0.4) drop-shadow(0 0 0 #c4c4c4);
 }
 
 .sideRigth {
