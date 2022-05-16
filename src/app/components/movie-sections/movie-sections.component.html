@@ -24,11 +24,11 @@
     </div>
   </div>
 </div>
-<mat-sidenav-container autosize>
+<mat-sidenav-container autosize >
   <mat-sidenav #sideRight position="end" mode="over" class="sideRigth" >
     <app-login (closeSidenav)="sideRight.close()"> </app-login>
   </mat-sidenav>
-  <mat-sidenav #sideLeft position="start" mode="side" class="sideLeft">
+  <mat-sidenav #sideLeft position="start" mode="push" class="sideLeft">
     <app-nav-bar (closeSidenav)="sideLeft.close()"> </app-nav-bar>
   </mat-sidenav>
   <mat-sidenav-content style="height: 92vh">
