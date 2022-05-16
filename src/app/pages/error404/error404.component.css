@@ -1,0 +1,29 @@
+strong {
+    color: red;
+}
+
+.container404 {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/img/404/bg6.jpg');
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+}
+
+.containerText {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.text {
+    color: white;
+    font-size: 55px;
+    font-family: monospace;
+    width: 60%;
+    white-space: pre-wrap;
+    line-height: 100%;
+    text-align: center;
+}

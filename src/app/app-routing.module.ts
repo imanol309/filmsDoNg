@@ -7,6 +7,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/pages.module').then((m) => m.pagesModule)
     },
     {
+        path: 'error404',
+        loadChildren: () => import('./pages/error404/error404.module').then((m) => m.Error404Module)
+    },
+    {
         path: '**', redirectTo: 'pelis'
     }
 ];
