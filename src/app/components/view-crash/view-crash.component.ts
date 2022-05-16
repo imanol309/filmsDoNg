@@ -19,7 +19,6 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     if (!this.Css) {
       this.cssVer = false;
     }
-    console.log(window.innerWidth)
   }
 
   ngOnDestroy(): void {

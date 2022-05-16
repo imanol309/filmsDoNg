@@ -36,7 +36,14 @@ export class ViewingMoviesComponent implements OnInit {
     this.subs.sink = this.viewingMoviesService
       .getPelisTitulo(value)
       .subscribe((datos) => {
-        console.log(datos);
+        if (datos) {
+          this.subs.sink = this.viewingMoviesService
+            .getPelisMasVistasTitulo(value)
+            .subscribe((datos) => {
+              this.peliDato = datos;
+              this.loanding = false;
+            });
+        }
         this.peliDato = datos;
         this.loanding = false;
       });
