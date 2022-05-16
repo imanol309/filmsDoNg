@@ -1,3 +1,13 @@
 <div class="movieSectionsContainer">
-  <app-view-crash-row></app-view-crash-row>
+  <div class="containerGenre">
+    <div class="infoGenre">
+      <h4 class="tituloGenre">La Mas Vistas</h4>
+      <p class="descriptionGenre">Esta es la lista de peliculas mas vistas en la historia de la Republica Dominicana, estan ordenada de la numero ONE hasta la ultima. Seguiremos agregando cada año mas.</p>
+    </div>
+  </div>
+  <app-view-crash
+  [datosPelicula]="datosPelisMasVistas"
+  [Css]="css"
+  [loanding]="loanding"
+></app-view-crash>
 </div>

@@ -1,9 +1,3 @@
-.containerSidenav {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
 .containerGenre {
   display: flex;
   justify-content: center;

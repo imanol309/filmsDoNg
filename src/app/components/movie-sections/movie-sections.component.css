@@ -116,6 +116,11 @@
   .sideRigth {
     width: 30%;
   }
+
+  .sideLeft {
+    width: 20%;
+    border-right: 1px solid white;
+  }
 }
 
 /* Para 960px */
@@ -131,6 +136,12 @@
   .sideRigth {
     width: 40%;
   }
+
+  .sideLeft {
+    width: 30%;
+    border-right: 1px solid white;
+  }
+
 }
 
 /* Para 800px */
@@ -146,6 +157,12 @@
   .sideRigth {
     width: 50%;
   }
+
+  .sideLeft {
+    width: 40%;
+    border-right: 1px solid white;
+  }
+
 }
 
 /* Para 600px */
@@ -160,6 +177,11 @@
 
   .sideRigth {
     width: 80%;
+  }
+
+  .sideLeft {
+    width: 40%;
+    border-right: 1px solid white;
   }
 
   .seccionesImg {
@@ -238,7 +260,7 @@
   }
 
   .sideLeft {
-    width: 40%;
+    width: 50%;
     border-right: 1px solid white;
   }
 
