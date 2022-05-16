@@ -1,12 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka:wdth,wght@86.6,375;100,300&family=Rowdies&display=swap");
-
-/* .ContainerLoading {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 /* Container pelis informacion */
 .containerPelisInfoCenter {
   margin: 0;
@@ -30,7 +21,7 @@
 
 .containerCarh {
   height: 20%;
-  width: 18%;
+  width: 15%;
   animation: square-animation 1s ease-in;
   padding-bottom: 3%;
 }
@@ -178,10 +169,10 @@
 /* Media screen para crear el diseño para pantalla mas pequeña */
 
 /* Para 1250px */  
-@media only screen and (max-width: 1250px) and (min-width: 980px) {  
+@media only screen and (max-width: 1390px) and (min-width: 980px) {  
   .containerCarh {
     height: 20%;
-    width: 18%;
+    width: 17%;
   }
 
   .carhImg {
@@ -282,7 +273,7 @@
 
   .carhImg {
     width: 100%;
-    height: 220px;
+    height: 230px;
   }
 
   .genero {
@@ -306,13 +297,13 @@
 /* Para 320px */  
 @media only screen and (max-width: 340px) and (min-width: 5px)  {  
   .containerCarh {
-    height: 20%;
+    height: 23%;
     width: 40%;
   }
 
   .carhImg {
     width: 100%;
-    height: 150px;
+    height: 170px;
   }
 
   .genero {
