@@ -36,7 +36,7 @@ export class ViewingMoviesComponent implements OnInit {
     this.subs.sink = this.viewingMoviesService
       .getPelisTitulo(value)
       .subscribe((datos) => {
-        if (datos) {
+        if (datos[0] === null) {
           this.subs.sink = this.viewingMoviesService
             .getPelisMasVistasTitulo(value)
             .subscribe((datos) => {
