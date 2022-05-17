@@ -40,6 +40,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.subs.unsubscribe();
   }
 
+  eliminarDatos() {
+    localStorage.removeItem('usuario');
+    location.reload();
+  }
+
   datosForm() {
     if (!this.formLogin.valid) {
       return;
@@ -51,6 +56,7 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.datosLogin = value;
           this.is_sendmail = true;
           localStorage.setItem('usuario', JSON.stringify(this.datosLogin.DatosLogin));
+          location.reload();
         },
         (_error) => {
           this.is_sendmail = false;
