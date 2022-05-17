@@ -18,15 +18,32 @@
             formControlName="email"
             class="input"
           />
+          <mat-error *ngIf="formLogin.controls['email'].touched && formLogin.controls['email'].hasError('required')">
+            Correo Requerido.
+          </mat-error>
+          <mat-error *ngIf="formLogin.controls['password'].touched && formLogin.controls['email'].hasError('pattern')">
+            Correo inválido.
+          </mat-error>
           <input
             type="password"
             placeholder="Contraseña"
             formControlName="password"
             class="input"
           />
+          <mat-error *ngIf="formLogin.controls['password'].touched && formLogin.controls['password'].hasError('required')">
+            Contraseña Requerida.
+          </mat-error>
+          <mat-error *ngIf="formLogin.controls['password'].touched && formLogin.controls['password'].invalid">
+            Esta contraseña no cumple con el tamaño.
+          </mat-error>
+        </div>
+        <div class="matError">
+          <mat-error *ngIf="is_sendmail == false && (!formLogin.controls['email'].hasError('required')) && !formLogin.controls['email'].hasError('pattern')">
+            No pudimos encontrar un usuario con este correo electrónico y esta contraseña, intente con otro.
+          </mat-error>
         </div>
         <div class="button">
-          <button type="submit">Iniciar Sesión</button>
+          <button type="submit" [disabled]="formLogin.invalid">Iniciar Sesión</button>
         </div>
       </form>
     </div>

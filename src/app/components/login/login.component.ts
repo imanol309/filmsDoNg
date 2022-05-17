@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { SubSink } from 'subsink';
+import { GenericService } from '../../services/generic.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   formLogin: FormGroup;
-  constructor(private fb: FormBuilder) {
+  subs = new SubSink();
+  datosLogin;
+  is_sendmail: boolean | undefined = undefined;
+  constructor(private fb: FormBuilder, private genericService: GenericService) {
     this.formLogin = this.fb.group({
       email: [
         '',
@@ -32,10 +36,28 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
 
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
+  }
+
   datosForm() {
-    if (!this.formLogin.valid){
+    if (!this.formLogin.valid) {
       return;
     }
-    console.log('Datos', this.formLogin.value)
+    this.subs.sink = this.genericService
+      .postLogin(this.formLogin.value)
+      .subscribe(
+        (value) => {
+          this.datosLogin = value;
+          this.is_sendmail = true;
+          console.log(this.datosLogin);
+        },
+        (_error) => {
+          this.is_sendmail = false;
+          setInterval(() => {
+            this.is_sendmail = true;
+          }, 5000);
+        }
+      );
   }
 }

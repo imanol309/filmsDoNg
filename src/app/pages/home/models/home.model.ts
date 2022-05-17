@@ -25,3 +25,14 @@ export interface homeDateMovieVistas {
   duracion: String;
   time: String;
 }
+
+export interface homeLoginSchema {
+  sort(arg0: (a: any, b: any) => number);
+  random(): any;
+  length: any;
+  email: string;
+  name: String;
+  password: string;
+  signupDate: string;
+  favoriteMovies: HomeDateMovie;
+}

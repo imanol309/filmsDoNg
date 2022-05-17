@@ -109,6 +109,13 @@ h4{
   text-align: center;
 }
 
+.matError {
+  width: 100%;
+  padding-top: 1%;
+  align-items: center;
+  text-align: center;
+}
+
 /* From uiverse.io by @nikk7007 */
 
 button {
