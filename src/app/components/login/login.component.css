@@ -9,69 +9,6 @@ h4 {
   text-align: center;
 }
 
-/* From uiverse.io */
-button {
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  background: red;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: #e62222;
-}
-
-button,
-button span {
-  transition: 200ms;
-}
-
-button .text {
-  transform: translateX(35px);
-  color: white;
-  font-weight: bold;
-}
-
-button .icon {
-  position: absolute;
-  border-left: 1px solid #c41b1b;
-  transform: translateX(110px);
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button svg {
-  width: 15px;
-  fill: #eee;
-}
-
-button:hover {
-  background: #ff3636;
-}
-
-button:hover .text {
-  color: transparent;
-}
-
-button:hover .icon {
-  width: 150px;
-  border-left: none;
-  transform: translateX(0);
-}
-
-button:focus {
-  outline: none;
-}
-
-button:active .icon svg {
-  transform: scale(0.8);
-}
-
 .containerLogin {
   width: 100%;
   height: 100%;
@@ -112,7 +49,6 @@ button:active .icon svg {
   justify-content: center;
   align-items: center;
   height: 250px;
-  /* background-color: rebeccapurple; */
 }
 
 .IniciarSeccion {
@@ -260,6 +196,69 @@ p {
 }
 
 /* BOTON PARA CERRAR CESSION EN LOGIN */
+
+/* From uiverse.io */
+.noselect {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+}
+
+.noselect,
+button span {
+  transition: 200ms;
+}
+
+.noselect .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.noselect .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noselect svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.noselect:hover {
+  background: #ff3636;
+}
+
+.noselect:hover .text {
+  color: transparent;
+}
+
+.noselect:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.noselect:focus {
+  outline: none;
+}
+
+.noselect:active .icon svg {
+  transform: scale(0.8);
+}
 
 .containerCerrar {
   width: 100%;

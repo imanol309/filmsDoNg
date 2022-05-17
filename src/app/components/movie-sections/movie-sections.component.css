@@ -52,6 +52,10 @@
   text-align: center;
   filter: opacity(0.7);
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50%;
 }
 
 .pCuenta:hover {
