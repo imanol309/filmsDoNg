@@ -184,7 +184,7 @@
   }
 
   .sideLeft {
-    width: 40%;
+    width: 50%;
     border-right: 1px solid white;
   }
 
@@ -206,6 +206,7 @@
 
   .pCuenta {
     font-size: 15px;
+    width: 40%;
   }
 }
 
@@ -224,7 +225,7 @@
   }
 
   .sideLeft {
-    width: 40%;
+    width: 70%;
     border-right: 1px solid white;
   }
 
@@ -246,6 +247,7 @@
 
   .pCuenta {
     font-size: 13px;
+    width: 38%;
   }
 }
 
@@ -264,7 +266,7 @@
   }
 
   .sideLeft {
-    width: 50%;
+    width: 70%;
     border-right: 1px solid white;
   }
 
@@ -286,5 +288,6 @@
 
   .pCuenta {
     font-size: 11px;
+    width: 30%;
   }
 }

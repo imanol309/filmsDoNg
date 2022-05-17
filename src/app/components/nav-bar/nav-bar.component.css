@@ -98,9 +98,10 @@
 /* Para 480px */
 @media only screen and (max-width: 500px) and (min-width: 341px) {
   .secciones {
-    font-size: 14px;
+    font-size: 16px;
     padding: 0%;
     margin: 0;
+    margin-bottom: 2%;
     margin-left: 8%;
   }
 
@@ -112,9 +113,10 @@
 /* Para 320px */
 @media only screen and (max-width: 340px) and (min-width: 5px) {
   .secciones {
-    font-size: 12px;
+    font-size: 14px;
     padding: 0%;
     margin: 0;
+    margin-bottom: 2%;
     margin-left: 8%;
   }
 
