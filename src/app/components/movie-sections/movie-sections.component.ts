@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./movie-sections.component.css'],
 })
 export class MovieSectionsComponent implements OnInit {
+  datoUsuario;
   @ViewChild(MatSidenav) sideRight: MatSidenav;
   @ViewChild(MatSidenav) sideLeft: MatSidenav;
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
+    console.log(this.datoUsuario);
+  }
 }

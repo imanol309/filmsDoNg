@@ -20,7 +20,7 @@
   <div class="seccionesCuenta">
     <div class="seccioneUsuario" (click)="sideRight.toggle()">
       <img src="../../../assets/img/icon/usuario.png" alt="" class="imgUsuario">
-      <p class="pCuenta">Cuenta</p>
+      <p class="pCuenta">{{datoUsuario ? datoUsuario?.name : 'Cuenta'}}</p>
     </div>
   </div>
 </div>

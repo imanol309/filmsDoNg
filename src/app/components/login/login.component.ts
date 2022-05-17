@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         (value) => {
           this.datosLogin = value;
           this.is_sendmail = true;
-          console.log(this.datosLogin);
+          localStorage.setItem('usuario', JSON.stringify(this.datosLogin.DatosLogin));
         },
         (_error) => {
           this.is_sendmail = false;
