@@ -4,9 +4,72 @@
   padding: 0;
 }
 
-h4{
-    font-family: monospace;
-    text-align: center;
+h4 {
+  font-family: monospace;
+  text-align: center;
+}
+
+/* From uiverse.io */
+button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+}
+
+button,
+button span {
+  transition: 200ms;
+}
+
+button .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+button .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button svg {
+  width: 15px;
+  fill: #eee;
+}
+
+button:hover {
+  background: #ff3636;
+}
+
+button:hover .text {
+  color: transparent;
+}
+
+button:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active .icon svg {
+  transform: scale(0.8);
 }
 
 .containerLogin {
@@ -118,7 +181,7 @@ h4{
 
 /* From uiverse.io by @nikk7007 */
 
-button {
+.buttonIS {
   padding: 0.8em 1.8em;
   border: 2px solid #17c3b2;
   position: relative;
@@ -134,7 +197,7 @@ button {
   cursor: pointer;
 }
 
-button::before {
+.buttonIS::before {
   content: "";
   width: 0;
   height: 300%;
@@ -148,11 +211,11 @@ button::before {
   z-index: -1;
 }
 
-button:hover::before {
+.buttonIS:hover::before {
   width: 105%;
 }
 
-button:hover {
+.buttonIS:hover {
   color: #111;
 }
 
@@ -196,9 +259,17 @@ p {
   font-family: monospace;
 }
 
+/* BOTON PARA CERRAR CESSION EN LOGIN */
 
-/* Para 960px */  
-@media only screen and (max-width: 980px) and (min-width: 821px) {  
+.containerCerrar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Para 960px */
+@media only screen and (max-width: 980px) and (min-width: 821px) {
   .Bienvenido {
     font-size: 32px;
   }
@@ -206,13 +277,13 @@ p {
     font-size: 19px;
   }
 
-  button {
+  .buttonIS {
     font-size: 13px;
   }
-}  
-  
-/* Para 800px */  
-@media only screen and (max-width: 820px) and (min-width: 621px) {  
+}
+
+/* Para 800px */
+@media only screen and (max-width: 820px) and (min-width: 621px) {
   .Bienvenido {
     font-size: 30px;
   }
@@ -221,13 +292,13 @@ p {
     font-size: 17px;
   }
 
-  button {
+  .buttonIS {
     font-size: 12px;
   }
-}  
-  
-/* Para 600px */  
-@media only screen and (max-width: 620px) and (min-width: 501px) {  
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
   .Bienvenido {
     font-size: 28px;
   }
@@ -235,7 +306,7 @@ p {
     font-size: 16px;
   }
 
-  button {
+  .buttonIS {
     font-size: 12px;
   }
 
@@ -250,17 +321,17 @@ p {
   .registrate {
     font-size: 14px;
   }
-}  
-  
-/* Para 480px */  
-@media only screen and (max-width: 500px) and (min-width: 341px) {  
+}
+
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
   .Bienvenido {
     font-size: 25px;
   }
   .IniciarSeccion {
     font-size: 15px;
   }
-  button {
+  .buttonIS {
     font-size: 11px;
   }
 
@@ -275,11 +346,10 @@ p {
   .registrate {
     font-size: 12px;
   }
+}
 
-}  
-  
-/* Para 320px */  
-@media only screen and (max-width: 340px) and (min-width: 5px)  {  
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
   .Bienvenido {
     font-size: 21px;
   }
@@ -287,7 +357,7 @@ p {
     font-size: 11px;
   }
 
-  button {
+  .buttonIS {
     font-size: 9px;
   }
 
@@ -307,5 +377,4 @@ p {
   .registrate {
     font-size: 10px;
   }
-
-} 
+}

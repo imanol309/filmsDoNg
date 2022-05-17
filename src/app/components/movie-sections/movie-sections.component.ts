@@ -15,6 +15,5 @@ export class MovieSectionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
-    console.log(this.datoUsuario);
   }
 }

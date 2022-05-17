@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   formLogin: FormGroup;
   subs = new SubSink();
   datosLogin;
+  datoUsuario;
   is_sendmail: boolean | undefined = undefined;
   constructor(private fb: FormBuilder, private genericService: GenericService) {
     this.formLogin = this.fb.group({
@@ -34,7 +35,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
+  }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
@@ -57,6 +60,7 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.is_sendmail = true;
           localStorage.setItem('usuario', JSON.stringify(this.datosLogin.DatosLogin));
           location.reload();
+
         },
         (_error) => {
           this.is_sendmail = false;

@@ -1,8 +1,7 @@
 <div class="containerLogin">
-  <div class="containerInput">
+  <div class="containerInput" *ngIf="!datoUsuario">
     <div class="containerImg">
       <img
-        (click)="eliminarDatos()"
         src="../../../assets/img/icon/google-play.png"
         alt=""
         class="playImg"
@@ -11,7 +10,11 @@
     </div>
     <div class="containerIniciar">
       <h4 class="IniciarSeccion">Iniciar Sesión Por Email</h4>
-      <form [formGroup]="formLogin" (ngSubmit)="datosForm()" class="formContainer">
+      <form
+        [formGroup]="formLogin"
+        (ngSubmit)="datosForm()"
+        class="formContainer"
+      >
         <div class="contianerInputs">
           <input
             type="text"
@@ -19,10 +22,20 @@
             formControlName="email"
             class="input"
           />
-          <mat-error *ngIf="formLogin.controls['email'].touched && formLogin.controls['email'].hasError('required')">
+          <mat-error
+            *ngIf="
+              formLogin.controls['email'].touched &&
+              formLogin.controls['email'].hasError('required')
+            "
+          >
             Correo Requerido.
           </mat-error>
-          <mat-error *ngIf="formLogin.controls['password'].touched && formLogin.controls['email'].hasError('pattern')">
+          <mat-error
+            *ngIf="
+              formLogin.controls['password'].touched &&
+              formLogin.controls['email'].hasError('pattern')
+            "
+          >
             Correo inválido.
           </mat-error>
           <input
@@ -31,20 +44,39 @@
             formControlName="password"
             class="input"
           />
-          <mat-error *ngIf="formLogin.controls['password'].touched && formLogin.controls['password'].hasError('required')">
+          <mat-error
+            *ngIf="
+              formLogin.controls['password'].touched &&
+              formLogin.controls['password'].hasError('required')
+            "
+          >
             Contraseña Requerida.
           </mat-error>
-          <mat-error *ngIf="formLogin.controls['password'].touched && formLogin.controls['password'].invalid">
+          <mat-error
+            *ngIf="
+              formLogin.controls['password'].touched &&
+              formLogin.controls['password'].invalid
+            "
+          >
             Esta contraseña no cumple con el tamaño.
           </mat-error>
         </div>
         <div class="matError">
-          <mat-error *ngIf="is_sendmail == false && (!formLogin.controls['email'].hasError('required')) && !formLogin.controls['email'].hasError('pattern')">
-            No pudimos encontrar un usuario con este correo electrónico y esta contraseña, intente con otro.
+          <mat-error
+            *ngIf="
+              is_sendmail == false &&
+              !formLogin.controls['email'].hasError('required') &&
+              !formLogin.controls['email'].hasError('pattern')
+            "
+          >
+            No pudimos encontrar un usuario con este correo electrónico y esta
+            contraseña, intente con otro.
           </mat-error>
         </div>
         <div class="button">
-          <button type="submit" [disabled]="formLogin.invalid">Iniciar Sesión</button>
+          <button type="submit" [disabled]="formLogin.invalid" class="buttonIS">
+            Iniciar Sesión
+          </button>
         </div>
       </form>
     </div>
@@ -60,5 +92,19 @@
         </p>
       </div>
     </div>
+  </div>
+  <div class="containerCerrar" *ngIf="datoUsuario">
+    <button class=".noselect" (click)="eliminarDatos()">
+      <span class="text">Cerrar</span><span class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+      </svg>
+    </span>
+    </button>
   </div>
 </div>
