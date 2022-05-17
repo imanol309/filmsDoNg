@@ -10,13 +10,25 @@
     </div>
     <div class="containerIniciar">
       <h4 class="IniciarSeccion">Iniciar Sesión Por Email</h4>
-      <div class="contianerInputs">
-        <input type="text" placeholder="Correo Electronico" name="email" class="input" required/>
-        <input type="password" placeholder="Contraseña" name="password" class="input" required/>
-      </div>
-      <div class="button">
-        <button>Iniciar Sesión</button>
-      </div>
+      <form [formGroup]="formLogin" (ngSubmit)="datosForm()" class="formContainer">
+        <div class="contianerInputs">
+          <input
+            type="text"
+            placeholder="Correo Electronico"
+            formControlName="email"
+            class="input"
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            formControlName="password"
+            class="input"
+          />
+        </div>
+        <div class="button">
+          <button type="submit">Iniciar Sesión</button>
+        </div>
+      </form>
     </div>
     <div class="containerCondiciones">
       <div class="containerNoTienes">

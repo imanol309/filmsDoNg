@@ -9,7 +9,7 @@ import { ViewingMoviesComponent } from './viewing-movies/viewing-movies.componen
 import { GenreComponent } from './genre/genre.component';
 import { ViewCrashComponent } from '../components/view-crash/view-crash.component';
 import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MoreViewComponent } from './more-view/more-view.component';
 import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
 import { LoginComponent } from '../components/login/login.component';
@@ -25,14 +25,20 @@ import { SafePipe } from '../pipe/seguridad-url.pipe';
     SpinnerLoadingComponent,
     SafePipe,
   ],
-  imports: [CommonModule, pagesRoutingModule, FormsModule, MatSidenavModule],
+  imports: [
+    CommonModule,
+    pagesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSidenavModule,
+  ],
   exports: [
     ViewCrashComponent,
     ModalSeekerComponent,
     ViewCrashRowComponent,
     MatSidenavModule,
     SpinnerLoadingComponent,
-    SafePipe
+    SafePipe,
   ],
 })
 export class pagesModule {}
