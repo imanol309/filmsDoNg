@@ -77,8 +77,8 @@
             No pudimos encontrar un usuario con este correo electrónico y esta
             contraseña, intente con otro.
           </mat-error>
-          <mat-error *ngIf="datosLogin.DatosLogin" class="matTrue">
-            BIENVENIDO {{datosLogin.DatosLogin.name}}
+          <mat-error *ngIf="datosLogin?.DatosLogin" class="matTrue">
+            BIENVENIDO {{datosLogin?.DatosLogin?.name}}
           </mat-error>
         </div>
         <div class="button">

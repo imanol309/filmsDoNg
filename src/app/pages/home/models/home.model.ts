@@ -1,4 +1,5 @@
 export interface HomeDateMovie {
+  year: string;
   sort(arg0: (a: any, b: any) => number);
   random(): any;
   length: any;
