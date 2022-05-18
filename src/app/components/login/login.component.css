@@ -104,6 +104,7 @@ h4 {
 .button {
   width: 100%;
   padding-top: 6%;
+  padding-top: 2%;
   align-items: center;
   text-align: center;
 }
@@ -113,6 +114,14 @@ h4 {
   padding-top: 1%;
   align-items: center;
   text-align: center;
+}
+
+.matTrue {
+  color: rgb(7, 183, 7);
+}
+
+.matFalse {
+  color: rgb(196, 15, 15);
 }
 
 /* From uiverse.io by @nikk7007 */
@@ -187,6 +196,10 @@ h4 {
   padding: 0;
   width: 40%;
   text-align: center;
+}
+
+.strongTerminos {
+  color: white;
 }
 
 p {

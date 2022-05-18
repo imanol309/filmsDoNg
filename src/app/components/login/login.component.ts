@@ -59,8 +59,9 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.datosLogin = value;
           this.is_sendmail = true;
           localStorage.setItem('usuario', JSON.stringify(this.datosLogin.DatosLogin));
-          location.reload();
-
+          setInterval(() => {
+            location.reload();
+            }, 2000);
         },
         (_error) => {
           this.is_sendmail = false;

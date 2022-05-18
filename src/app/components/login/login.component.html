@@ -27,6 +27,7 @@
               formLogin.controls['email'].touched &&
               formLogin.controls['email'].hasError('required')
             "
+            class="matFalse"
           >
             Correo Requerido.
           </mat-error>
@@ -35,6 +36,7 @@
               formLogin.controls['password'].touched &&
               formLogin.controls['email'].hasError('pattern')
             "
+            class="matFalse"
           >
             Correo inválido.
           </mat-error>
@@ -49,6 +51,7 @@
               formLogin.controls['password'].touched &&
               formLogin.controls['password'].hasError('required')
             "
+            class="matFalse"
           >
             Contraseña Requerida.
           </mat-error>
@@ -57,6 +60,7 @@
               formLogin.controls['password'].touched &&
               formLogin.controls['password'].invalid
             "
+            class="matFalse"
           >
             Esta contraseña no cumple con el tamaño.
           </mat-error>
@@ -68,9 +72,13 @@
               !formLogin.controls['email'].hasError('required') &&
               !formLogin.controls['email'].hasError('pattern')
             "
+            class="matFalse"
           >
             No pudimos encontrar un usuario con este correo electrónico y esta
             contraseña, intente con otro.
+          </mat-error>
+          <mat-error *ngIf="datosLogin.DatosLogin" class="matTrue">
+            BIENVENIDO {{datosLogin.DatosLogin.name}}
           </mat-error>
         </div>
         <div class="button">
@@ -87,8 +95,8 @@
       </div>
       <div class="Terminos">
         <p>
-          Al registrarte, has aceptado los términos de uso y la política de
-          privacidad de pelisRD
+          Al registrarte, has aceptado los <strong class="strongTerminos">términos de uso y la política de
+            privacidad</strong> de pelisRD
         </p>
       </div>
     </div>
