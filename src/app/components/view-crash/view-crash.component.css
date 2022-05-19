@@ -66,9 +66,9 @@
 
 .containerTop {
   position: absolute;
-  top: -10px;
-  left: -12px;
-  width: 80px;
+  top: -9px;
+  left: -10px;
+  width: 100px;
   height: 80px;
   border-radius: 100%;
 }
@@ -229,6 +229,13 @@
     width: 20%;
     height: 35%;
   }
+
+  .h4Top {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+  
 }
 
 /* Para 800px */
@@ -258,6 +265,12 @@
     width: 23%;
     height: 35%;
   }
+
+  .h4Top {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
 }
 
 /* Para 600px */
@@ -286,6 +299,12 @@
     font-size: 12px;
     width: 27%;
     height: 35%;
+  }
+
+  .h4Top {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
   }
 }
 
@@ -322,6 +341,11 @@
     color: rgb(0, 0, 0);
     border: 1px solid #17c3b200;
   }
+  .h4Top {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
 }
 
 /* Para 320px */
@@ -356,5 +380,11 @@
     background-color: #fafafa;
     color: rgb(0, 0, 0);
     border: 1px solid #17c3b200;
+  }
+
+  .h4Top {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
   }
 }
