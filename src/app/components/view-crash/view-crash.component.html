@@ -1,31 +1,43 @@
-<div class="{{Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart'}}">
-    <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
-    <div class="containerCarh" 
-        *ngFor="let item of datosPelicula | slice:0:numSlice; 
-        let top = index">
-        <div class="Carh" (click)="routerMovies(item?.titulo)" *ngIf="item" >
-            <div class="containerTop" *ngIf="router.url === '/pelis/moreView'">
-                <h4 class="h4Top">#{{top+1}}</h4>
-            </div>
-            <img src={{item?.img}} alt="" class="carhImg">
-            <div class="containerIcon" *ngIf="item">
-                <img src="../../../assets/img/icon/jugar.png" alt="" class="iconImg" >
-            </div>
-        </div>
-        <div class="containerInfo" *ngIf="item">
-            <p class="tituloCarh" (click)="routerMovies(item?.titulo)" >{{item?.titulo}}</p>
-            <div class="containerInfon">
-                <div class="genero">
-                    <p class="generoCarh generoYears">{{item?.year?.slice(0,4) || '2013'}} - {{item?.time || '90'}}Min</p>
-                    <p class="generoCarh">{{item?.genero?.split('_').join('· ')}}</p>
-                </div>
-                <div class="containerGuardar" *ngIf="datoUsuario">
-                    <img src="../../../assets/img/icon/guardar-instagram.png" alt="" class="imgGuardad">
-                </div>
-            </div>
-        </div>
+<div class="{{ Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart' }}">
+  <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
+  <div
+    class="containerCarh"
+    *ngFor="let item of datosPelicula | slice: 0:numSlice; let top = index"
+  >
+    <div class="Carh" (click)="routerMovies(item?.titulo)" *ngIf="item">
+      <div class="containerTop" *ngIf="router.url === '/pelis/moreView'">
+        <h4 class="h4Top">#{{ top + 1 }}</h4>
+      </div>
+      <img src="{{ item?.img }}" alt="" class="carhImg" />
+      <div class="containerIcon" *ngIf="item">
+        <img src="../../../assets/img/icon/jugar.png" alt="" class="iconImg" />
+      </div>
     </div>
+    <div class="containerInfo" *ngIf="item">
+      <p class="tituloCarh" (click)="routerMovies(item?.titulo)">
+        {{ item?.titulo }}
+      </p>
+      <div class="containerInfon">
+        <div class="genero">
+          <p class="generoCarh generoYears">
+            {{ item?.year?.slice(0, 4) || "2013" }} -
+            {{ item?.time || "90" }}Min
+          </p>
+          <p class="generoCarh">{{ item?.genero?.split("_").join("· ") }}</p>
+        </div>
+        <div class="containerGuardar">
+          <img
+            src="../../../assets/img/icon/guardar-instagram.png"
+            alt=""
+            class='imgGuardad'
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="containerBtn" *ngIf="datosPelicula">
-    <h4 class="btnCargar" (click)="cargarMas()" *ngIf="cssVer || loanding">Ver Mas</h4>
+  <h4 class="btnCargar" (click)="cargarMas()" *ngIf="cssVer || loanding">
+    Ver Mas
+  </h4>
 </div>

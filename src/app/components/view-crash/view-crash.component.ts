@@ -20,7 +20,8 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     if (!this.Css) {
       this.cssVer = false;
     }
-    this.datoUsuario = localStorage.getItem('usuario');
+    this.datoUsuario = JSON.parse(localStorage.getItem('usuario'))
+    console.log(this.datoUsuario)
   }
 
   ngOnDestroy(): void {
@@ -38,5 +39,9 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
         this.cssVer = false;
       }
     }
+  }
+
+  datos(d) {
+  console.log(d)
   }
 }

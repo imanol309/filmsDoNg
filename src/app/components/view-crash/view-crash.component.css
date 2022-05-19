@@ -208,9 +208,20 @@
   cursor: pointer;
 }
 
+.imgGuardadBlanco {
+  width: 27px;
+  height: 27px;
+  opacity: 1;
+}
+
 .imgGuardad {
   width: 27px;
   height: 27px;
+  opacity: 0.2;
+}
+
+.imgGuardad:hover {
+  opacity: 1;
 }
 
 /* Media screen para crear el diseño para pantalla mas pequeña */
