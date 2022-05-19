@@ -43,9 +43,12 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     }
   }
 
-  datos(d) {
+  agregarPelicula(d) {
     this.genericService.postAddMovieList(d).subscribe((datoGuardado) => {
-      console.log(datoGuardado)
+      const datoFormulario = JSON.parse(localStorage.getItem('Formulario'));
+      this.genericService.postLogin(datoFormulario).subscribe((value) => {
+        localStorage.setItem('usuario', JSON.stringify(value.DatosLogin));
+      })
     })
   }
 
