@@ -14,7 +14,25 @@ export class GenericService {
     return this.httpClient
       .post<any>(`${environment.URL_API}/api/user/loginUser`, {
         email: datos.email,
-        password: datos.password
+        password: datos.password,
+      })
+      .pipe(catchError((err) => throwError(err)));
+  }
+
+  postAddMovieList(datos): Observable<any> {
+    const id = JSON.parse(localStorage.getItem('usuario'))
+    return this.httpClient
+      .post<any>(`${environment.URL_API}/api/user/addMovieList/${id._id}`, {
+        _id: datos._id,
+        titulo: datos.titulo,
+        genero: datos.genero,
+        Director: datos.Director,
+        year: datos.año,
+        Reparto: datos.Reparto,
+        img: datos.img,
+        video: datos.video,
+        time: datos.time,
+        descripcion: datos.descripcion,
       })
       .pipe(catchError((err) => throwError(err)));
   }
