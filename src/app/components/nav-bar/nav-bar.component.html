@@ -4,7 +4,7 @@
       <p class="secciones auto" routerLink="/pelis/home">Inicio</p>
       <p class="secciones" (click)="openModalSeeker()">Buscador</p>
       <p class="secciones" routerLink="/pelis/moreView">Mas vista</p>
-      <p class="secciones" routerLink="/pelis/favoriteList">Mis Listas</p>
+      <p class="secciones" routerLink="/pelis/favoriteList" *ngIf="datoUsuario">Mis Listas</p>
       <p class="secciones" routerLink="/error404">Extrenos</p>
     </div>
   </div>

@@ -8,9 +8,11 @@ import { ModalSeekerComponent } from '../modal-seeker/modal-seeker.component';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
+  datoUsuario;
   constructor(private matDialog: MatDialog) {}
 
   ngOnInit(): void {
+    this.datoUsuario = JSON.parse(localStorage.getItem('usuario'))
   }
 
   openModalSeeker(): void {
