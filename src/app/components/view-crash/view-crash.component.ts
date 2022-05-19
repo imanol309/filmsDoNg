@@ -11,6 +11,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   @Input() datosPelicula: HomeDateMovie;
   @Input() Css: boolean;
   @Input() loanding: boolean;
+  datoUsuario;
   numSlice: any = 15;
   cssVer: boolean = true;
   constructor(private router: Router) {}
@@ -19,7 +20,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     if (!this.Css) {
       this.cssVer = false;
     }
-    console.log(this.router.url);
+    this.datoUsuario = localStorage.getItem('usuario');
   }
 
   ngOnDestroy(): void {
