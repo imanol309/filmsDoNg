@@ -26,6 +26,11 @@ const routes: Routes = [
           import('./more-view/more-view.module').then((m) => m.MoreViewModule),
       },
       {
+        path: 'favoriteList', 
+        loadChildren: () =>
+          import('./list-movies/list-movies.module').then((m) => m.ListMoviesModule),
+      },
+      {
         path: '**', redirectTo: 'home'
       }
     ]
