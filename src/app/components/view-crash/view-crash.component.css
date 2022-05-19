@@ -59,9 +59,34 @@
 }
 
 .Carh:hover .carhImg {
-  opacity: 0.3;
+  opacity: 0.5;
   --webkit-transform: scale(1.3);
   transform: scale(1.3);
+}
+
+.containerTop {
+  position: absolute;
+  top: -10px;
+  left: -12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.h4Top {
+  background-color: red;
+  border-radius: 100%;
+  width: 55px;
+  height: 55px;
+  font-size: 25px;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Carh:hover .h4Top {
+  opacity: 0;
 }
 
 .containerIcon {

@@ -6,6 +6,16 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  /* overflow-y: scroll; */
+}
+
+.NavbarPrincipal::-webkit-scrollbar {
+  background: #161717;
+  width: 9px;
+}
+
+.NavbarPrincipal::-webkit-scrollbar-thumb {
+  background: #8e9494;
 }
 
 .NavbarContainer {

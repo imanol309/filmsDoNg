@@ -1,7 +1,12 @@
 <div class="{{Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart'}}">
     <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
-    <div class="containerCarh" *ngFor="let item of datosPelicula | slice:0:numSlice">
+    <div class="containerCarh" 
+        *ngFor="let item of datosPelicula | slice:0:numSlice; 
+        let top = index">
         <div class="Carh" (click)="routerMovies(item?.titulo)" *ngIf="item" >
+            <div class="containerTop" *ngIf="router.url === '/pelis/moreView'">
+                <h4 class="h4Top">#{{top+1}}</h4>
+            </div>
             <img src={{item?.img}} alt="" class="carhImg">
             <div class="containerIcon" *ngIf="item">
                 <img src="../../../assets/img/icon/jugar.png" alt="" class="iconImg" >

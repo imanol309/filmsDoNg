@@ -19,6 +19,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     if (!this.Css) {
       this.cssVer = false;
     }
+    console.log(this.router.url);
   }
 
   ngOnDestroy(): void {
