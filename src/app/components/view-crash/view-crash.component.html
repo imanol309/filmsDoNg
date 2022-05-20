@@ -25,7 +25,7 @@
           </p>
           <p class="generoCarh">{{ item?.genero?.split("_").join("· ") }}</p>
         </div>
-        <div class="containerGuardar">
+        <div class="containerGuardar" *ngIf="datoUsuario">
           <img
           (click)="agregarPelicula(item)"
             src="../../../assets/img/icon/guardar-instagram.png"
