@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { VigilanteDobleGuard } from '../guard/vigilante-doble.guard';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
         path: 'favoriteList', 
         loadChildren: () =>
           import('./list-movies/list-movies.module').then((m) => m.ListMoviesModule),
+          canActivate: [VigilanteDobleGuard]
       },
       {
         path: '**', redirectTo: 'home'

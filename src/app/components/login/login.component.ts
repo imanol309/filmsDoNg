@@ -45,6 +45,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   eliminarDatos() {
     localStorage.removeItem('usuario');
+    localStorage.removeItem('Formulario');
+    localStorage.removeItem('Token');
     location.reload();
   }
 
@@ -60,6 +62,7 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.is_sendmail = true;
           localStorage.setItem('Formulario', JSON.stringify(this.formLogin.value));
           localStorage.setItem('usuario', JSON.stringify(this.datosLogin.DatosLogin));
+          localStorage.setItem('Token', JSON.stringify(this.datosLogin.DatosLogin.password));
           setInterval(() => {
             location.reload();
             }, 2000);
