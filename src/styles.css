@@ -23,7 +23,7 @@ mat-dialog-container {
 
 mat-dialog-container::-webkit-scrollbar {
   background: #161717;
-  width: 9px;
+  width: 4px;
 }
 
 mat-dialog-container::-webkit-scrollbar-thumb {
@@ -44,7 +44,7 @@ mat-dialog-container::-webkit-scrollbar-thumb {
 
 .movieSectionsContainer::-webkit-scrollbar {
   background: #161717;
-  width: 9px;
+  width: 4px;
 }
 
 .movieSectionsContainer::-webkit-scrollbar-thumb {
