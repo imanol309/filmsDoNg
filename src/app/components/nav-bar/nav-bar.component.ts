@@ -17,7 +17,8 @@ export class NavBarComponent implements OnInit {
 
   openModalSeeker(): void {
     const dialogRef = this.matDialog.open(ModalSeekerComponent, {
-      width: '100%',
+      width: '100vw',
+      maxWidth: '100vw',
       height: '90%',
     });
     dialogRef.afterClosed().subscribe((result) => {

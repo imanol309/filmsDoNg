@@ -7,12 +7,22 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
 }
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+html::-webkit-scrollbar {
+  background: #161717;
+  width: 4px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #8e9494;
 }
 
 mat-dialog-container {
