@@ -94,7 +94,7 @@
 }
 
 .sideRigth {
-  width: 25%;
+  width: 35%;
   height: 95vh;
   background-color: #000000;
   border-left: 1px solid white;
@@ -115,10 +115,6 @@
 
   .pSecciones {
     font-size: 14px;
-  }
-
-  .sideRigth {
-    width: 30%;
   }
 
   .sideLeft {
