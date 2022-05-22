@@ -10,7 +10,7 @@
 .seccionesImg {
   width: 30%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -71,7 +71,7 @@
 .seccionesCuenta {
   width: 30%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   cursor: pointer;
 }
 
@@ -81,6 +81,7 @@
   justify-content: center;
   gap: 8px;
   width: auto;
+  margin-right: 8%;
 }
 
 .seccioneUsuario:hover .imgUsuario {
