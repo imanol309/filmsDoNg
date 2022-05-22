@@ -15,7 +15,7 @@
 }
 
 .imgLogo {
-  height: 32px;
+  height: 30px;
   cursor: pointer;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .imgUsuario {
-  height: 30px;
+  height: 28px;
   transition: filter 0.2s ease;
 }
 
