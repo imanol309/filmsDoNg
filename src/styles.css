@@ -7,12 +7,22 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
 }
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+html::-webkit-scrollbar {
+  background: #161717;
+  width: 4px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #8e9494;
 }
 
 mat-dialog-container {
@@ -23,7 +33,7 @@ mat-dialog-container {
 
 mat-dialog-container::-webkit-scrollbar {
   background: #161717;
-  width: 9px;
+  width: 4px;
 }
 
 mat-dialog-container::-webkit-scrollbar-thumb {
@@ -44,7 +54,7 @@ mat-dialog-container::-webkit-scrollbar-thumb {
 
 .movieSectionsContainer::-webkit-scrollbar {
   background: #161717;
-  width: 9px;
+  width: 4px;
 }
 
 .movieSectionsContainer::-webkit-scrollbar-thumb {

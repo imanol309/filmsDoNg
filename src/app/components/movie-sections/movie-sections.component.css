@@ -10,12 +10,12 @@
 .seccionesImg {
   width: 30%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
 .imgLogo {
-  height: 32px;
+  height: 30px;
   cursor: pointer;
 }
 
@@ -71,7 +71,7 @@
 .seccionesCuenta {
   width: 30%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   cursor: pointer;
 }
 
@@ -81,6 +81,7 @@
   justify-content: center;
   gap: 8px;
   width: auto;
+  margin-right: 8%;
 }
 
 .seccioneUsuario:hover .imgUsuario {
@@ -88,12 +89,12 @@
 }
 
 .imgUsuario {
-  height: 30px;
+  height: 28px;
   transition: filter 0.2s ease;
 }
 
 .sideRigth {
-  width: 25%;
+  width: 35%;
   height: 95vh;
   background-color: #000000;
   border-left: 1px solid white;
@@ -114,10 +115,6 @@
 
   .pSecciones {
     font-size: 14px;
-  }
-
-  .sideRigth {
-    width: 30%;
   }
 
   .sideLeft {

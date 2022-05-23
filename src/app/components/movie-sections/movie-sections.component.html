@@ -1,11 +1,6 @@
 <div class="containerSeccionesPelis">
   <div class="seccionesImg">
-    <img 
-    src="../../../assets/img/icon/google-play.png" 
-    alt="" 
-    class="imgLogo" 
-    (click)="sideLeft.toggle()"
-    >
+    <img src="../../../assets/img/icon/google-play.png" alt="" class="imgLogo" (click)="sideLeft.toggle()">
   </div>
   <div class="seccionesPelis">
     <p href="" class="pSecciones" routerLink="/pelis/genre/Acción,Drama">Accion</p>
@@ -19,13 +14,15 @@
   </div>
   <div class="seccionesCuenta">
     <div class="seccioneUsuario" (click)="sideRight.toggle()">
-      <img src="../../../assets/img/icon/usuario.png" alt="" class="imgUsuario">
+      <img
+        src="{{datoUsuario ? '../../../../../assets/img/perfil/extraterrestre.png' : '../../../assets/img/icon/usuario.png'}}"
+        alt="" class="imgUsuario">
       <p class="pCuenta">{{datoUsuario ? datoUsuario?.name?.split(' ')[0] : 'Cuenta'}}</p>
     </div>
   </div>
 </div>
-<mat-sidenav-container autosize >
-  <mat-sidenav #sideRight position="end" mode="over" class="sideRigth" >
+<mat-sidenav-container autosize>
+  <mat-sidenav #sideRight position="end" mode="over" class="sideRigth">
     <app-login (closeSidenav)="sideRight.close()"> </app-login>
   </mat-sidenav>
   <mat-sidenav #sideLeft position="start" mode="push" class="sideLeft">
