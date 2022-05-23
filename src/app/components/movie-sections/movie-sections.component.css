@@ -55,7 +55,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 75%;
 }
 
 .pCuenta:hover {
@@ -165,7 +164,6 @@
 
   .pCuenta {
     font-size: 15px;
-    width: 85%;
   }
 
 }
@@ -207,7 +205,6 @@
 
   .pCuenta {
     font-size: 15px;
-    width: 80%;
   }
 }
 

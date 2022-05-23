@@ -9,11 +9,14 @@ import { Router } from '@angular/router';
 })
 export class MovieSectionsComponent implements OnInit {
   datoUsuario;
+  rutaImg;
   @ViewChild(MatSidenav) sideRight: MatSidenav;
   @ViewChild(MatSidenav) sideLeft: MatSidenav;
   constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
+    const img =  this.datoUsuario?.logo
+    this.rutaImg = `../../../../../assets/img/perfil/${img}.png`
   }
 }

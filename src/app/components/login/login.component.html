@@ -103,7 +103,7 @@
   </div>
   <div class="containerCerrar" *ngIf="datoUsuario">
     <div class="containerPerfil">
-      <img src="../../../assets/img/perfil/extraterrestre.png" alt="" srcset="" class="imgLogoPri">
+      <img src={{rutaImg}} alt="" srcset="" class="imgLogoPri">
       <h4 class="h4Infor">{{datoUsuario?.name}}</h4>
       <h4 class="h4Infor">{{datoUsuario?.email}}</h4>
       <h4 class="h4Infor">Fecha Creacion: {{datoUsuario?.signupDate?.slice(0, 10)}}</h4>

@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   datosLogin;
   datoUsuario;
   is_sendmail: boolean | undefined = undefined;
+  rutaImg;
   constructor(private fb: FormBuilder, private genericService: GenericService) {
     this.formLogin = this.fb.group({
       email: [
@@ -37,6 +38,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
+    const img =  this.datoUsuario?.logo
+    this.rutaImg = `../../../../../assets/img/perfil/${img}.png`
   }
 
   ngOnDestroy(): void {
