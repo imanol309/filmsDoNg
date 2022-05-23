@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-Registration',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
+  @ViewChild('imgPerfil') imgPerfil: ElementRef;
   constructor() { }
 
   ngOnInit() {
+    const imgPefil =  this.imgPerfil.nativeElement
+    console.log(imgPefil)
   }
+
+
 
 }

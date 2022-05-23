@@ -3,9 +3,46 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
+.ContainerTitulo {
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.titulo {
+  font-size: 34px;
+  font-family: monospace;
+  text-align: center;
+  color: white;
+}
+
+
+.containerInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerInputText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.containerButton {
+  width: 100%;
+  margin-top: 3%;
+  align-items: center;
+  text-align: center;
+}
 /* From uiverse.io */
 .buttonCrear {
   padding: 1.3em 3em;
@@ -48,10 +85,12 @@
   font-family: monospace;
   letter-spacing: 1px;
   cursor: pointer;
+  margin-bottom: 3%;
 }
 
 .input::placeholder {
   color: #ffffff;
+  font-size: 17px;
 }
 
 .input:focus {
@@ -64,4 +103,36 @@
 
 .input:focus::placeholder {
   color: #17c3b2;
+}
+
+.imgPerfil {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  /* height: 70px;
+  width: 70px;
+  background-color: rgb(242, 242, 242);
+  padding: 1%;
+  border-radius: 100%; */
+}
+
+.corto {
+  width: 50%;
+}
+
+
+.containerLogo {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.Eligue {
+  font-size: 18px;
+  font-family: monospace;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
