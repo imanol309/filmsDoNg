@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SubSink } from 'subsink';
 import { GenericService } from '../../services/generic.service';
+import {RegistrationComponent} from '../Registration/Registration.component'
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +16,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   datoUsuario;
   is_sendmail: boolean | undefined = undefined;
   rutaImg;
-  constructor(private fb: FormBuilder, private genericService: GenericService) {
+  constructor(private fb: FormBuilder, private genericService: GenericService, private matDialog:MatDialog) {
     this.formLogin = this.fb.group({
       email: [
         '',
@@ -77,5 +79,16 @@ export class LoginComponent implements OnInit, OnDestroy {
           }, 5000);
         }
       );
+  }
+
+  OpenModalResgistrar() {
+    const dialogRef = this.matDialog.open(RegistrationComponent, {
+      width: '70vw',
+      maxWidth: '100vw',
+      height: '80%',
+    });
+    this.subs.sink = dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 }
