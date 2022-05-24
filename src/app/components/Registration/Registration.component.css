@@ -18,6 +18,10 @@
   height: 5%;
 }
 
+mat-error {
+  color: red;
+}
+
 .imgClose {
   height: 20px;
   transition: 0.3s linear;

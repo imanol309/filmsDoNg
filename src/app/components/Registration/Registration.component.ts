@@ -25,7 +25,7 @@ export class RegistrationComponent implements OnInit, AfterViewInit {
     public dialogRef: MatDialogRef<RegistrationComponent>
   ) {
     this.formRegistre = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(3)]],
+      name: ['', [Validators.required]],
       email: [
         '',
         [
@@ -54,7 +54,7 @@ export class RegistrationComponent implements OnInit, AfterViewInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
-  
+
   eligueUno(datos) {
     this.formRegistre.controls['logo'].setValue(datos);
     console.log(this.formRegistre.get('logo').value);

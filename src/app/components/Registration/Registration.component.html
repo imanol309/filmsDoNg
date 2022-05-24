@@ -5,7 +5,11 @@
   <div class="ContainerTitulo">
     <h4 class="titulo">Formulario</h4>
   </div>
-  <form [formGroup]="formRegistre" (ngSubmit)="registrarUsuario()" class="containerForm">
+  <form
+    [formGroup]="formRegistre"
+    (ngSubmit)="registrarUsuario()"
+    class="containerForm"
+  >
     <div class="containerInput">
       <div class="containerInputText">
         <input
@@ -14,18 +18,64 @@
           class="input corto"
           formControlName="name"
         />
+        <mat-error
+          *ngIf="
+            formRegistre.controls['name'].touched &&
+            formRegistre.controls['name'].hasError('required')
+          "
+          class="matFalse"
+        >
+          Nombre Requerido
+        </mat-error>
         <input
           type="email"
           placeholder="Email"
           class="input"
           formControlName="email"
         />
+        <mat-error
+          *ngIf="
+            formRegistre.controls['email'].touched &&
+            formRegistre.controls['email'].hasError('required')
+          "
+          class="matFalse"
+        >
+          Correo Requerido.
+        </mat-error>
+        <mat-error
+          *ngIf="
+            formRegistre.controls['email'].touched &&
+            formRegistre.controls['email'].hasError('pattern')
+          "
+          class="matFalse"
+        >
+          Correo inválido, tiene que tener @ Y.com
+        </mat-error>
         <input
           type="password"
           placeholder="Contraseña"
           class="input"
           formControlName="password"
         />
+        <mat-error
+          *ngIf="
+            formRegistre.controls['password'].touched &&
+            formRegistre.controls['password'].hasError('required')
+          "
+          class="matFalse"
+        >
+          Contraseña Requerida.
+        </mat-error>
+        <mat-error
+          *ngIf="
+            formRegistre.controls['password'].touched &&
+            formRegistre.controls['password'].invalid
+          "
+          class="matFalse"
+        >
+          Esta contraseña no cumple con el tamaño,tiene que ser minimo 3 y
+          maximo 15 caracteres.
+        </mat-error>
       </div>
       <div class="containerLogo">
         <h4 class="Eligue">Eligue:</h4>
