@@ -54,6 +54,10 @@ mat-error {
 
 .containerForm {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .containerInput {
@@ -210,6 +214,14 @@ mat-error {
   .imgClose {
     margin-right: 3%;
   }
+
+  .containerForm {
+    height: 70%;
+  }
+
+  .ContainerTitulo {
+    height: 10%;
+  }
 }
 
 /* Para 480px */
@@ -225,6 +237,14 @@ mat-error {
   .imgClose {
     margin-right: 3%;
   }
+
+  .containerForm {
+    height: 70%;
+  }
+
+  .ContainerTitulo {
+    height: 10%;
+  }
 }
 
 /* Para 320px */
@@ -239,5 +259,12 @@ mat-error {
 
   .imgClose {
     margin-right: 3%;
+  }
+  .containerForm {
+    height: 70%;
+  }
+
+  .ContainerTitulo {
+    height: 10%;
   }
 }
