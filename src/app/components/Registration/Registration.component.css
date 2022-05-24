@@ -22,6 +22,10 @@ mat-error {
   color: red;
 }
 
+.matTrue {
+  color: #02ee8f;
+}
+
 .imgClose {
   height: 20px;
   transition: 0.3s linear;

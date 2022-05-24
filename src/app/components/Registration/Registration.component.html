@@ -92,6 +92,9 @@
       </div>
     </div>
     <div class="containerButton">
+      <mat-error *ngIf="mensaje" class="matTrue">
+        BIENVENIDO {{mensaje}}
+      </mat-error>
       <button
         class="buttonCrear"
         type="submit"

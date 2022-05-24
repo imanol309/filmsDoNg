@@ -66,6 +66,9 @@ export class RegistrationComponent implements OnInit, AfterViewInit {
       .postRegistrarUsuario(this.formRegistre.value)
       .subscribe((datos) => {
         this.mensaje = datos?.mensaje;
+        setInterval(() => {
+          this.dialogRef.close();
+          }, 2000);
         console.log(datos);
       }),
       (_error) => {
