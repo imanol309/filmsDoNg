@@ -3,9 +3,9 @@ import {
   Component,
   ElementRef,
   OnInit,
-  Renderer2,
   ViewChild,
 } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-Registration',
@@ -14,16 +14,43 @@ import {
 })
 export class RegistrationComponent implements OnInit, AfterViewInit {
   @ViewChild('imgPerfil') img: ElementRef;
+  formRegistre: FormGroup;
   logo: any = ['fantasma', 'extraterrestre', 'ladron', 'momia', 'muerte'];
-  constructor(private renderer: Renderer2) {}
+  constructor(private fb: FormBuilder) {
+    this.formRegistre = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      email: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          ),
+        ],
+      ],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(15),
+        ],
+      ],
+      logo: ['fantasma'],
+    });
+  }
 
   ngOnInit() {}
 
   ngAfterViewInit() {}
+  
+  eligueUno(datos) {
+    this.formRegistre.controls['logo'].setValue(datos);
+    console.log(this.formRegistre.get('logo').value)
+  }
 
-  click(d) {
-    console.log(d);
-    // console.log(this.img.nativeElement.src.split('/')[6])
-    // this.renderer.addClass(this.img.nativeElement, "logoBlanco");
+  registrarUsuario() {
+    console.log(this.formRegistre.value)
+    
   }
 }

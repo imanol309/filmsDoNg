@@ -19,6 +19,9 @@
   color: white;
 }
 
+.containerForm {
+  width: 100%;
+}
 
 .containerInput {
   width: 100%;
@@ -79,7 +82,9 @@
   border: 1px solid transparent;
   border-bottom: 1px solid #e6e4e4;
   caret-color: #ffffff;
-  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  background-color: #ff0d0d00;
   padding: 5px;
   transition: 0.5s linear;
   font-family: monospace;
@@ -89,7 +94,7 @@
 }
 
 .input::placeholder {
-  color: #ffffff;
+  color: #fffefe;
   font-size: 17px;
 }
 

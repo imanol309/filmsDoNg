@@ -2,28 +2,50 @@
   <div class="ContainerTitulo">
     <h4 class="titulo">Formulario</h4>
   </div>
-  <div class="containerInput">
-    <div class="containerInputText">
-      <input type="text" placeholder="Nombre" class="input corto">
-      <input type="email" placeholder="Email" class="input">
-      <input type="password" placeholder="Contraseña" class="input">
-    </div>
-    <div class="containerLogo">
-      <h4 class="Eligue">Eligue: </h4>
-      <div class="containerLogoImg" *ngFor="let LogoPerfil of logo">
-        <img 
-            src="../../../assets/img/perfil/{{LogoPerfil}}.png" 
-            alt="logo Pefil" 
-            class="imgPerfil" 
-            (click)="click(LogoPerfil)" 
+  <form [formGroup]="formRegistre" (ngSubmit)="registrarUsuario()" class="containerForm">
+    <div class="containerInput">
+      <div class="containerInputText">
+        <input
+          type="text"
+          placeholder="Nombre"
+          class="input corto"
+          formControlName="name"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="input"
+          formControlName="email"
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          class="input"
+          formControlName="password"
+        />
+      </div>
+      <div class="containerLogo">
+        <h4 class="Eligue">Eligue:</h4>
+        <div class="containerLogoImg" *ngFor="let LogoPerfil of logo">
+          <img
+            src="../../../assets/img/perfil/{{ LogoPerfil }}.png"
+            alt="logo Pefil"
+            class="imgPerfil"
             #imgPerfil
-           >
+            (click)="eligueUno(LogoPerfil)"
+            placeholder="logo"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="containerButton">
-    <button class="buttonCrear">
-       Crear
-    </button>
-  </div>
+    <div class="containerButton">
+      <button
+        class="buttonCrear"
+        type="submit"
+        [disabled]="formRegistre.invalid"
+      >
+        Crear
+      </button>
+    </div>
+  </form>
 </div>
