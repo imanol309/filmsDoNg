@@ -6,6 +6,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { GenericService } from 'src/app/services/generic.service';
 
 @Component({
   selector: 'app-Registration',
@@ -16,7 +18,12 @@ export class RegistrationComponent implements OnInit, AfterViewInit {
   @ViewChild('imgPerfil') img: ElementRef;
   formRegistre: FormGroup;
   logo: any = ['fantasma', 'extraterrestre', 'ladron', 'momia', 'muerte'];
-  constructor(private fb: FormBuilder) {
+  mensaje: String;
+  constructor(
+    private fb: FormBuilder,
+    private genericService: GenericService,
+    public dialogRef: MatDialogRef<RegistrationComponent>
+  ) {
     this.formRegistre = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: [
@@ -43,14 +50,26 @@ export class RegistrationComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
   
   eligueUno(datos) {
     this.formRegistre.controls['logo'].setValue(datos);
-    console.log(this.formRegistre.get('logo').value)
+    console.log(this.formRegistre.get('logo').value);
   }
 
   registrarUsuario() {
-    console.log(this.formRegistre.value)
-    
+    console.log(this.formRegistre.value);
+    this.genericService
+      .postRegistrarUsuario(this.formRegistre.value)
+      .subscribe((datos) => {
+        this.mensaje = datos?.mensaje;
+        console.log(datos);
+      }),
+      (_error) => {
+        console.log(_error);
+      };
   }
 }
