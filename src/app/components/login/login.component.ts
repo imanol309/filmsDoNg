@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SubSink } from 'subsink';
 import { GenericService } from '../../services/generic.service';
-import {RegistrationComponent} from '../Registration/Registration.component'
+import { RegistrationComponent } from '../Registration/Registration.component';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-login',
@@ -16,7 +16,11 @@ export class LoginComponent implements OnInit, OnDestroy {
   datoUsuario;
   is_sendmail: boolean | undefined = undefined;
   rutaImg;
-  constructor(private fb: FormBuilder, private genericService: GenericService, private matDialog:MatDialog) {
+  constructor(
+    private fb: FormBuilder,
+    private genericService: GenericService,
+    private matDialog: MatDialog
+  ) {
     this.formLogin = this.fb.group({
       email: [
         '',
@@ -40,8 +44,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
-    const img =  this.datoUsuario?.logo
-    this.rutaImg = `../../../../../assets/img/perfil/${img}.png`
+    const img = this.datoUsuario?.logo;
+    this.rutaImg = `../../../../../assets/img/perfil/${img}.png`;
   }
 
   ngOnDestroy(): void {
@@ -65,12 +69,21 @@ export class LoginComponent implements OnInit, OnDestroy {
         (value) => {
           this.datosLogin = value;
           this.is_sendmail = true;
-          localStorage.setItem('Formulario', JSON.stringify(this.formLogin.value));
-          localStorage.setItem('usuario', JSON.stringify(this.datosLogin.DatosLogin));
-          localStorage.setItem('Token', JSON.stringify(this.datosLogin.DatosLogin.password));
+          localStorage.setItem(
+            'Formulario',
+            JSON.stringify(this.formLogin.value)
+          );
+          localStorage.setItem(
+            'usuario',
+            JSON.stringify(this.datosLogin.DatosLogin)
+          );
+          localStorage.setItem(
+            'Token',
+            JSON.stringify(this.datosLogin.DatosLogin.password)
+          );
           setInterval(() => {
             location.reload();
-            }, 2000);
+          }, 2000);
         },
         (_error) => {
           this.is_sendmail = false;
@@ -82,10 +95,18 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   OpenModalResgistrar() {
+    let width = '70vw';
+    let height = '80%';
+
+    if (window.innerWidth < 500) {
+      width = '100vw';
+      height = '100%';
+    }
+
     const dialogRef = this.matDialog.open(RegistrationComponent, {
-      width: '70vw',
+      width: width,
       maxWidth: '100vw',
-      height: '80%',
+      height: height,
     });
     this.subs.sink = dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
