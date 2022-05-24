@@ -109,11 +109,17 @@
   height: 50px;
   width: 50px;
   cursor: pointer;
-  /* height: 70px;
-  width: 70px;
-  background-color: rgb(242, 242, 242);
+  transition: 1s ease;
   padding: 1%;
-  border-radius: 100%; */
+  border-radius: 100%;
+}
+
+.imgPerfil:visited{
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  background-color: rgb(242, 242, 242);
+  
 }
 
 .corto {
@@ -128,6 +134,16 @@
   align-items: center;
   text-align: center;
   margin-bottom: 3%;
+}
+
+.containerLogoImg {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3%;
+  height: 40px;
 }
 
 .Eligue {

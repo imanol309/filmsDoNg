@@ -16,6 +16,7 @@ import { LoginComponent } from '../components/login/login.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-loading.component';
 import { SafePipe } from '../pipe/seguridad-url.pipe';
+import { RegistrationComponent } from '../components/Registration/Registration.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SafePipe } from '../pipe/seguridad-url.pipe';
     ViewCrashRowComponent,
     SpinnerLoadingComponent,
     SafePipe,
+    RegistrationComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +41,7 @@ import { SafePipe } from '../pipe/seguridad-url.pipe';
     MatSidenavModule,
     SpinnerLoadingComponent,
     SafePipe,
+    RegistrationComponent
   ],
 })
 export class pagesModule {}

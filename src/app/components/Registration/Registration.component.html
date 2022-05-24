@@ -10,11 +10,15 @@
     </div>
     <div class="containerLogo">
       <h4 class="Eligue">Eligue: </h4>
-      <img src="../../../assets/img/perfil/extraterrestre.png" alt="" class="imgPerfil" #imgPerfil >
-      <img src="../../../assets/img/perfil/fantasma.png" alt="" class="imgPerfil" #imgPerfil>
-      <img src="../../../assets/img/perfil/ladron.png" alt="" class="imgPerfil" #imgPerfil>
-      <img src="../../../assets/img/perfil/momia.png" alt="" class="imgPerfil" #imgPerfil>
-      <img src="../../../assets/img/perfil/muerte.png" alt="" class="imgPerfil" #imgPerfil>
+      <div class="containerLogoImg" *ngFor="let LogoPerfil of logo">
+        <img 
+            src="../../../assets/img/perfil/{{LogoPerfil}}.png" 
+            alt="logo Pefil" 
+            class="imgPerfil" 
+            (click)="click(LogoPerfil)" 
+            #imgPerfil
+           >
+      </div>
     </div>
   </div>
   <div class="containerButton">
