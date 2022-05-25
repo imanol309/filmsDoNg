@@ -15,6 +15,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   datoUsuario;
   numSlice: any = 15;
   cssVer: boolean = true;
+  arrayId = [];
   constructor(private router: Router, private genericService: GenericService) {}
 
   ngOnInit(): void {
@@ -22,8 +23,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
       this.cssVer = false;
     }
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'))
-    // console.log(this.datoUsuario)
-    // this.for()
+    this.forGuardad()
   }
 
   ngOnDestroy(): void {
@@ -44,17 +44,32 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   }
 
   agregarPelicula(d) {
-    this.genericService.postAddMovieList(d).subscribe((datoGuardado) => {
-      const datoFormulario = JSON.parse(localStorage.getItem('Formulario'));
-      this.genericService.postLogin(datoFormulario).subscribe((value) => {
-        localStorage.setItem('usuario', JSON.stringify(value.DatosLogin));
-      })
+    this.genericService.postAddMovieList(d).subscribe((datoGuradado) => {
+      localStorage.setItem('usuario', JSON.stringify(datoGuradado.DatosLogin));
     })
   }
 
-  // for() {
-  //   this.datoUsuario?.favoriteMovies?.map(function(n) {
-  //     console.log(n?.titulo)
-  //   })
-  // }
+  forGuardad() {
+    this.datoUsuario.favoriteMovies?.map((x) => {
+      this.arrayId.push(x._id)
+    })
+  }
+
+  ifGuardad(d) {
+      if (this.arrayId.includes(d)) {
+        return '../../../../../assets/img/icon/guardar-instagram (2).png'
+      } else {
+        return '../../../../../assets/img/icon/guardar-instagram.png'
+      }
+  }
+
+  
+  ifClases(d) {
+    if (this.arrayId.includes(d)) {
+      return 'imgGuardad imgGuardadYes'
+    } else {
+      return 'imgGuardad'
+    }
+}
+
 }

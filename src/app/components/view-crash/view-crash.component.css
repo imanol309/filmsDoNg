@@ -220,6 +220,10 @@
   opacity: 0.2;
 }
 
+.imgGuardadYes {
+  opacity: 1;
+}
+
 .imgGuardad:hover {
   opacity: 1;
 }

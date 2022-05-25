@@ -27,10 +27,10 @@
         </div>
         <div class="containerGuardar" *ngIf="datoUsuario">
           <img
-          (click)="agregarPelicula(item)"
-            src="../../../assets/img/icon/guardar-instagram.png"
+            (click)="agregarPelicula(item)"
+            src={{ifGuardad(item._id)}}
             alt=""
-            class='imgGuardad'
+            class={{ifClases(item._id)}}
           />
         </div>
       </div>
