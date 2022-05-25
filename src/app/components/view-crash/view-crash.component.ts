@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, ViewChild, Renderer2, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomeDateMovie } from 'src/app/pages/home/models/home.model';
 import { GenericService } from 'src/app/services/generic.service';
@@ -17,7 +17,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   cssVer: boolean = true;
   arrayId = [];
   constructor(private router: Router, private genericService: GenericService) {}
-
+  
   ngOnInit(): void {
     if (!this.Css) {
       this.cssVer = false;
@@ -25,6 +25,15 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'))
     this.forGuardad()
   }
+
+  cilccc(d, datos){
+    this.agregarPelicula(datos)
+    d.src = "http://localhost:8888/assets/img/icon/guardar-instagram-guardado.png"
+    this.forGuardad()
+    this.ifClases(datos._id)
+    console.log(d.src)
+    console.log(datos)
+   }
 
   ngOnDestroy(): void {
     this.numSlice = 15;
@@ -45,11 +54,8 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
 
   agregarPelicula(datos) {
     this.genericService.postAddMovieList(datos).subscribe((datoGuradado) => {
-      console.log(datoGuradado)
       localStorage.setItem('usuario', JSON.stringify(datoGuradado?.moviesNew));
       this.ifGuardad(datos._id)
-      this.router.navigateByUrl('/DummyComponent', {skipLocationChange: true}).then(()=>
-      this.router.navigate(["/pelis/home/"]));
     })
   }
 
@@ -60,11 +66,11 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   }
 
   ifGuardad(d) {
-      if (this.arrayId.includes(d)) {
-        return '../../../../../assets/img/icon/guardar-instagram (2).png'
-      } else {
-        return '../../../../../assets/img/icon/guardar-instagram.png'
-      }
+    if (this.arrayId.includes(d)) {
+      return '../../../../../assets/img/icon/guardar-instagram-guardado.png'
+    } else {
+      return '../../../../../assets/img/icon/guardar-instagram-sin-guarda.png'
+    }
   }
 
   ifClases(d) {
