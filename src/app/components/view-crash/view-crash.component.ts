@@ -31,8 +31,6 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     d.src = "http://localhost:8888/assets/img/icon/guardar-instagram-guardado.png"
     this.forGuardad()
     this.ifClases(datos._id)
-    console.log(d.src)
-    console.log(datos)
    }
 
   ngOnDestroy(): void {
