@@ -93,7 +93,7 @@
 }
 
 .sideRigth {
-  width: 35%;
+  width: 30%;
   height: 95vh;
   background-color: #000000;
   border-left: 1px solid white;
@@ -133,7 +133,7 @@
   }
 
   .sideRigth {
-    width: 40%;
+    width: 45%;
   }
 
   .sideLeft {
@@ -154,7 +154,7 @@
   }
 
   .sideRigth {
-    width: 50%;
+    width: 60%;
   }
 
   .sideLeft {
