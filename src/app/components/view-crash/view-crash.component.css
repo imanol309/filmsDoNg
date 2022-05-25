@@ -217,16 +217,16 @@
 .imgGuardad {
   width: 27px;
   height: 27px;
-  opacity: 0.2;
+  opacity: 1;
 }
 
 .imgGuardadYes {
   opacity: 1;
 }
 
-.imgGuardad:hover {
+/* .imgGuardad:hover {
   opacity: 1;
-}
+} */
 
 /* Media screen para crear el diseño para pantalla mas pequeña */
 
