@@ -43,9 +43,13 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     }
   }
 
-  agregarPelicula(d) {
-    this.genericService.postAddMovieList(d).subscribe((datoGuradado) => {
-      localStorage.setItem('usuario', JSON.stringify(datoGuradado.DatosLogin));
+  agregarPelicula(datos) {
+    this.genericService.postAddMovieList(datos).subscribe((datoGuradado) => {
+      console.log(datoGuradado)
+      localStorage.setItem('usuario', JSON.stringify(datoGuradado?.moviesNew));
+      this.ifGuardad(datos._id)
+      this.router.navigateByUrl('/DummyComponent', {skipLocationChange: true}).then(()=>
+      this.router.navigate(["/pelis/home/"]));
     })
   }
 
@@ -63,7 +67,6 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
       }
   }
 
-  
   ifClases(d) {
     if (this.arrayId.includes(d)) {
       return 'imgGuardad imgGuardadYes'

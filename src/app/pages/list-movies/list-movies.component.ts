@@ -14,17 +14,13 @@ export class ListMoviesComponent implements OnInit {
 
   ngOnInit() {
     this.loanding = true
-    const datosFormulario = JSON.parse(localStorage.getItem('Formulario'));
-    this.datosLista(datosFormulario)
+    this.datosLista()
   }
   
 
-  datosLista(datos) {
-    this.genericService.postLogin(datos).subscribe((datos) => {
-      localStorage.setItem('usuario', JSON.stringify(datos?.DatosLogin));
-      this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
-      this.datoUsuario = this.datoUsuario?.favoriteMovies
-      this.loanding = false
-    })
+  datosLista() {
+    const datosUsuario = JSON.parse(localStorage.getItem('usuario'));
+    this.datoUsuario = datosUsuario?.favoriteMovies
+    this.loanding = false
   }
 }
