@@ -28,7 +28,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
 
   cilccc(d, datos){
     this.agregarPelicula(datos)
-    d.src = "http://localhost:8888/assets/img/icon/guardar-instagram-guardado.png"
+    d.src = "https://films-do-ng.vercel.app/assets/img/icon/guardar-instagram-guardado.png"
     this.forGuardad()
     this.ifClases(datos._id)
    }
