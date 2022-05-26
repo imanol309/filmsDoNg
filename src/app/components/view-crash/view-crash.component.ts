@@ -15,7 +15,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   datoUsuario;
   numSlice: any = 15;
   cssVer: boolean = true;
-  arrayId = [];
+  arrayId: any = [];
   constructor(private router: Router, private genericService: GenericService) {}
   
   ngOnInit(): void {
@@ -32,8 +32,8 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
    }
 
    
-  imgEliminar(d, datos){
-    this.agregarPelicula(datos)
+  imgEliminar(d, id){
+    this.eliminarPelicula(id)
     d.src = "https://films-do-ng.vercel.app/assets/img/icon/guardar-instagram-sin-guarda.png"
    }
 
@@ -63,7 +63,16 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     })
   }
 
+  eliminarPelicula(id) {
+    this.genericService.putDeleteMyList(id).subscribe((datos) => {
+      localStorage.setItem('usuario', JSON.stringify(datos?.moviesNew));
+      this.datoUsuario = JSON.parse(localStorage.getItem('usuario'))
+      this.forGuardad()
+    })
+  }
+    
   forGuardad() {
+    this.arrayId = []
     this.datoUsuario.favoriteMovies?.map((x) => {
       this.arrayId.push(x._id)
     })

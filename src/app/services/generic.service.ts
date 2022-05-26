@@ -47,4 +47,16 @@ export class GenericService {
       })
       .pipe(catchError((err) => throwError(err)));
   }
+
+  putDeleteMyList(datos): Observable<any> {
+    const id = JSON.parse(localStorage.getItem('usuario'));
+    return this.httpClient
+      .put<any>(
+        `${environment.URL_API}/api/user/deleteaddMovieList/${id._id}`,
+        {
+          id: datos,
+        }
+      )
+      .pipe(catchError((err) => throwError(err)));
+  }
 }
