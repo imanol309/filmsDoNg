@@ -43,6 +43,13 @@
   text-overflow: ellipsis;
   border: 1px solid #17c3b200;
   transition: 0.5s linear;
+  /* text-align: center; */
+  align-items: center;
+}
+
+.imgSecciones {
+  height: 20px;
+  margin-right: 2%;
 }
 
 .auto:focus {
