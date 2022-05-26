@@ -26,12 +26,17 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     this.forGuardad()
   }
 
-  cilccc(d, datos){
+  imgGuardad(d, datos){
     this.agregarPelicula(datos)
     d.src = "https://films-do-ng.vercel.app/assets/img/icon/guardar-instagram-guardado.png"
-    this.forGuardad()
-    this.ifClases(datos._id)
    }
+
+   
+  imgEliminar(d, datos){
+    this.agregarPelicula(datos)
+    d.src = "https://films-do-ng.vercel.app/assets/img/icon/guardar-instagram-sin-guarda.png"
+   }
+
 
   ngOnDestroy(): void {
     this.numSlice = 15;
@@ -53,7 +58,8 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   agregarPelicula(datos) {
     this.genericService.postAddMovieList(datos).subscribe((datoGuradado) => {
       localStorage.setItem('usuario', JSON.stringify(datoGuradado?.moviesNew));
-      this.ifGuardad(datos._id)
+      this.datoUsuario = JSON.parse(localStorage.getItem('usuario'))
+      this.forGuardad()
     })
   }
 
