@@ -1,5 +1,4 @@
 import {
-  AfterViewInit,
   Component,
   ElementRef,
   OnInit,
@@ -14,11 +13,13 @@ import { GenericService } from 'src/app/services/generic.service';
   templateUrl: './Registration.component.html',
   styleUrls: ['./Registration.component.css'],
 })
-export class RegistrationComponent implements OnInit, AfterViewInit {
+export class RegistrationComponent implements OnInit {
   @ViewChild('imgPerfil') img: ElementRef;
   formRegistre: FormGroup;
   logo: any = ['fantasma', 'extraterrestre', 'ladron', 'momia', 'muerte'];
   mensaje: String;
+  imgPerfil: any;
+  link: any;
   constructor(
     private fb: FormBuilder,
     private genericService: GenericService,
@@ -49,15 +50,14 @@ export class RegistrationComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {}
 
-  ngAfterViewInit() {}
-
   onNoClick(): void {
     this.dialogRef.close();
   }
 
   eligueUno(datos) {
+    this.imgPerfil = datos
+    this.link = `../../../../../assets/img/perfil/${this.imgPerfil}.png`
     this.formRegistre.controls['logo'].setValue(datos);
-    console.log(this.formRegistre.get('logo').value);
   }
 
   registrarUsuario() {

@@ -18,6 +18,5 @@ export class MovieSectionsComponent implements OnInit {
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
     const img =  this.datoUsuario?.logo
     this.rutaImg = `../../../../../assets/img/perfil/${img}.png`
-    console.log(window.innerHeight)
   }
 }
