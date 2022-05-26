@@ -96,7 +96,7 @@ mat-error {
 
 .containerButton {
   width: 100%;
-  margin-top: 3%;
+  margin-top: 1%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +175,7 @@ mat-error {
   border-radius: 100%;
 }
 
-.imgPerfil:visited {
+.imgPerfil:hover {
   height: 70px;
   width: 70px;
   cursor: pointer;
@@ -188,7 +188,7 @@ mat-error {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 
 .containerEligue {
