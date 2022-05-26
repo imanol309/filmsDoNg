@@ -1,8 +1,10 @@
-<div class="containerCLose" (click)="onNoClick()">
-  <img src="../../../assets/img/icon/letra-x.png" alt="" class="imgClose" />
+<div class="containerCLose">
+  <img src="../../../assets/img/icon/google-play.png" alt="" class="imgLogo">
+  <img src="../../../assets/img/icon/letra-x.png" alt="" class="imgClose" (click)="onNoClick()" />
 </div>
 <div class="containerRegistar">
   <div class="ContainerTitulo">
+    <img src="../../../assets/img/icon/usuarioOneNew.png" alt="" class="imgPerfilDemo">
     <h4 class="titulo">Formulario</h4>
   </div>
   <form
@@ -15,7 +17,7 @@
         <input
           type="text"
           placeholder="Nombre"
-          class="input corto"
+          class="input"
           formControlName="name"
         />
         <mat-error
@@ -78,7 +80,9 @@
         </mat-error>
       </div>
       <div class="containerLogo">
-        <h4 class="Eligue">Eligue:</h4>
+        <div class="containerEligue">
+          <h4 class="Eligue">Dale click:</h4>
+        </div>
         <div class="containerLogoImg" *ngFor="let LogoPerfil of logo">
           <img
             src="../../../assets/img/perfil/{{ LogoPerfil }}.png"
@@ -93,7 +97,7 @@
     </div>
     <div class="containerButton">
       <mat-error *ngIf="mensaje" class="matTrue">
-        BIENVENIDO {{mensaje}}
+        {{mensaje}}
       </mat-error>
       <button
         class="buttonCrear"

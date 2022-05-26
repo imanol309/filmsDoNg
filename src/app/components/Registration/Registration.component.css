@@ -3,9 +3,9 @@
   height: 95%;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 5%;
 }
 
 .containerCLose {
@@ -13,9 +13,8 @@
   padding: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  height: 40px;
   height: 5%;
 }
 
@@ -25,14 +24,23 @@ mat-error {
 
 .matTrue {
   color: #02ee8f;
+  font-size: 21px;
+  margin-bottom: 2%;
+}
+
+.imgLogo {
+  height: 30px;
+  cursor: pointer;
+  margin-top: 3%;
+  margin-left: 7%;
 }
 
 .imgClose {
   height: 20px;
   transition: 0.3s linear;
   margin: 5px;
-  margin-top: 1%;
-  margin-right: 1%;
+  margin-top: 3%;
+  margin-right: 3%;
   cursor: pointer;
 }
 
@@ -42,13 +50,21 @@ mat-error {
 
 .ContainerTitulo {
   width: 100%;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imgPerfilDemo {
+  height: 82px;
+  padding-bottom: 3%;
 }
 
 .titulo {
-  font-size: 34px;
+  font-size: 37px;
   font-family: monospace;
-  text-align: center;
   color: white;
 }
 
@@ -69,18 +85,21 @@ mat-error {
 }
 
 .containerInputText {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 
 .containerButton {
   width: 100%;
   margin-top: 3%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 /* From uiverse.io */
@@ -162,21 +181,21 @@ mat-error {
   background-color: rgb(242, 242, 242);
 }
 
-.corto {
-  width: 50%;
-}
-
 .containerLogo {
-  width: 80%;
+  width: 65%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   margin-bottom: 3%;
 }
 
+.containerEligue {
+  width: 40%;
+}
+
 .containerLogoImg {
-  width: 80%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -202,69 +221,33 @@ mat-error {
 
 /* Para 600px */
 @media only screen and (max-width: 620px) and (min-width: 501px) {
-  .corto {
-    width: 100%;
-  }
-
   .imgPerfil {
     height: 40px;
-    width: 40px;
   }
 
   .imgClose {
     margin-right: 3%;
-  }
-
-  .containerForm {
-    height: 70%;
-  }
-
-  .ContainerTitulo {
-    height: 10%;
   }
 }
 
 /* Para 480px */
 @media only screen and (max-width: 500px) and (min-width: 341px) {
-  .corto {
-    width: 100%;
-  }
   .imgPerfil {
     height: 35px;
-    width: 35px;
   }
 
   .imgClose {
     margin-right: 3%;
-  }
-
-  .containerForm {
-    height: 70%;
-  }
-
-  .ContainerTitulo {
-    height: 10%;
   }
 }
 
 /* Para 320px */
 @media only screen and (max-width: 340px) and (min-width: 5px) {
-  .corto {
-    width: 100%;
-  }
   .imgPerfil {
     height: 30px;
-    width: 30px;
   }
 
   .imgClose {
     margin-right: 3%;
-  }
-  .containerForm {
-    height: 70%;
-  }
-
-  .ContainerTitulo {
-    height: 10%;
   }
 }
