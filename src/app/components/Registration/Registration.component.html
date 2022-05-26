@@ -83,8 +83,9 @@
         <div class="containerEligue">
           <h4 class="Eligue">Dale click:</h4>
         </div>
-        <div class="containerLogoImg" *ngFor="let LogoPerfil of logo">
-          <img
+        <div class="containerLogoImg" >
+          <div *ngFor="let LogoPerfil of logo">
+            <img
             src="../../../assets/img/perfil/{{ LogoPerfil }}.png"
             alt="logo Pefil"
             class="imgPerfil"
@@ -92,6 +93,7 @@
             (click)="eligueUno(LogoPerfil)"
             placeholder="logo"
           />
+          </div>
         </div>
       </div>
     </div>
@@ -108,4 +110,12 @@
       </button>
     </div>
   </form>
+  <div class="containerTerminos">
+    <div class="Terminos">
+      <p>
+        Al registrarte, has aceptado los <strong class="strongTerminos">términos de uso y la política de
+          privacidad</strong> de pelisRD.
+      </p>
+    </div>
+  </div>
 </div>

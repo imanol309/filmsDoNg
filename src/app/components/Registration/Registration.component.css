@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   padding-top: 5%;
 }
 
@@ -211,6 +212,31 @@ mat-error {
   color: rgb(255, 255, 255);
 }
 
+.containerTerminos {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Terminos {
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  text-align: center;
+}
+
+.strongTerminos {
+  color: white;
+}
+
+p {
+  color: #a9a9a9;
+  font-size: 12px;
+  font-family: monospace;
+}
+
 /* Para 960px */
 @media only screen and (max-width: 980px) and (min-width: 821px) {
 }
@@ -223,10 +249,47 @@ mat-error {
 @media only screen and (max-width: 620px) and (min-width: 501px) {
   .imgPerfil {
     height: 40px;
+    width: 40px;
   }
 
   .imgClose {
     margin-right: 3%;
+  }
+
+  .containerInputText {
+    width: 100%;
+  }
+
+  .containerInput {
+    gap: 10px;
+  }
+
+  .containerLogo {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .containerLogoImg {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 2%;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .imgPerfilDemo {
+    height: 70px;
+  }
+
+  .input::placeholder {
+    color: #fffefe;
+    font-size: 15px;
+  }
+
+  .Terminos {
+    width: 45%;
   }
 }
 
@@ -234,10 +297,47 @@ mat-error {
 @media only screen and (max-width: 500px) and (min-width: 341px) {
   .imgPerfil {
     height: 35px;
+    width: 35px;
   }
 
   .imgClose {
     margin-right: 3%;
+  }
+
+  .containerInputText {
+    width: 100%;
+  }
+
+  .containerInput {
+    gap: 10px;
+  }
+
+  .containerLogo {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .containerLogoImg {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 2%;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .imgPerfilDemo {
+    height: 65px;
+  }
+
+  .input::placeholder {
+    color: #fffefe;
+    font-size: 13px;
+  }
+
+  .Terminos {
+    width: 50%;
   }
 }
 
@@ -245,9 +345,46 @@ mat-error {
 @media only screen and (max-width: 340px) and (min-width: 5px) {
   .imgPerfil {
     height: 30px;
+    width: 30px;
   }
 
   .imgClose {
     margin-right: 3%;
+  }
+
+  .containerInputText {
+    width: 100%;
+  }
+
+  .containerInput {
+    gap: 10px;
+  }
+
+  .containerLogo {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .containerLogoImg {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 2%;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .imgPerfilDemo {
+    height: 55px;
+  }
+
+  .input::placeholder {
+    color: #fffefe;
+    font-size: 13px;
+  }
+
+  .Terminos {
+    width: 60%;
   }
 }
