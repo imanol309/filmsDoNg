@@ -18,7 +18,13 @@
 .imgLogo {
   height: 30px;
   cursor: pointer;
+  transition: height 0.5s linear;
 }
+
+.imgLogo:hover {
+  height: 40px;
+}
+
 
 .seccionesPelis {
   display: flex;
