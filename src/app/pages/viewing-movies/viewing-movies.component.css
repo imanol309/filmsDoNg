@@ -141,6 +141,10 @@ h4 {
   flex-direction: column;
 }
 
+.containerMovil {
+  display: none;
+}
+
 .containerImgCaratula {
   height: 350px;
   width: 250px;
@@ -173,6 +177,8 @@ h4 {
   margin: 0;
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.543);
+  width: 75%;
+  height: 700px;
 }
 
 .containerPeliculaSugeridas {
@@ -197,3 +203,227 @@ h4 {
 .peliculasSugeridas {
   width: 75%;
 }
+
+/* Para 960px */  
+@media only screen and (max-width: 980px) and (min-width: 821px) {  
+  
+}  
+  
+/* Para 800px */  
+@media only screen and (max-width: 820px) and (min-width: 621px) {  
+  
+}  
+  
+/* Para 600px */  
+@media only screen and (max-width: 620px) and (min-width: 501px) {  
+  .containerH4 {
+    width: 90%;
+    gap: 15px;
+  }
+
+  .tituloH4 {
+    font-size: 40px;
+  }
+
+  
+.videoIframe {
+  width: 90%;
+  height: 350px;
+}
+
+.containerCarhView {
+  max-width: 100%;
+  width: 95%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imgCaratula {
+  height: 270px;
+  width: 165px;
+  box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
+}
+
+.containerImg {
+  width: 100%;
+  flex-direction: row;
+}
+
+.containerMovil {
+  display: block;
+  width: 50%;
+  margin-left: 5%;
+}
+
+.movil {
+  font-size: 22px;
+}
+
+.none {
+  display: none;
+}
+
+.containerTexto {
+  max-width: 100%;
+  width: 95%;
+  padding-left: 0%;
+}
+
+
+.sinopsis {
+  font-size: 20px;
+}
+
+.colorGris {
+  width: 20%;
+  font-size: 12px;
+}
+
+.h4white {
+  color: white;
+  font-size: 11px;
+}
+
+}  
+  
+/* Para 480px */  
+@media only screen and (max-width: 500px) and (min-width: 341px) {  
+  .containerH4 {
+    width: 90%;
+    gap: 10px;
+  }
+
+  .tituloH4 {
+    font-size: 35px;
+  }
+
+  .videoIframe {
+    width: 90%;
+    height: 300px;
+  }
+
+  .containerCarhView {
+    max-width: 100%;
+    width: 95%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .imgCaratula {
+    height: 250px;
+    width: 150px;
+    box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
+  }
+
+  .containerMovil {
+    display: block;
+    width: 50%;
+    margin-left: 5%;
+  }
+  .containerImg {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .containerImgCaratula {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movil {
+    font-size: 20px;
+  }
+
+  .none {display: none;}
+
+  
+.containerTexto {
+  max-width: 100%;
+  width: 95%;
+  padding-left: 0%;
+}
+
+.sinopsis {
+  font-size: 19px;
+}
+
+.colorGris {
+  width: 20%;
+  font-size: 12px;
+}
+
+.h4white {
+  color: white;
+  font-size: 11px;
+}
+  
+}  
+  
+/* Para 320px */  
+@media only screen and (max-width: 340px) and (min-width: 5px)  {  
+  .containerH4 {
+    width: 90%;
+    gap: 7px;
+  }
+
+  .tituloH4 {
+    font-size: 30px;
+  }
+
+  .videoIframe {
+    width: 90%;
+    height: 250px;
+  }
+
+  .containerCarhView {
+    max-width: 100%;
+    width: 95%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .imgCaratula {
+    height: 220px;
+    width: 130px;
+    box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
+  }
+  .containerImg {
+    width: 100%;
+    flex-direction: row;
+  }
+  .containerMovil {
+    display: block;
+    width: 50%;
+    margin-left: 5%;
+  }
+
+  .movil {
+    font-size: 15px;
+  }
+
+  .none {display: none;}
+  
+  .containerTexto {
+    max-width: 100%;
+    width: 95%;
+    padding-left: 0%;
+  }
+
+  .sinopsis {
+    font-size: 15px;
+  }
+
+  .colorGris {
+    width: 20%;
+    font-size: 12px;
+  }
+  
+  .h4white {
+    color: white;
+    font-size: 11px;
+  }
+  
+} 

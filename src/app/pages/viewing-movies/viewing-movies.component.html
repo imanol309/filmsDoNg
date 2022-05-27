@@ -11,8 +11,6 @@
       <div class="containerIframe">
         <iframe
           [src]='transform(datos?.video)'
-          width="75%"
-          height="700px"
           allowfullscreen
           allowtransparency
           allow="autoplay"
@@ -28,10 +26,17 @@
             <div class="containerImgCaratula">
               <img src="{{ datos?.img }}" alt="" srcset="" class="imgCaratula" />
             </div>
+            <div class="containerMovil">
+              <h4 class="titulo movil">{{ datos?.titulo }}</h4>
+              <div class="containerValoracion">
+                <h4>90Min</h4>
+                <h4>(2009)</h4>
+              </div>
+            </div>
           </div>
           <div class="containerTexto">
-            <h4 class="titulo">{{ datos?.titulo }}</h4>
-            <div class="containerValoracion">
+            <h4 class="titulo none">{{ datos?.titulo }}</h4>
+            <div class="containerValoracion none">
               <h4>90Min</h4>
               <h4>(2009)</h4>
             </div>
