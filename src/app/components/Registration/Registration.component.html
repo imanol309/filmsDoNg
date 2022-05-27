@@ -1,10 +1,21 @@
 <div class="containerCLose">
-  <img src="../../../assets/img/icon/google-play.png" alt="" class="imgLogo">
-  <img src="../../../assets/img/icon/letra-x.png" alt="" class="imgClose" (click)="onNoClick()" />
+  <img src="../../../assets/img/icon/google-play.png" alt="" class="imgLogo" />
+  <img
+    src="../../../assets/img/icon/letra-x.png"
+    alt=""
+    class="imgClose"
+    (click)="onNoClick()"
+  />
 </div>
 <div class="containerRegistar">
   <div class="ContainerTitulo">
-    <img src="{{imgPerfil ? link :'../../../assets/img/icon/usuarioOneNew.png'}}" alt="" class="imgPerfilDemo">
+    <img
+      src="{{
+        imgPerfil ? link : '../../../assets/img/icon/usuarioOneNew.png'
+      }}"
+      alt=""
+      class="imgPerfilDemo"
+    />
     <h4 class="titulo">Formulario</h4>
   </div>
   <form
@@ -83,23 +94,23 @@
         <div class="containerEligue">
           <h4 class="Eligue">Dale click:</h4>
         </div>
-        <div class="containerLogoImg" >
+        <div class="containerLogoImg">
           <div *ngFor="let LogoPerfil of logo">
             <img
-            src="../../../assets/img/perfil/{{ LogoPerfil }}.png"
-            alt="logo Pefil"
-            class="imgPerfil"
-            #imgPerfil
-            (click)="eligueUno(LogoPerfil)"
-            placeholder="logo"
-          />
+              src="../../../assets/img/perfil/{{ LogoPerfil }}.png"
+              alt="logo Pefil"
+              class="imgPerfil"
+              #imgPerfil
+              (click)="eligueUno(LogoPerfil)"
+              placeholder="logo"
+            />
           </div>
         </div>
       </div>
     </div>
     <div class="containerButton">
       <mat-error *ngIf="mensaje" class="matTrue">
-        {{mensaje}}
+        {{ mensaje }}
       </mat-error>
       <button
         class="buttonCrear"
@@ -113,8 +124,11 @@
   <div class="containerTerminos">
     <div class="Terminos">
       <p>
-        Al registrarte, has aceptado los <strong class="strongTerminos">términos de uso y la política de
-          privacidad</strong> de pelisRD.
+        Al registrarte, has aceptado los
+        <strong class="strongTerminos"
+          >términos de uso y la política de privacidad</strong
+        >
+        de FilmsDo.
       </p>
     </div>
   </div>
