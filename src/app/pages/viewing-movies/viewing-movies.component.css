@@ -69,7 +69,6 @@ h4 {
   color: white;
 }
 
-
 .containerTexto {
   width: 80%;
   height: 100%;
@@ -192,7 +191,7 @@ h4 {
 
 .containerPuede {
   width: 75%;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
 }
 
 .h4Puede {
@@ -204,18 +203,16 @@ h4 {
   width: 75%;
 }
 
-/* Para 960px */  
-@media only screen and (max-width: 980px) and (min-width: 821px) {  
-  
-}  
-  
-/* Para 800px */  
-@media only screen and (max-width: 820px) and (min-width: 621px) {  
-  
-}  
-  
-/* Para 600px */  
-@media only screen and (max-width: 620px) and (min-width: 501px) {  
+/* Para 960px */
+@media only screen and (max-width: 980px) and (min-width: 821px) {
+}
+
+/* Para 800px */
+@media only screen and (max-width: 820px) and (min-width: 621px) {
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
   .containerH4 {
     width: 90%;
     gap: 15px;
@@ -225,69 +222,75 @@ h4 {
     font-size: 40px;
   }
 
-  
-.videoIframe {
-  width: 90%;
-  height: 350px;
+  .videoIframe {
+    width: 90%;
+    height: 350px;
+  }
+
+  .containerCarhView {
+    max-width: 100%;
+    width: 95%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .imgCaratula {
+    height: 270px;
+    width: 165px;
+    box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
+  }
+
+  .containerImg {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .containerMovil {
+    display: block;
+    width: 50%;
+    margin-left: 5%;
+  }
+
+  .movil {
+    font-size: 22px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .containerTexto {
+    max-width: 100%;
+    width: 95%;
+    padding-left: 0%;
+  }
+
+  .sinopsis {
+    font-size: 20px;
+  }
+
+  .colorGris {
+    width: 20%;
+    font-size: 12px;
+  }
+
+  .h4white {
+    color: white;
+    font-size: 11px;
+  }
+
+  .peliculasSugeridas {
+    width: 100%;
+  }
+
+  .h4Puede {
+    color: white;
+    font-size: 20px;
+  }
 }
 
-.containerCarhView {
-  max-width: 100%;
-  width: 95%;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.imgCaratula {
-  height: 270px;
-  width: 165px;
-  box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
-}
-
-.containerImg {
-  width: 100%;
-  flex-direction: row;
-}
-
-.containerMovil {
-  display: block;
-  width: 50%;
-  margin-left: 5%;
-}
-
-.movil {
-  font-size: 22px;
-}
-
-.none {
-  display: none;
-}
-
-.containerTexto {
-  max-width: 100%;
-  width: 95%;
-  padding-left: 0%;
-}
-
-
-.sinopsis {
-  font-size: 20px;
-}
-
-.colorGris {
-  width: 20%;
-  font-size: 12px;
-}
-
-.h4white {
-  color: white;
-  font-size: 11px;
-}
-
-}  
-  
-/* Para 480px */  
-@media only screen and (max-width: 500px) and (min-width: 341px) {  
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
   .containerH4 {
     width: 90%;
     gap: 10px;
@@ -325,7 +328,7 @@ h4 {
     display: flex;
     flex-direction: row;
   }
-  
+
   .containerImgCaratula {
     width: 40%;
     display: flex;
@@ -337,33 +340,42 @@ h4 {
     font-size: 20px;
   }
 
-  .none {display: none;}
+  .none {
+    display: none;
+  }
 
-  
-.containerTexto {
-  max-width: 100%;
-  width: 95%;
-  padding-left: 0%;
+  .containerTexto {
+    max-width: 100%;
+    width: 95%;
+    padding-left: 0%;
+  }
+
+  .sinopsis {
+    font-size: 19px;
+  }
+
+  .colorGris {
+    width: 20%;
+    font-size: 12px;
+  }
+
+  .h4white {
+    color: white;
+    font-size: 11px;
+  }
+
+  .peliculasSugeridas {
+    width: 100%;
+  }
+
+  .h4Puede {
+    color: white;
+    font-size: 18px;
+  }
 }
 
-.sinopsis {
-  font-size: 19px;
-}
-
-.colorGris {
-  width: 20%;
-  font-size: 12px;
-}
-
-.h4white {
-  color: white;
-  font-size: 11px;
-}
-  
-}  
-  
-/* Para 320px */  
-@media only screen and (max-width: 340px) and (min-width: 5px)  {  
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
   .containerH4 {
     width: 90%;
     gap: 7px;
@@ -404,8 +416,10 @@ h4 {
     font-size: 15px;
   }
 
-  .none {display: none;}
-  
+  .none {
+    display: none;
+  }
+
   .containerTexto {
     max-width: 100%;
     width: 95%;
@@ -420,10 +434,18 @@ h4 {
     width: 20%;
     font-size: 12px;
   }
-  
+
   .h4white {
     color: white;
     font-size: 11px;
   }
-  
-} 
+
+  .peliculasSugeridas {
+    width: 100%;
+  }
+
+  .h4Puede {
+    color: white;
+    font-size: 16px;
+  }
+}
