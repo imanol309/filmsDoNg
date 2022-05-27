@@ -279,6 +279,11 @@
     height: 50px;
     font-size: 22px;
   }
+
+  .containerCarhView {
+    height: 20%;
+    width: 30%;
+  }
 }
 
 /* Para 800px */
@@ -326,6 +331,11 @@
   .imgGuardad {
     width: 24px;
     height: 24px;
+  }
+
+  .containerCarhView {
+    height: 20%;
+    width: 30%;
   }
   
 }

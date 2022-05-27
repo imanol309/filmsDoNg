@@ -23,7 +23,7 @@
             {{ item?.year?.slice(0, 4) || "2013" }} -
             {{ item?.time || "90" }}Min
           </p>
-          <p class="generoCarh">{{ item?.genero?.split("_").join("· ") }}</p>
+          <p class="generoCarh">{{ item?.genero?.split("_").join(" · ") }}</p>
         </div>
         <div class="containerGuardar" *ngIf="datoUsuario">
           <img

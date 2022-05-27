@@ -5,7 +5,7 @@
       <div class="containerTitulo">
         <div class="containerH4">
           <h4 class="tituloH4">{{datos?.titulo}}</h4>
-          <h4 class="generoH4">{{datos?.genero}}</h4>
+          <h4 class="generoH4">{{datos?.genero?.split("_").join(" · ")}}</h4>
         </div>
       </div>
       <div class="containerIframe">
