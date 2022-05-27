@@ -37,16 +37,25 @@
 }
 
 .containerSecciones {
-  width: 80%;
+  width: 100%;
   margin-bottom: 1%;
+  padding-left: 5%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  height: 50px;
+  height: 45px;
   gap: 15px;
   cursor: pointer;
+  transition: 0.5s linear;
+  text-decoration: none;
 }
+
+.containerSecciones:hover {
+  background-color: rgba(27, 26, 26, 0.734);
+  border: 1px solid #17c3b2;
+}
+
 
 .secciones {
   color: rgb(255, 255, 255);
@@ -61,6 +70,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .imgSecciones {
