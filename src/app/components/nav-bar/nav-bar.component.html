@@ -1,13 +1,26 @@
 <div class="NavbarPrincipal" role="navigation">
   <div class="NavbarContainer">
     <div class="navBarSecciones">
-      <p class="secciones auto" routerLink="/pelis/home">
-        <!-- <img src="../../../assets/img/secciones/hogar.png" alt="" class="imgSecciones"> -->
-        Inicio</p>
-      <p class="secciones" (click)="openModalSeeker()">Buscador</p>
-      <p class="secciones" routerLink="/pelis/moreView">Mas vista</p>
-      <p class="secciones" routerLink="/pelis/favoriteList" *ngIf="datoUsuario">Mis Listas</p>
-      <p class="secciones" routerLink="/error404">Extrenos</p>
+      <div class="containerSecciones" routerLink="/pelis/home">
+        <img src="../../../assets/img/secciones/hogar.png" alt="" class="imgSecciones">
+        <p class="secciones">Inicio</p>
+      </div>
+     <div class="containerSecciones" (click)="openModalSeeker()">
+      <img src="../../../assets/img/secciones/busqueda.png" alt="" class="imgSecciones">
+      <p class="secciones">Buscador</p>
+     </div>
+      <div class="containerSecciones" routerLink="/pelis/moreView">
+        <img src="../../../assets/img/secciones/fuego.png" alt="" class="imgSecciones">
+        <p class="secciones">Mas vista</p>
+      </div>
+      <div class="containerSecciones" routerLink="/pelis/favoriteList" *ngIf="datoUsuario">
+        <img src="../../../assets/img/secciones/boton.png" alt="" class="imgSecciones">
+        <p class="secciones">Mis Listas</p>
+      </div>
+      <div class="containerSecciones"routerLink="/error404" >
+        <img src="../../../assets/img/secciones/reloj.png" alt="" class="imgSecciones">
+        <p class="secciones">Extrenos</p>
+      </div>
     </div>
   </div>
   <div class="seccionesPelis">
@@ -21,8 +34,17 @@
     </p>
   </div>
   <div class="navBarContacto">
-    <p class="secciones" routerLink="/error404">Contactos</p>
-    <p class="secciones" routerLink="/error404">Politicas</p>
-    <p class="secciones" routerLink="/error404">Desarrollador</p>
+    <div class="containerSecciones" routerLink="/error404">
+      <img src="../../../assets/img/secciones/contacto.png" alt="" class="imgSecciones">
+      <p class="secciones">Contactos</p>
+    </div>
+    <div class="containerSecciones"  routerLink="/error404">
+      <img src="../../../assets/img/secciones/politica.png" alt="" class="imgSecciones">
+      <p class="secciones">Politicas</p>
+    </div>
+    <div class="containerSecciones" routerLink="/error404">
+      <img src="../../../assets/img/secciones/desarrollo-web.png" alt="" class="imgSecciones">
+      <p class="secciones">Desarrollador</p>
+    </div>
   </div>
 </div>

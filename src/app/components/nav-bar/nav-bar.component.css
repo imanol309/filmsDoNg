@@ -29,44 +29,52 @@
 .navBarSecciones {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border-bottom: 1px solid #ffffff7a;
+  padding-bottom: 4%;
+}
+
+.containerSecciones {
+  width: 80%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  height: 50px;
+  gap: 15px;
+  cursor: pointer;
 }
 
 .secciones {
   color: rgb(255, 255, 255);
   font-size: 18px;
   font-family: monospace;
-  cursor: pointer;
-  margin-left: 8%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border: 1px solid #17c3b200;
   transition: 0.5s linear;
-  /* text-align: center; */
+  text-align: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .imgSecciones {
-  height: 20px;
-  margin-right: 2%;
-}
-
-.auto:focus {
-  color: #17c3b2;
-  border: 1px solid #17c3b2;
-}
-
-.secciones:hover {
-  color: #17c3b2;
-  border: 1px solid #17c3b2;
-  background-color: #e34d1600;
+  height: 25px;
 }
 
 .navBarContacto {
-  padding-top: 2%;
-  border-top: 1px solid #ffffffc2;
-  width: 100%;
+  padding-top: 3%;
+  border-top: 1px solid #ffffff7d;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* adding the genre bar when it reaches the mobile level */
