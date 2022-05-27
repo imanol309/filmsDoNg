@@ -2,11 +2,17 @@
   <div class="movieSectionsContainer">
     <div class="containerMovies" *ngFor="let datos of peliDato">
       <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
+      <div class="containerTitulo">
+        <div class="containerH4">
+          <h4 class="tituloH4">{{datos?.titulo}}</h4>
+          <h4 class="generoH4">{{datos?.genero}}</h4>
+        </div>
+      </div>
       <div class="containerIframe">
         <iframe
           [src]='transform(datos?.video)'
-          width="90%"
-          height="900px"
+          width="75%"
+          height="700px"
           allowfullscreen
           allowtransparency
           allow="autoplay"
@@ -16,66 +22,47 @@
         >
         </iframe>
       </div>
-      <div class="containerCarhView">
-        <div class="containerTexto">
-          <h4 class="titulo">{{ datos?.titulo }}</h4>
-          <div class="containerValoracion">
-            <h4 class="estrella">⭐⭐⭐⭐⭐</h4>
-            <h4>90Min</h4>
-            <h4>(2009)</h4>
-          </div>
-          <p class="sinopsis">
-            Eddy vive una doble vida: cristiano en el templo y fuera de él
-            oculta su fe buscando disfrutar de diversiones que su religión no le
-            permite. Al conocer a Débora, multiplica sus mentiras, provocando
-            una divertida y aleccionadora cadena de enredos.
-          </p>
-          <div class="containerDirector">
-            <div class="containerInfo">
-              <h4 class="colorGris">Director</h4>
-              <h4>{{ datos?.Director }}</h4>
-            </div>
-            <div class="containerInfo">
-              <h4 class="colorGris">Elenco</h4>
-              <h4 class="reparto">{{ datos?.Reparto }}</h4>
-            </div>
-            <div class="containerInfo">
-              <h4 class="colorGris">Generos</h4>
-              <h4>{{ datos?.genero }}</h4>
-            </div>
-            <div class="containerInfo">
-              <h4 class="colorGris">Subtitulos</h4>
-              <h4>Opcional</h4>
-            </div>
-            <div class="containerInfo">
-              <h4 class="colorGris">Idiomas de audio</h4>
-              <h4>Español</h4>
+      <div class="containerCarhInfo">
+        <div class="containerCarhView">
+          <div class="containerImg">
+            <div class="containerImgCaratula">
+              <img src="{{ datos?.img }}" alt="" srcset="" class="imgCaratula" />
             </div>
           </div>
-        </div>
-        <div class="containerImg">
-          <div class="containerImgCaratula">
-            <img src="{{ datos?.img }}" alt="" srcset="" class="imgCaratula" />
-          </div>
-          <div class="containerImgOpciones">
-            <img
-              src="../../../assets/img/view-movies/boton-de-play.png"
-              alt=""
-              srcset=""
-              class="imgOpciones"
-            />
-            <img
-              src="../../../assets/img/view-movies/marcador.png"
-              alt=""
-              srcset=""
-              class="imgOpciones"
-            />
-            <img
-              src="../../../assets/img/view-movies/me-gusta.png"
-              alt=""
-              srcset=""
-              class="imgOpciones"
-            />
+          <div class="containerTexto">
+            <h4 class="titulo">{{ datos?.titulo }}</h4>
+            <div class="containerValoracion">
+              <h4>90Min</h4>
+              <h4>(2009)</h4>
+            </div>
+            <p class="sinopsis">
+              Eddy vive una doble vida: cristiano en el templo y fuera de él
+              oculta su fe buscando disfrutar de diversiones que su religión no le
+              permite. Al conocer a Débora, multiplica sus mentiras, provocando
+              una divertida y aleccionadora cadena de enredos.
+            </p>
+            <div class="containerDirector">
+              <div class="containerInfo">
+                <h4 class="colorGris">Director:</h4>
+                <h4 class="h4white">{{ datos?.Director }}</h4>
+              </div>
+              <div class="containerInfo">
+                <h4 class="colorGris">Elenco:</h4>
+                <h4 class="reparto h4white">{{ datos?.Reparto }}</h4>
+              </div>
+              <div class="containerInfo">
+                <h4 class="colorGris">Generos:</h4>
+                <h4 class="h4white">{{ datos?.genero }}</h4>
+              </div>
+              <div class="containerInfo">
+                <h4 class="colorGris">Subtitulos:</h4>
+                <h4 class="h4white">Opcional</h4>
+              </div>
+              <div class="containerInfo">
+                <h4 class="colorGris">Idiomas de audio:</h4>
+                <h4 class="h4white">Español</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>

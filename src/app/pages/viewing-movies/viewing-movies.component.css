@@ -1,16 +1,22 @@
 h4 {
   margin: 0;
   padding: 0;
-  font-size: 130%;
   color: #afafaf;
+  font-family: monospace;
+}
+
+.containerCarhInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerCarhView {
   margin: 0;
   padding: 0;
-  height: 800px;
-  max-width: 100%;
-  width: 100%;
+  max-width: 75%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -25,6 +31,29 @@ h4 {
   gap: 40px;
 }
 
+.containerTitulo {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 110px;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.containerH4 {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 20px;
+}
+
+.tituloH4 {
+  font-size: 60px;
+  color: white;
+  font-family: monospace;
+}
+
 .containerIframe {
   width: 100%;
   display: flex;
@@ -33,30 +62,37 @@ h4 {
 }
 
 .colorGris {
-  color: white;
   width: 20%;
 }
 
+.h4white {
+  color: white;
+}
+
+
 .containerTexto {
-  width: 50%;
+  width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 13px;
+  padding-top: 2%;
+  padding-left: 2%;
 }
 
 .titulo {
-  font-size: 195%;
+  font-size: 35px;
   letter-spacing: 0.1em;
-  color: rgb(212, 24, 24);
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: white;
 }
 
 .sinopsis {
   color: white;
   margin: 0;
   padding: 0;
-  font-size: 140%;
+  font-size: 22px;
+  font-family: monospace;
 }
 
 .containerValoracion {
@@ -70,7 +106,7 @@ h4 {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  font-size: 95%;
+  margin-top: 2%;
 }
 
 .containerInfo {
@@ -111,13 +147,13 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.5px solid white;
 }
 
 .imgCaratula {
-  height: 300px;
+  height: 350px;
   box-shadow: 5px 5px 40px wheat;
   cursor: pointer;
+  border-radius: 2%;
 }
 
 .containerDirectorTwo {
@@ -130,12 +166,10 @@ h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #afafaf;
-  font-size: 130%;
 }
 
 .videoIframe {
-  /* border: 1px solid rgb(255, 255, 255); */
   margin: 0;
   padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.543);
 }
