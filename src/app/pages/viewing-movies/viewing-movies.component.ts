@@ -13,6 +13,9 @@ export class ViewingMoviesComponent implements OnInit {
   peliDato: any;
   subs = new SubSink();
   loanding: boolean = false;
+  loandingGet: boolean = false;
+  css: boolean = true;
+  datosPeliculas: any;
   constructor(
     private rutaActiva: ActivatedRoute,
     private viewingMoviesService: ViewingMoviesService,
@@ -26,6 +29,7 @@ export class ViewingMoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.loanding = true;
+    this.loandingGet = true;
   }
 
   ngOnDestroy(): void {
@@ -41,12 +45,24 @@ export class ViewingMoviesComponent implements OnInit {
             .getPelisMasVistasTitulo(value)
             .subscribe((datos) => {
               this.peliDato = datos;
+              this.getPeliculas();
               this.loanding = false;
             });
         }
         this.peliDato = datos;
+        this.getPeliculas();
         this.loanding = false;
       });
+  }
+
+  getPeliculas() {
+    let genero = this.peliDato[0]?.genero;
+    let generoLimpio = genero?.split('_')[0];
+    this.viewingMoviesService.getGenre(generoLimpio).subscribe((datos) => {
+      this.datosPeliculas = datos;
+      this.datosPeliculas.sort((a, b) => Math.random() - 0.5);
+      this.loandingGet = false;
+    });
   }
 
   transform(url) {

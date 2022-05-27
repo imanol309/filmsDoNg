@@ -12,6 +12,8 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   @Input() datosPelicula: HomeDateMovie;
   @Input() Css: boolean;
   @Input() loanding: boolean;
+  @Input() viewing: Number;
+  @Input() clases: String;
   datoUsuario;
   numSlice: any = 15;
   cssVer: boolean = true;

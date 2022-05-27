@@ -1,8 +1,8 @@
 <div class="{{ Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart' }}">
   <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
   <div
-    class="containerCarh"
-    *ngFor="let item of datosPelicula | slice: 0:numSlice; let top = index"
+    class="{{clases || 'containerCarh'}}"
+    *ngFor="let item of datosPelicula | slice: 0:viewing || numSlice; let top = index"
   >
     <div class="Carh" (click)="routerMovies(item?.titulo)" *ngIf="item">
       <div class="containerTop" *ngIf="router.url === '/pelis/moreView'">

@@ -173,3 +173,26 @@ h4 {
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.543);
 }
+
+.containerPeliculaSugeridas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3%;
+}
+
+.containerPuede {
+  width: 75%;
+  margin-bottom: 1%;
+}
+
+.h4Puede {
+  color: white;
+  font-size: 22px;
+}
+
+.peliculasSugeridas {
+  width: 75%;
+}

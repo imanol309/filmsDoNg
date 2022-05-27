@@ -66,6 +66,21 @@
           </div>
         </div>
       </div>
+
+      <div class="containerPeliculaSugeridas">
+        <div class="containerPuede">
+          <h4 class="h4Puede">RELACIONADOS:</h4>
+        </div>
+        <div class="peliculasSugeridas">
+          <app-view-crash
+          [datosPelicula]="datosPeliculas"
+          [Css]="css"
+          [loanding]="loandingGet"
+          [viewing]="8"
+          [clases]="'containerCarhView'"
+        ></app-view-crash>
+        </div>
+      </div>
     </div>
   </div>
 </div>
