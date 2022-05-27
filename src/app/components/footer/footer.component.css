@@ -1,0 +1,48 @@
+.containerFooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.containerImg {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Logo {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 15%;
+}
+
+.imgLogo {
+    height: 80px;
+}
+
+.redes {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.imgRedes {
+    height: 25px;
+}
+
+.containerDerechos {
+    width: 100%;
+    height: 20px;
+}
+
+.derechos {
+    width: 80%;
+    font-size: 20px;
+    color: white;
+    font-family: monospace;
+}
