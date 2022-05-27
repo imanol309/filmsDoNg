@@ -25,7 +25,6 @@
   height: 40px;
 }
 
-
 .seccionesPelis {
   display: flex;
   flex-direction: row;
@@ -147,7 +146,6 @@
     width: 30%;
     border-right: 1px solid white;
   }
-
 }
 
 /* Para 800px */
@@ -173,6 +171,9 @@
     font-size: 15px;
   }
 
+  .imgLogo:hover {
+    height: 38px;
+  }
 }
 
 /* Para 600px */
@@ -212,6 +213,10 @@
 
   .pCuenta {
     font-size: 15px;
+  }
+
+  .imgLogo:hover {
+    height: 35px;
   }
 }
 
@@ -253,6 +258,9 @@
   .pCuenta {
     font-size: 13px;
   }
+  .imgLogo:hover {
+    height: 33px;
+  }
 }
 
 /* Para 320px */
@@ -293,8 +301,11 @@
   .pCuenta {
     font-size: 11px;
   }
-}
 
+  .imgLogo:hover {
+    height: 30px;
+  }
+}
 
 /* Para 1300px */
 @media only screen and (max-height: 680px) and (min-height: 50px) {
@@ -312,5 +323,9 @@
 
   .pCuenta {
     font-size: 13px;
+  }
+
+  .imgLogo:hover {
+    height: 26px;
   }
 }
