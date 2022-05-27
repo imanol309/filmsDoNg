@@ -15,6 +15,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   @Input() viewing: Number;
   @Input() clases: String;
   @Input() MasVistas: String;
+  @Input() boton: boolean = true;
   datoUsuario;
   numSlice: any = 15;
   cssVer: boolean = true;
@@ -95,6 +96,6 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     } else {
       return 'imgGuardad'
     }
-}
+  }
 
 }
