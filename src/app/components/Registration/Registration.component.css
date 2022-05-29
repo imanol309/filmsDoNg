@@ -37,9 +37,9 @@ mat-error {
 }
 
 .imgClose {
-  height: 20px;
+  height: 40px;
   transition: 0.3s linear;
-  margin: 5px;
+  padding: 1%;
   margin-top: 3%;
   margin-right: 3%;
   cursor: pointer;
