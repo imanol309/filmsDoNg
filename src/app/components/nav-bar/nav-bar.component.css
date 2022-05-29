@@ -11,6 +11,15 @@
 
 .NavbarPrincipal::-webkit-scrollbar {
   background: #161717;
+  width: 4px;
+}
+
+.NavbarPrincipal::-webkit-scrollbar-thumb {
+  background: #8e9494;
+}
+
+.NavbarPrincipal::-webkit-scrollbar {
+  background: #161717;
   width: 9px;
 }
 
