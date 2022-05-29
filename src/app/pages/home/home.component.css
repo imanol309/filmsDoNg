@@ -11,6 +11,19 @@
   font-family: monospace;
   letter-spacing: 0.1em;
 }
+.op {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnCargar {
+  color: white;
+  font-size: 30px;
+  background-color: aqua;
+  scroll-behavior: smooth;
+}
 
 /* Para 960px */  
 @media only screen and (max-width: 980px) and (min-width: 821px) {  

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { HomeDateMovie } from './models/home.model';
 import { SubSink } from 'subsink';
 import { HomeService } from './services/home.service';
@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   subs = new SubSink();
   css: boolean = true;
   loanding: boolean = false
+  
   
   constructor(private homeServices: HomeService) {
     this.GetDatos();
