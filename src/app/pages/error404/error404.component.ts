@@ -10,6 +10,7 @@ export class Error404Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.document.title = '404';
   }
 
 }

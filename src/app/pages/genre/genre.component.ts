@@ -52,6 +52,7 @@ export class GenreComponent implements OnInit, OnDestroy {
   }
 
   descriptionGenre(genre): any {
+    window.document.title = `Genero ${this.genre}`;
     switch (genre) {
       case 'Acción,Drama':
         this.description =

@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    window.document.title = 'FilmsDo';
     this.loanding = true
-    
     // console.log(window.innerWidth)
   }
 

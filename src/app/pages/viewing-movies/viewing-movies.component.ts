@@ -28,6 +28,7 @@ export class ViewingMoviesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.document.title = this.peliDato;
     this.loanding = true;
     this.loandingGet = true;
   }

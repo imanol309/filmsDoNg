@@ -14,6 +14,7 @@ export class MoreViewComponent implements OnInit {
   constructor(private moreViewService: MoreViewService) {}
 
   ngOnInit() {
+    window.document.title = 'La Mas Vistas';
     this.loanding = true;
     this.getMasVistas();
   }
