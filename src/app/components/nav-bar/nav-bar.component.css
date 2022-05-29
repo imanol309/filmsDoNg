@@ -49,11 +49,14 @@
   cursor: pointer;
   transition: 0.5s linear;
   text-decoration: none;
+  filter: opacity(0.7);
+  border: 1px solid #17c3b200;
 }
 
 .containerSecciones:hover {
   background-color: rgba(27, 26, 26, 0.734);
   border: 1px solid #17c3b2;
+  filter: opacity(1);
 }
 
 
@@ -74,7 +77,7 @@
 }
 
 .imgSecciones {
-  height: 25px;
+  height: 24px;
 }
 
 .navBarContacto {
@@ -131,6 +134,9 @@
     display: flex;
   }
   
+  .imgSecciones {
+    height: 24px;
+  }
 }
 
 /* Para 480px */
@@ -146,6 +152,10 @@
   .seccionesPelis {
     display: flex;
   }
+
+  .imgSecciones {
+    height: 22px;
+  }
 }
 
 /* Para 320px */
@@ -160,5 +170,9 @@
 
   .seccionesPelis {
     display: flex;
+  }
+
+  .imgSecciones {
+    height: 20px;
   }
 }
