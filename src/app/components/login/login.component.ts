@@ -58,7 +58,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     location.reload();
   }
 
-  datosForm() {
+  datosForm() { 
+    this.is_sendmail = true;
     if (!this.formLogin.valid) {
       return;
     }
@@ -81,12 +82,9 @@ export class LoginComponent implements OnInit, OnDestroy {
             location.reload();
           }, 2000);
         },
-        (_error) => {
+        async (_error) => {
           this.formLogin.get('password').reset();  
           this.is_sendmail = false;
-          setInterval(() => {
-            this.is_sendmail = true;
-          }, 5000);
         }
       );
   }

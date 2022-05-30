@@ -130,8 +130,13 @@ h4 {
 }
 
 .matFalse {
-  color: rgb(196, 15, 15);
+  color: rgb(255, 179, 0);
 }
+
+.matFalseRojo {
+  color: rgb(255, 0, 0);
+}
+
 
 /* From uiverse.io by @nikk7007 */
 

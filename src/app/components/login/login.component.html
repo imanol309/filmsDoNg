@@ -68,11 +68,10 @@
         <div class="matError">
           <mat-error
             *ngIf="
-              is_sendmail == false &&
-              !formLogin.controls['email'].hasError('required') &&
-              !formLogin.controls['email'].hasError('pattern')
+              is_sendmail == false 
+              && formLogin.controls['email'].touched
             "
-            class="matFalse"
+            class="matFalseRojo "
           >
             No pudimos encontrar un usuario con este correo electrónico y esta
             contraseña, intente con otro.
