@@ -84,7 +84,9 @@
 }
 
 .imgSecciones {
-  height: 24px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
 }
 
 .navBarContacto {
@@ -95,7 +97,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 3%;
 }
 
 /* adding the genre bar when it reaches the mobile level */
@@ -108,6 +109,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.containerVersion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.version {
+  font-family: monospace;
+  font-size: 16px;
+  color: #474949;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 980px) {
@@ -142,7 +158,7 @@
   }
   
   .imgSecciones {
-    height: 24px;
+    height: 19px;
   }
 }
 
@@ -150,10 +166,6 @@
 @media only screen and (max-width: 500px) and (min-width: 341px) {
   .secciones {
     font-size: 16px;
-    padding: 0%;
-    margin: 0;
-    margin-bottom: 2%;
-    margin-left: 8%;
   }
 
   .seccionesPelis {
@@ -161,7 +173,7 @@
   }
 
   .imgSecciones {
-    height: 22px;
+    height: 17px;
   }
 }
 
@@ -169,10 +181,6 @@
 @media only screen and (max-width: 340px) and (min-width: 5px) {
   .secciones {
     font-size: 14px;
-    padding: 0%;
-    margin: 0;
-    margin-bottom: 2%;
-    margin-left: 8%;
   }
 
   .seccionesPelis {
@@ -180,6 +188,6 @@
   }
 
   .imgSecciones {
-    height: 20px;
+    height: 15px;
   }
 }
