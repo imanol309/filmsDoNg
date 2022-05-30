@@ -66,12 +66,13 @@ export class RegistrationComponent implements OnInit {
       .postRegistrarUsuario(this.formRegistre.value)
       .subscribe((datos) => {
         this.mensaje = datos?.mensaje;
+        this.formRegistre.reset();  
         setInterval(() => {
           this.dialogRef.close();
           }, 2000);
-        console.log(datos);
       }),
       (_error) => {
+        
         console.log(_error);
       };
   }

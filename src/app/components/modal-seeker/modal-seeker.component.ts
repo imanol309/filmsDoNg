@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
 import { HomeService } from 'src/app/pages/home/services/home.service';
 import { SubSink } from 'subsink';
 import { HomeDateMovie } from '../../pages/home/models/home.model';
@@ -19,7 +18,6 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   loanding: boolean = false
 
   constructor(
-    public dialogRef: MatDialogRef<ModalSeekerComponent>,
     private homeServices: HomeService
   ) {}
 
@@ -29,10 +27,6 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
-  }
-
-  onNoClick(): void {
-    this.dialogRef.close();
   }
 
   search(value: any): any {

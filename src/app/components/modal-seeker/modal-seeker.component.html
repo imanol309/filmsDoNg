@@ -6,8 +6,9 @@
       type="text"
       (ngModelChange)="search($event)"
       [(ngModel)]="src"
+      autofocus
     />
-    <div class="containerCLose" (click)="onNoClick()">
+    <div class="containerCLose">
       <img src="../../../assets/img/icon/x.png" alt="" class="imgClose" />
     </div>
   </div>
@@ -15,8 +16,10 @@
     <div class="containerTest">
       <h4 class="textResult">Tu resultado :</h4>
     </div>
-    <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
-    <app-view-crash [datosPelicula]="data$" [Css]="false" (click)="onNoClick()"></app-view-crash>
+    <div class="containerResultado">
+      <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
+      <app-view-crash [datosPelicula]="data$" [Css]="false" [clases]="'containerCarhView'"></app-view-crash>
+    </div>
   </div>
   <div *ngIf="verInfo" class="containerIAlsoLike">
     <div class="containerTest">

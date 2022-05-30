@@ -4,14 +4,15 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 3%;
+  justify-content: center;
+  margin-top: 2%;
 }
 
 .input {
-  width: 95%;
+  width: 65%;
   height: 50px;
-  border: 1px solid transparent;
+  border: 1px solid #e6e4e4;;
   outline: none;
-  border-bottom: 1px solid #e6e4e4;
   caret-color: #ffffff;
   color: white;
   background-color: black;
@@ -20,6 +21,7 @@
   font-family: monospace;
   letter-spacing: 1px;
   font-size: 20px;
+  
 }
 
 .input::placeholder {
@@ -69,10 +71,15 @@ li {
 .containerIAlsoLike {
   padding: 0;
   margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerTest {
-  width: 100%;
+  width: 80%;
   height: 30px;
 }
 
@@ -81,6 +88,10 @@ li {
   font-size: 20px;
   font-family: monospace;
   letter-spacing: 0.1em;
+}
+
+.containerResultado {
+  width: 80%;
 }
 
 .containerViewLo {

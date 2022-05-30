@@ -7,8 +7,9 @@ import { SeachRoutingModule } from './seach-routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    pagesModule,
-    SeachRoutingModule
+    SeachRoutingModule,
+    pagesModule
+    
   ],
   declarations: [SeachComponent]
 })

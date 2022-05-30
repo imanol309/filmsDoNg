@@ -20,15 +20,4 @@ export class NavBarComponent implements OnInit, OnDestroy  {
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
-
-  openModalSeeker(): void {
-    const dialogRef = this.matDialog.open(ModalSeekerComponent, {
-      width: '100vw',
-      maxWidth: '100vw',
-      height: '90%',
-    });
-    this.subs.sink = dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
-  }
 }

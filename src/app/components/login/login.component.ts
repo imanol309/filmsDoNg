@@ -77,10 +77,12 @@ export class LoginComponent implements OnInit, OnDestroy {
             JSON.stringify(this.datosLogin.DatosLogin.password)
           );
           setInterval(() => {
+            this.formLogin.reset();  
             location.reload();
           }, 2000);
         },
         (_error) => {
+          this.formLogin.get('password').reset();  
           this.is_sendmail = false;
           setInterval(() => {
             this.is_sendmail = true;
