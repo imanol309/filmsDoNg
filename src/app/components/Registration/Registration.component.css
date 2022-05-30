@@ -37,10 +37,10 @@ mat-error {
 }
 
 .imgClose {
-  height: 40px;
+  height: 45px;
   transition: 0.3s linear;
   padding: 1%;
-  margin-top: 3%;
+  margin-top: 2%;
   margin-right: 3%;
   cursor: pointer;
 }
@@ -254,6 +254,7 @@ p {
   }
 
   .imgClose {
+    height: 35px;
     margin-right: 3%;
   }
 
@@ -302,6 +303,7 @@ p {
   }
 
   .imgClose {
+    height: 28px;
     margin-right: 3%;
   }
 
@@ -350,6 +352,7 @@ p {
   }
 
   .imgClose {
+    height: 28px;
     margin-right: 3%;
   }
 
