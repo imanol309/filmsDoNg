@@ -33,6 +33,11 @@ const routes: Routes = [
           canActivate: [VigilanteDobleGuard]
       },
       {
+        path: 'seach', 
+        loadChildren: () =>
+          import('./seach/seach.module').then((m) => m.SeachModule),
+      },
+      {
         path: '**', redirectTo: 'home'
       }
     ]

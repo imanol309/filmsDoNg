@@ -59,12 +59,10 @@
   transition: 0.5s linear;
   text-decoration: none;
   filter: opacity(0.7);
-  border: 1px solid #17c3b200;
 }
 
 .containerSecciones:hover {
   background-color: rgba(27, 26, 26, 0.734);
-  border: 1px solid #17c3b2;
   filter: opacity(1);
 }
 
