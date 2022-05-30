@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { HomeService } from 'src/app/pages/home/services/home.service';
 import { SubSink } from 'subsink';
 import { HomeDateMovie } from '../../pages/home/models/home.model';
@@ -16,6 +16,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   src: String;
   verInfo: boolean = false;
   loanding: boolean = false
+  @ViewChild("input") input: ElementRef;
 
   constructor(
     private homeServices: HomeService
@@ -58,5 +59,10 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
       this.loanding = false
       this.pelisRandom.sort((a,b) => Math.random() - 0.5)
     });
+  }
+
+  borrar() {
+    this.input.nativeElement.value = ""
+    this.data$[0] = ''
   }
 }

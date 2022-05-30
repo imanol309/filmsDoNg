@@ -1,15 +1,16 @@
 <div mat-dialog-content>
   <div class="containerModal">
     <input
-      placeholder="Busca Aquí tu pelicula"
+      placeholder="Busca..."
       class="input"
       type="text"
       (ngModelChange)="search($event)"
       [(ngModel)]="src"
       autofocus
+      #input
     />
-    <div class="containerCLose">
-      <img src="../../../assets/img/icon/x.png" alt="" class="imgClose" />
+    <div class="containerCLose" (click)="borrar()">
+      <img src="../../../assets/img/icon/escoba.png" alt="" class="imgClose" />
     </div>
   </div>
   <div *ngIf="verInfo" class="containerIAlsoLike">
@@ -27,7 +28,7 @@
     </div>
     <div class="containerViewLo">
       <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
-      <app-view-crash [datosPelicula]="pelisRandom" [Css]="true" (click)="onNoClick()"></app-view-crash>
+      <app-view-crash [datosPelicula]="pelisRandom" [Css]="true"></app-view-crash>
     </div>
   </div>
 </div>
