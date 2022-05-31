@@ -225,10 +225,13 @@
   width: 27px;
   height: 27px;
   opacity: 1;
+  transition: 0.1s linear;
 }
 
-.imgGuardadYes {
-  opacity: 1;
+.imgGuardad:hover {
+  --webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  opacity: 0.5;
 }
 
 /* .imgGuardad:hover {

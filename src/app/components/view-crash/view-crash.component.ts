@@ -99,7 +99,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
 
   ifClases(d) {
     if (this.arrayId.includes(d)) {
-      return 'imgGuardad imgGuardadYes'
+      return 'imgGuardad'
     } else {
       return 'imgGuardad'
     }
