@@ -9,6 +9,7 @@ import { MovieSectionsComponent } from './components/movie-sections/movie-sectio
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

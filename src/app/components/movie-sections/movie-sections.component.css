@@ -113,6 +113,12 @@
   border-right: 1px solid white;
 }
 
+mat-menu-panel.containerMenu {
+  /* max-width:none; */
+  width: 40%; 
+  
+}
+
 /* Para 1300px */
 @media only screen and (max-width: 1300px) and (min-width: 980px) {
   .seccionesPelis {
