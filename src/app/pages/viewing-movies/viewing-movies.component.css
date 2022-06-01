@@ -203,7 +203,7 @@ h4 {
   width: 75%;
 }
 
-@media only screen and (max-width: 1300px) and (min-width: 980px) {
+@media only screen and (max-width: 1450px) and (min-width: 980px) {
   .containerH4 {
     width: 90%;
     gap: 15px;
@@ -216,10 +216,6 @@ h4 {
   .videoIframe {
     width: 90%;
     height: 420px;
-  }
-
-  .none {
-    display: none;
   }
 
   .containerCarhView {
@@ -270,10 +266,6 @@ h4 {
   .videoIframe {
     width: 90%;
     height: 420px;
-  }
-
-  .none {
-    display: none;
   }
 
   .containerCarhView {

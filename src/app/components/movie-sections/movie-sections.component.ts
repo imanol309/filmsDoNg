@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-sections',
@@ -14,7 +13,7 @@ export class MovieSectionsComponent implements OnInit {
   @ViewChild(MatSidenav) sideRight: MatSidenav;
   @ViewChild(MatSidenav) sideLeft: MatSidenav;
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'));
@@ -22,11 +21,6 @@ export class MovieSectionsComponent implements OnInit {
     this.rutaImg = `../../../../../assets/img/perfil/${img}.png`
   }
 
-  eliminarDatos() {
-    localStorage.removeItem('usuario');
-    localStorage.removeItem('Token');
-    location.reload();
-  }
 }
 
 

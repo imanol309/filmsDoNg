@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MovieSectionsComponent,
     LoginComponent,
     NavBarComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
