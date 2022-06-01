@@ -80,7 +80,7 @@ export class LoginComponent implements OnInit, OnDestroy {
           setInterval(() => {
             this.formLogin.reset();  
             location.reload();
-          }, 2000);
+          }, 1000);
         },
         async (_error) => {
           this.formLogin.get('password').reset();  

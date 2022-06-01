@@ -120,7 +120,7 @@ h4 {
 /* CSS DEL MENU */
 
 ::ng-deep .cdk-overlay-pane .mat-menu-panel {
-  max-width: 536px;
+  max-width: 450px;
   width: 80vh;
   background-color: #000000;
   border: 1px solid white;

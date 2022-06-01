@@ -21,7 +21,7 @@
     </p>
   </div>
   <div class="seccionesCuenta">
-    <div class="seccioneUsuario" *ngIf="!datoUsuario"  (click)="sideRight.toggle()">
+    <div class="seccioneUsuario" *ngIf="!datoUsuario" (click)="sideRight.toggle()">
       <img src="../../../assets/img/icon/usuarioOneNew.png" alt="" class="imgUsuario" />
       <p class="pCuenta">Cuenta
       </p>
@@ -38,9 +38,6 @@
           <img src="{{ rutaImg }}" alt="" srcset="" class="imgLogoPri" />
           <h4 class="h4Infor">{{ datoUsuario?.name }}</h4>
           <h4 class="h4Infor">{{ datoUsuario?.email }}</h4>
-          <h4 class="h4Infor">
-            Fecha Creacion: {{ datoUsuario?.signupDate?.slice(0, 10) }}
-          </h4>
         </div>
         <div class="containerBoton">
           <button class="EditarBtt">
