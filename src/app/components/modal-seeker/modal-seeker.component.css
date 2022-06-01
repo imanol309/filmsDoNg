@@ -15,7 +15,7 @@
   outline: none;
   caret-color: #ffffff;
   color: white;
-  background-color: black;
+  background-color: #0d1017;
   padding: 5px;
   transition: 0.5s linear;
   font-family: monospace;
@@ -29,14 +29,14 @@
 }
 
 .input:focus {
-  border: 2px solid #17c3b2;
-  caret-color: #17c3b2;
-  color: #17c3b2;
+  border: 2px solid #fd0a0acd;
+  caret-color: #fd0a0acd;
+  color: #ffffffcd;
   box-shadow: 4px 4px 10px #070707;
 }
 
 .input:focus::placeholder {
-  color: #17c3b2;
+  color: #fd0a0acd;
 }
 
 .containerCLose {

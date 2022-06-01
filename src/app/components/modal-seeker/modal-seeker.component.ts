@@ -63,6 +63,6 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
 
   borrar() {
     this.input.nativeElement.value = ""
-    this.data$[0] = ''
+    this.data$ = []
   }
 }
