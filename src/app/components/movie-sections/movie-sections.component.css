@@ -5,10 +5,10 @@ h4 {
 .containerSeccionesPelis {
   width: 100%;
   height: 8vh;
-  background-color: #000000;
+  background-color: #0d1017;
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid #ffffffc2;
+  border-bottom: 1px solid #ffffff5a;
   overflow: hidden;
 }
 
@@ -105,15 +105,14 @@ h4 {
 .sideRigth {
   width: 30%;
   height: 92vh;
-  background-color: #000000;
+  background-color: #0d1017;
   border-left: 1px solid white;
 }
-
 
 .sideLeft {
   width: 15%;
   height: 92vh;
-  background-color: #000000;
+  background-color: #0d1017;
   border-right: 1px solid white;
 }
 
@@ -122,7 +121,7 @@ h4 {
 ::ng-deep .cdk-overlay-pane .mat-menu-panel {
   max-width: 450px;
   width: 80vh;
-  background-color: #000000;
+  background-color: #0d1017;
   border: 1px solid white;
 }
 
@@ -143,13 +142,13 @@ h4 {
   flex-direction: column;
 }
 
-.imgLogoPri{
+.imgLogoPri {
   width: 80px;
   height: 80px;
   margin-bottom: 5%;
 }
 
-.containerBoton{
+.containerBoton {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -283,16 +282,6 @@ button span {
     transform: translateY(-0.1em);
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Para 1300px */
 @media only screen and (max-width: 1300px) and (min-width: 980px) {
