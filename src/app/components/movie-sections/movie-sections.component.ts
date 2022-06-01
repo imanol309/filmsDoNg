@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
@@ -12,6 +13,7 @@ export class MovieSectionsComponent implements OnInit {
   rutaImg;
   @ViewChild(MatSidenav) sideRight: MatSidenav;
   @ViewChild(MatSidenav) sideLeft: MatSidenav;
+  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -19,4 +21,14 @@ export class MovieSectionsComponent implements OnInit {
     const img =  this.datoUsuario?.logo
     this.rutaImg = `../../../../../assets/img/perfil/${img}.png`
   }
+
+  eliminarDatos() {
+    localStorage.removeItem('usuario');
+    localStorage.removeItem('Token');
+    location.reload();
+  }
 }
+
+
+
+

@@ -21,14 +21,15 @@
     </p>
   </div>
   <div class="seccionesCuenta">
-    <!-- [matMenuTriggerFor]="menu" -->
-    <!-- (click)="sideRight.toggle()" -->
-    <div class="seccioneUsuario" [matMenuTriggerFor]="menu">
-      <img src="{{
-          datoUsuario ? rutaImg : '../../../assets/img/icon/usuarioOneNew.png'
-        }}" alt="" class="imgUsuario" />
+    <div class="seccioneUsuario" *ngIf="!datoUsuario"  (click)="sideRight.toggle()">
+      <img src="../../../assets/img/icon/usuarioOneNew.png" alt="" class="imgUsuario" />
+      <p class="pCuenta">Cuenta
+      </p>
+    </div>
+    <div class="seccioneUsuario" *ngIf="datoUsuario" [matMenuTriggerFor]="menu">
+      <img src="{{rutaImg}}" alt="" class="imgUsuario" />
       <p class="pCuenta">
-        {{ datoUsuario ? datoUsuario?.name?.split(" ")[0] : "Cuenta" }}
+        {{ datoUsuario?.name?.split(" ")[0] }}
       </p>
     </div>
     <mat-menu #menu="matMenu" class="containerMenu">
