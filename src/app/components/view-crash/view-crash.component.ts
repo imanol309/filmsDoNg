@@ -47,8 +47,8 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     this.numSlice = 15;
   }
 
-  routerMovies(titulo: String) {
-    this.router.navigate(['/pelis/movies/' + titulo]);
+  routerMovies(id: String) {
+    this.router.navigate(['/pelis/movies/' + id]);
   }
 
   

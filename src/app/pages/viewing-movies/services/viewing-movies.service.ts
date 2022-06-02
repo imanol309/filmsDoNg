@@ -19,24 +19,24 @@ export class ViewingMoviesService {
       .get<HomeDateMovie>(`${environment.URL_API}/api/verPelis`)
       .pipe(catchError((err) => throwError(err)));
   }
-  
+
   getGenre(genre): Observable<HomeDateMovie> {
     return this.httpClient
       .get<HomeDateMovie>(`${environment.URL_API}/api/verPelis/genero/${genre}`)
       .pipe(catchError((err) => throwError(err)));
   }
 
-  getPelisTitulo(titulo: String): Observable<HomeDateMovie> {
+  getPelisId(id: String): Observable<HomeDateMovie> {
     return this.httpClient
-      .get<HomeDateMovie>(
-        `${environment.URL_API}/api/verPelis/titulo/${titulo}`
-      )
+      .get<HomeDateMovie>(`${environment.URL_API}/api/verPelis/${id}`)
       .pipe(catchError((err) => throwError(err)));
   }
 
   getPelisMasVistasTitulo(titulo: string): Observable<homeDateMovieVistas> {
     return this.httpClient
-      .get<homeDateMovieVistas>(`${environment.URL_API}/api/verPelis/masVistas/titulo/${titulo}`)
+      .get<homeDateMovieVistas>(
+        `${environment.URL_API}/api/verPelis/masVistas/titulo/${titulo}`
+      )
       .pipe(catchError((err) => throwError(err)));
   }
 }

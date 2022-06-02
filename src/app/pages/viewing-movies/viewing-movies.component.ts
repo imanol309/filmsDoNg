@@ -24,6 +24,7 @@ export class ViewingMoviesComponent implements OnInit {
     this.rutaActiva.paramMap.subscribe((params) => {
       this.peliDato = params.get('idpeli');
     });
+    console.log(this.peliDato);
     this.datosUnicos(this.peliDato);
   }
 
@@ -39,7 +40,7 @@ export class ViewingMoviesComponent implements OnInit {
 
   datosUnicos(value: any): any {
     this.subs.sink = this.viewingMoviesService
-      .getPelisTitulo(value)
+      .getPelisId(value)
       .subscribe((datos) => {
         if (datos[0] === null) {
           this.subs.sink = this.viewingMoviesService
@@ -51,6 +52,7 @@ export class ViewingMoviesComponent implements OnInit {
             });
         }
         this.peliDato = datos;
+        console.log(datos);
         this.getPeliculas();
         this.loanding = false;
       });

@@ -29,22 +29,19 @@
             <div class="containerMovil">
               <h4 class="titulo movil">{{ datos?.titulo }}</h4>
               <div class="containerValoracion">
-                <h4>90Min</h4>
-                <h4>(2009)</h4>
+                <h4>{{ datos?.time}} Min</h4>
+                <h4>{{ datos?.year?.slice(0, 4)}}</h4>
               </div>
             </div>
           </div>
           <div class="containerTexto">
             <h4 class="titulo none">{{ datos?.titulo }}</h4>
             <div class="containerValoracion none">
-              <h4>90Min</h4>
-              <h4>(2009)</h4>
+              <h4>{{ datos?.time}} Min</h4>
+              <h4>{{ datos?.year?.slice(0, 4)}}</h4>
             </div>
             <p class="sinopsis">
-              Eddy vive una doble vida: cristiano en el templo y fuera de él
-              oculta su fe buscando disfrutar de diversiones que su religión no le
-              permite. Al conocer a Débora, multiplica sus mentiras, provocando
-              una divertida y aleccionadora cadena de enredos.
+              {{ datos?.descripcion}}
             </p>
             <div class="containerDirector">
               <div class="containerInfo">
