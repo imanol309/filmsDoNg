@@ -11,6 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ViewingMoviesComponent implements OnInit {
   peliDato: any;
+  peliID: any;
   subs = new SubSink();
   loanding: boolean = false;
   loandingGet: boolean = false;
@@ -22,14 +23,13 @@ export class ViewingMoviesComponent implements OnInit {
     private sanitizer: DomSanitizer
   ) {
     this.rutaActiva.paramMap.subscribe((params) => {
-      this.peliDato = params.get('idpeli');
+      this.peliID = params.get('idpeli');
     });
-    this.datosUnicos(this.peliDato);
-    console.log(this.peliDato)
+    this.datosUnicos(this.peliID);
+    console.log(this.peliID)
   }
 
   ngOnInit(): void {
-    window.document.title = this.peliDato;
     this.loanding = true;
     this.loandingGet = true;
   }
@@ -52,6 +52,8 @@ export class ViewingMoviesComponent implements OnInit {
             });
         }
         this.peliDato = datos;
+        window.document.title = `${this.peliDato[0]?.titulo} - FilmsDo`;
+        console.log(this.peliDato)
         this.getPeliculas();
         this.loanding = false;
       });

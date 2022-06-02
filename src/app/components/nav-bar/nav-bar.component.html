@@ -1,68 +1,71 @@
-<div class="NavbarPrincipal" role="navigation">
-  <div class="NavbarContainer">
-    <div class="navBarSecciones">
-      <div class="containerSecciones" routerLink="/pelis/home">
-        <img src="../../../assets/img/secciones/hogar.png" alt="" class="imgSecciones">
-        <p class="secciones">Inicio</p>
+
+<div class="containerGeneral">
+  <div class="NavbarPrincipal" role="navigation">
+    <div class="NavbarContainer">
+      <div class="navBarSecciones">
+        <div class="containerSecciones" routerLink="/pelis/home">
+          <img src="../../../assets/img/secciones/hogar.png" alt="" class="imgSecciones">
+          <p class="secciones">Inicio</p>
+        </div>
+       <div class="containerSecciones" routerLink="/pelis/seach">
+        <img src="../../../assets/img/secciones/buscar.png" alt="" class="imgSecciones">
+        <p class="secciones">Buscador</p>
+       </div>
+        <div class="containerSecciones" routerLink="/pelis/moreView">
+          <img src="../../../assets/img/secciones/fuego.png" alt="" class="imgSecciones">
+          <p class="secciones">Mas vista</p>
+        </div>
+        <div class="containerSecciones" routerLink="/pelis/favoriteList" *ngIf="datoUsuario">
+          <img src="../../../assets/img/secciones/boton.png" alt="" class="imgSecciones">
+          <p class="secciones">Mis Listas</p>
+        </div>
+        <div class="containerSecciones"routerLink="/error404" >
+          <img src="../../../assets/img/secciones/reloj.png" alt="" class="imgSecciones">
+          <p class="secciones">Extrenos</p>
+        </div>
       </div>
-     <div class="containerSecciones" routerLink="/pelis/seach">
-      <img src="../../../assets/img/secciones/buscar.png" alt="" class="imgSecciones">
-      <p class="secciones">Buscador</p>
-     </div>
-      <div class="containerSecciones" routerLink="/pelis/moreView">
-        <img src="../../../assets/img/secciones/fuego.png" alt="" class="imgSecciones">
-        <p class="secciones">Mas vista</p>
+    </div>
+    <div class="seccionesPelis">
+      <div  class="containerSecciones" routerLink="/pelis/genre/Acción,Drama">
+        <img src="../../../assets/img/secciones/pelicula-de-accion.png" alt="" class="imgSecciones">
+        <p href="" class="secciones" >Accion</p>
       </div>
-      <div class="containerSecciones" routerLink="/pelis/favoriteList" *ngIf="datoUsuario">
-        <img src="../../../assets/img/secciones/boton.png" alt="" class="imgSecciones">
-        <p class="secciones">Mis Listas</p>
+      <div  class="containerSecciones" routerLink="/pelis/genre/Comedia">
+        <img src="../../../assets/img/secciones/humor.png" alt="" class="imgSecciones">
+        <p href="" class="secciones" >Comedia</p>
       </div>
-      <div class="containerSecciones"routerLink="/error404" >
-        <img src="../../../assets/img/secciones/reloj.png" alt="" class="imgSecciones">
-        <p class="secciones">Extrenos</p>
+      <div  class="containerSecciones" routerLink="/pelis/genre/Drama,Suspenso">
+        <img src="../../../assets/img/secciones/drama.png" alt="" class="imgSecciones">
+        <p href="" class="secciones" >Drama</p>
+      </div>
+      <div  class="containerSecciones" routerLink="/pelis/genre/Suspenso,Terror">
+        <img src="../../../assets/img/secciones/pelicula-de-terror.png" alt="" class="imgSecciones">
+        <p href="" class="secciones" >Terror</p>
+      </div>
+      <div  class="containerSecciones" routerLink="/pelis/genre/Documental">
+        <img src="../../../assets/img/secciones/novela-policial.png" alt="" class="imgSecciones">
+        <p href="" class="secciones" >
+          Documental
+        </p>
+      </div>
+      <div  class="containerSecciones" routerLink="/pelis/genre/Suspenso,Acción">
+        <img src="../../../assets/img/secciones/gritar.png" alt="" class="imgSecciones">
+        <p href="" class="secciones" >Suspenso</p>
       </div>
     </div>
-  </div>
-  <div class="seccionesPelis">
-    <div  class="containerSecciones" routerLink="/pelis/genre/Acción,Drama">
-      <img src="../../../assets/img/secciones/pelicula-de-accion.png" alt="" class="imgSecciones">
-      <p href="" class="secciones" >Accion</p>
-    </div>
-    <div  class="containerSecciones" routerLink="/pelis/genre/Comedia">
-      <img src="../../../assets/img/secciones/humor.png" alt="" class="imgSecciones">
-      <p href="" class="secciones" >Comedia</p>
-    </div>
-    <div  class="containerSecciones" routerLink="/pelis/genre/Drama,Suspenso">
-      <img src="../../../assets/img/secciones/drama.png" alt="" class="imgSecciones">
-      <p href="" class="secciones" >Drama</p>
-    </div>
-    <div  class="containerSecciones" routerLink="/pelis/genre/Suspenso,Terror">
-      <img src="../../../assets/img/secciones/pelicula-de-terror.png" alt="" class="imgSecciones">
-      <p href="" class="secciones" >Terror</p>
-    </div>
-    <div  class="containerSecciones" routerLink="/pelis/genre/Documental">
-      <img src="../../../assets/img/secciones/novela-policial.png" alt="" class="imgSecciones">
-      <p href="" class="secciones" >
-        Documental
-      </p>
-    </div>
-    <div  class="containerSecciones" routerLink="/pelis/genre/Suspenso,Acción">
-      <img src="../../../assets/img/secciones/gritar.png" alt="" class="imgSecciones">
-      <p href="" class="secciones" >Suspenso</p>
-    </div>
-  </div>
-  <div class="navBarContacto">
-    <div class="containerSecciones" routerLink="/error404">
-      <img src="../../../assets/img/secciones/contacto.png" alt="" class="imgSecciones">
-      <p class="secciones">Contactos</p>
-    </div>
-    <div class="containerSecciones"  routerLink="/error404">
-      <img src="../../../assets/img/secciones/politica.png" alt="" class="imgSecciones">
-      <p class="secciones">Politicas</p>
-    </div>
-    <div class="containerSecciones" routerLink="/error404">
-      <img src="../../../assets/img/secciones/desarrollo-web.png" alt="" class="imgSecciones">
-      <p class="secciones">Desarrollador</p>
+    <div class="navBarContacto">
+      <div class="containerSecciones" routerLink="/error404">
+        <img src="../../../assets/img/secciones/contacto.png" alt="" class="imgSecciones">
+        <p class="secciones">Contactos</p>
+      </div>
+      <div class="containerSecciones"  routerLink="/error404">
+        <img src="../../../assets/img/secciones/politica.png" alt="" class="imgSecciones">
+        <p class="secciones">Politicas</p>
+      </div>
+      <div class="containerSecciones" routerLink="/error404">
+        <img src="../../../assets/img/secciones/desarrollo-web.png" alt="" class="imgSecciones">
+        <p class="secciones">Desarrollador</p>
+      </div>
     </div>
   </div>
   <div class="containerVersion">
