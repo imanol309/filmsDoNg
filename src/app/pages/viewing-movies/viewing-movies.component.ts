@@ -25,6 +25,7 @@ export class ViewingMoviesComponent implements OnInit {
       this.peliDato = params.get('idpeli');
     });
     this.datosUnicos(this.peliDato);
+    console.log(this.peliDato)
   }
 
   ngOnInit(): void {
@@ -50,7 +51,6 @@ export class ViewingMoviesComponent implements OnInit {
               this.loanding = false;
             });
         }
-        console.log(datos)
         this.peliDato = datos;
         this.getPeliculas();
         this.loanding = false;
@@ -59,12 +59,9 @@ export class ViewingMoviesComponent implements OnInit {
 
   getPeliculas() {
     let genero = this.peliDato[0]?.genero;
-    console.log(genero)
-    let generoLimpio = genero?.split('_')[0];
-    console.log(genero)
-    this.viewingMoviesService.getGenre(generoLimpio).subscribe((datos) => {
+    // let generoLimpio = genero?.split('_')[0];
+    this.viewingMoviesService.getGenre(genero).subscribe((datos) => {
       this.datosPeliculas = datos;
-      console.log(this.datosPeliculas)
       this.datosPeliculas.sort((a, b) => Math.random() - 0.5);
       this.loandingGet = false;
     });

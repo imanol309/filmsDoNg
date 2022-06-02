@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subs.sink = this.homeServices
       .getPelis()
       .subscribe((datosPelis: HomeDateMovie) => {
+        console.log(datosPelis)
         this.datosObjPelicula = datosPelis;
         this.datosObjPelicula.sort((a, b) => Math.random() - 0.5);
         this.loanding = false
