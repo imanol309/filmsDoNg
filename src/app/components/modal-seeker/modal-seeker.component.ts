@@ -44,6 +44,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
       .subscribe((datos) => {
         this.data$ = datos;
         this.loanding = false
+        console.log(datos)
         if (this.data$[0] !== null) {
           this.verInfo = true;
           setTimeout(() => {
