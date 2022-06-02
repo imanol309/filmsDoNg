@@ -102,6 +102,18 @@ h4 {
   transition: filter 0.2s ease;
 }
 
+
+.imgFlecha {
+  height: 19px;
+  transition: filter 0.2s ease;
+  filter: opacity(0.5);
+}
+
+.seccioneUsuario:hover .imgFlecha {
+  filter: opacity(1) drop-shadow(0 0 0 #ffffff);
+}
+
+
 .sideRigth {
   width: 30%;
   height: 92vh;
@@ -172,7 +184,7 @@ h4 {
   }
 
   .pCuenta {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .imgLogo:hover {
@@ -216,11 +228,19 @@ h4 {
   }
 
   .pCuenta {
-    font-size: 15px;
+    font-size: 17px;
+  }
+
+  .none {
+    display: none;
   }
 
   .imgLogo:hover {
     height: 35px;
+  }
+
+  .imgFlecha {
+    height: 18px;
   }
 }
 
@@ -260,10 +280,18 @@ h4 {
   }
 
   .pCuenta {
-    font-size: 13px;
+    font-size: 15px;
+  }
+
+  .none {
+    display: none;
   }
   .imgLogo:hover {
     height: 33px;
+  }
+
+  .imgFlecha {
+    height: 18px;
   }
 }
 
@@ -303,11 +331,19 @@ h4 {
   }
 
   .pCuenta {
-    font-size: 11px;
+    font-size: 13px;
+  }
+
+  .none {
+    display: none;
   }
 
   .imgLogo:hover {
     height: 30px;
+  }
+
+  .imgFlecha {
+    height: 18px;
   }
 }
 
@@ -331,5 +367,9 @@ h4 {
 
   .imgLogo:hover {
     height: 26px;
+  }
+
+  .imgFlecha {
+    height: 18px;
   }
 }

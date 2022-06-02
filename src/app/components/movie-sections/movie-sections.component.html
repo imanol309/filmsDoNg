@@ -28,9 +28,10 @@
     </div>
     <div class="seccioneUsuario" *ngIf="datoUsuario" [matMenuTriggerFor]="menu">
       <img src="{{rutaImg}}" alt="" class="imgUsuario" />
-      <p class="pCuenta">
+      <p class="pCuenta none">
         {{ datoUsuario?.name?.split(" ")[0] }}
       </p>
+      <img src="../../../assets/img/icon/caret-down.png" alt="" class="imgFlecha" />
     </div>
     <mat-menu #menu="matMenu" class="containerMenu">
       <app-logout></app-logout>
