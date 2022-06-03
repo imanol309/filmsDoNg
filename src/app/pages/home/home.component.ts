@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   subs = new SubSink();
   css: boolean = true;
   loanding: boolean = false
-  
+  @ViewChild("myButton") myButton: ElementRef;
   
   constructor(private homeServices: HomeService) {
     this.GetDatos();
@@ -27,7 +27,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
-
+  
+  subir() {
+    console.log(this.myButton.nativeElement)
+    this.myButton.nativeElement.scrollIntoView({behavior: "smooth"});
+  }
   GetDatos(): void {
     this.subs.sink = this.homeServices
       .getPelis()

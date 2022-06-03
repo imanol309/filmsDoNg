@@ -1,6 +1,6 @@
 <div class="homeContainer">
   <div class="movieSectionsContainer">
-    <div class="containerGenre" >
+    <div class="containerGenre" #myButton >
       <h4 class="tituloGenre" >INICIO</h4>
     </div>
     <app-view-crash
@@ -8,6 +8,8 @@
       [Css]="css"
       [loanding]="loanding"
     ></app-view-crash>
+    <div class="op">
+      <img src="../../../assets/img/icon/punta-de-flecha-hacia-arriba.png" alt="" class="imgFlecha" (click)="subir()">
+    </div>
   </div>
-
 </div>

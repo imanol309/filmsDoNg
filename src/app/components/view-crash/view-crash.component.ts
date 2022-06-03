@@ -20,7 +20,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   numSlice: any = 15;
   cssVer: boolean = true;
   arrayId: any = [];
-  @ViewChild("myButton") myButton: ElementRef;
+  
   constructor(private router: Router, private genericService: GenericService) {}
   
   ngOnInit(): void {
@@ -52,10 +52,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
   }
 
   
-  subir() {
-    console.log(this.myButton.nativeElement)
-    this.myButton.nativeElement.scrollIntoView({behavior: "smooth"});
-  }
+
 
   cargarMas() {
     if (this.numSlice < this.datosPelicula.length) {
