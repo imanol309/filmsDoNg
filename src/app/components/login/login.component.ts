@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   eliminarDatos() {
     localStorage.removeItem('usuario');
     localStorage.removeItem('Token');
+    localStorage.removeItem('Formulario');
     location.reload();
   }
 
@@ -68,10 +69,15 @@ export class LoginComponent implements OnInit, OnDestroy {
       .subscribe(
         (value) => {
           this.datosLogin = value;
+          console.log(value)
           this.is_sendmail = true;
           localStorage.setItem(
             'usuario',
             JSON.stringify(this.datosLogin.DatosLogin)
+          );
+          localStorage.setItem(
+            'Formulario',
+            JSON.stringify(this.formLogin.value)
           );
           localStorage.setItem(
             'Token',

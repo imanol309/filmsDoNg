@@ -29,7 +29,6 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     }
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario'))
     this.forGuardad()
-    console.log(this.datosPelicula)
   }
 
   imgGuardad(d, datos){

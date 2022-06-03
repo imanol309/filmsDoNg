@@ -19,6 +19,7 @@ export class LogoutComponent implements OnInit {
   eliminarDatos() {
     localStorage.removeItem('usuario');
     localStorage.removeItem('Token');
+    localStorage.removeItem('Formulario');
     location.reload();
   }
 
