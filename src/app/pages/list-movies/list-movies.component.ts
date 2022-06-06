@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { GenericService } from 'src/app/services/generic.service';
 import { SubSink } from 'subsink';
 
@@ -12,6 +12,7 @@ export class ListMoviesComponent implements OnInit, OnDestroy {
   css: boolean = true;
   loanding: boolean = false;
   subs = new SubSink();
+  @ViewChild("myButton") myButton: ElementRef;
   constructor(private genericService: GenericService) {}
 
   ngOnInit() {
@@ -23,7 +24,9 @@ export class ListMoviesComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
-
+  subir() {
+    this.myButton.nativeElement.scrollIntoView({behavior: "smooth"});
+  }
   datosLista() {
     const datosFormulario = JSON.parse(localStorage.getItem('Formulario'));
     this.loanding = false;

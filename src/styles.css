@@ -68,3 +68,66 @@ mat-dialog-container::-webkit-scrollbar-thumb {
     border: solid 0px #8e9494;
   }
 }
+
+/* CSS PARA EL BOTON DE SUBIR A LA PARTE DE ARRIBA DE LAS PAGINAS */
+
+.containerFlecha {
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 90%;
+}
+
+.imgFlecha {
+  height: 30px;
+  scroll-behavior: smooth;
+  background-color: #4741d6;
+  border: 1px solid rgba(255, 255, 255, 0.442);
+  border-radius: 35%;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.imgFlecha:hover {
+  opacity: 1;
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
+  .imgFlecha {
+    height: 25px;
+    opacity: 0.8;
+  }
+
+  .imgFlecha:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+  .imgFlecha {
+    height: 25px;
+    opacity: 0.8;
+  }
+
+  .imgFlecha:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
+  .imgFlecha {
+    height: 20px;
+    opacity: 0.8;
+  }
+
+  .imgFlecha:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  ViewChild,
+  ElementRef,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HomeDateMovie } from '../home/models/home.model';
 import { GenreService } from './services/genre.service';
@@ -15,8 +21,9 @@ export class GenreComponent implements OnInit, OnDestroy {
   datosGenre: HomeDateMovie;
   subs = new SubSink();
   description: String;
-  css: boolean = true
-  loanding: boolean = false
+  css: boolean = true;
+  loanding: boolean = false;
+  @ViewChild('myButton') myButton: ElementRef;
   constructor(
     private rutaActiva: ActivatedRoute,
     private genreService: GenreService
@@ -25,13 +32,15 @@ export class GenreComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.loanding = true
+    this.loanding = true;
   }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
-
+  subir() {
+    this.myButton.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
   paramsRutas() {
     this.rutaActiva.paramMap.subscribe((params) => {
       this.genre = params.get('parameter');
@@ -46,8 +55,8 @@ export class GenreComponent implements OnInit, OnDestroy {
       .getGenre(genre)
       .subscribe((datosGenre) => {
         this.datosGenre = datosGenre;
-        this.loanding = false
-        this.datosGenre.sort((a,b) => Math.random() - 0.5)
+        this.loanding = false;
+        this.datosGenre.sort((a, b) => Math.random() - 0.5);
       });
   }
 

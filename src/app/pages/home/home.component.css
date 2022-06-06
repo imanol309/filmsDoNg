@@ -11,30 +11,6 @@
   font-family: monospace;
   letter-spacing: 0.1em;
 }
-.op {
-  width: 98%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: fixed;
-  top: 90%;
-}
-
-.imgFlecha {
-  height: 30px;
-  scroll-behavior: smooth;
-  background-color: #4741d6;
-  border: 1px solid rgba(255, 255, 255, 0.442);
-  border-radius: 35%;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.imgFlecha:hover {
-  opacity: 1;
-}
 
 /* Para 960px */
 @media only screen and (max-width: 980px) and (min-width: 821px) {

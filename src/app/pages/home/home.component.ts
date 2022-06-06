@@ -29,9 +29,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
   
   subir() {
-    console.log(this.myButton.nativeElement)
     this.myButton.nativeElement.scrollIntoView({behavior: "smooth"});
   }
+  
   GetDatos(): void {
     this.subs.sink = this.homeServices
       .getPelis()
