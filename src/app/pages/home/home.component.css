@@ -12,25 +12,23 @@
   letter-spacing: 0.1em;
 }
 .op {
-  width: 99.7%;
+  width: 98%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: fixed;
-  top: 85%;
+  top: 90%;
 }
 
 .imgFlecha {
-  height: 35px;
+  height: 30px;
   scroll-behavior: smooth;
   background-color: #4741d6;
-  border: 1px solid rgba(255, 255, 255, 0.442); 
-  padding-right: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.442);
+  border-radius: 35%;
   align-items: center;
   text-align: center;
   cursor: pointer;
-  border-top-left-radius: 10%;
-  border-bottom-left-radius: 10%;
   opacity: 0.5;
 }
 
@@ -38,46 +36,67 @@
   opacity: 1;
 }
 
-/* Para 960px */  
-@media only screen and (max-width: 980px) and (min-width: 821px) {  
+/* Para 960px */
+@media only screen and (max-width: 980px) and (min-width: 821px) {
   .tituloGenre {
     font-size: 23px;
   }
-}  
-  
-/* Para 800px */  
-@media only screen and (max-width: 820px) and (min-width: 621px) {  
+}
+
+/* Para 800px */
+@media only screen and (max-width: 820px) and (min-width: 621px) {
   .tituloGenre {
     font-size: 21px;
   }
-}  
-  
-/* Para 600px */  
-@media only screen and (max-width: 620px) and (min-width: 501px) {  
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
   .tituloGenre {
     font-size: 18px;
   }
+
   .imgFlecha {
-    opacity: 1;
+    height: 25px;
+    opacity: 0.8;
   }
-}  
-  
-/* Para 480px */  
-@media only screen and (max-width: 500px) and (min-width: 341px) {  
+
+  .imgFlecha:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
   .tituloGenre {
     font-size: 16px;
   }
+
   .imgFlecha {
-    opacity: 1;
+    height: 25px;
+    opacity: 0.8;
   }
-}  
-  
-/* Para 320px */  
-@media only screen and (max-width: 340px) and (min-width: 5px)  {  
+
+  .imgFlecha:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
   .tituloGenre {
     font-size: 14px;
   }
   .imgFlecha {
     opacity: 1;
+  }
+
+  .imgFlecha {
+    height: 20px;
+    opacity: 0.8;
+  }
+
+  .imgFlecha:hover {
+    opacity: 0.8;
   }
 }
