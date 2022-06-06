@@ -39,7 +39,7 @@ h4 {
   justify-content: center;
   height: 110px;
   align-items: center;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
 .containerH4 {
@@ -53,6 +53,7 @@ h4 {
   font-size: 60px;
   color: white;
   font-family: monospace;
+  line-height: 95%;
 }
 
 .containerIframe {
@@ -177,8 +178,8 @@ h4 {
   margin: 0;
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.543);
-  width: 75%;
-  height: 700px;
+  width: 80%;
+  height: 750px;
 }
 
 .containerPeliculaSugeridas {
@@ -216,7 +217,7 @@ h4 {
 
   .videoIframe {
     width: 90%;
-    height: 420px;
+    height: 520px;
   }
 
   .containerCarhView {
@@ -266,7 +267,7 @@ h4 {
 
   .videoIframe {
     width: 90%;
-    height: 420px;
+    height: 500px;
   }
 
   .containerCarhView {
@@ -362,12 +363,12 @@ h4 {
   }
 
   .tituloH4 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .videoIframe {
     width: 90%;
-    height: 350px;
+    height: 380px;
   }
 
   .containerCarhView {
@@ -433,14 +434,14 @@ h4 {
 }
 
 /* Para 480px */
-@media only screen and (max-width: 500px) and (min-width: 341px) {
+@media only screen and (max-width: 500px) and (min-width: 380px) {
   .containerH4 {
     width: 90%;
     gap: 10px;
   }
 
   .tituloH4 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .videoIframe {
@@ -518,14 +519,14 @@ h4 {
 }
 
 /* Para 320px */
-@media only screen and (max-width: 340px) and (min-width: 5px) {
+@media only screen and (max-width: 380px) and (min-width: 5px) {
   .containerH4 {
     width: 90%;
     gap: 7px;
   }
 
   .tituloH4 {
-    font-size: 30px;
+    font-size: 23px;
   }
 
   .videoIframe {
