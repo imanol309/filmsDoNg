@@ -51,15 +51,20 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
     this.router.navigate(['/pelis/movies/' + id]);
   }
 
-  
-
-
   cargarMas() {
     if (this.numSlice < this.datosPelicula.length) {
       this.numSlice = this.numSlice + 15;
       if (this.numSlice > this.datosPelicula.length) {
         this.cssVer = false;
       }
+    }
+  }
+
+  verCargarMas() {
+    if (this.numSlice <= this.datosPelicula.length) {
+      return true
+    } else {
+      return false
     }
   }
 

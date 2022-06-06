@@ -1,7 +1,6 @@
 <div class="{{ Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart' }}" >
   <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
   <div
-    
     class="{{clases || 'containerCarh'}}"
     *ngFor="let item of datosPelicula | slice: 0:viewing || numSlice; let top = index"
   >
@@ -38,7 +37,7 @@
     </div>
   </div>
 </div>
-<div class="containerBtn" *ngIf="datosPelicula && boton">
+<div class="containerBtn" *ngIf="verCargarMas() && boton">
   <h4 class="btnCargar" (click)="cargarMas()" *ngIf="cssVer || loanding">
     Ver Mas
   </h4>
