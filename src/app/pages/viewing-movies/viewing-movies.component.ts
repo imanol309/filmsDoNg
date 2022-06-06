@@ -26,7 +26,6 @@ export class ViewingMoviesComponent implements OnInit {
       this.peliID = params.get('idpeli');
     });
     this.datosUnicos(this.peliID);
-    console.log(this.peliID)
   }
 
   ngOnInit(): void {
@@ -53,7 +52,6 @@ export class ViewingMoviesComponent implements OnInit {
         }
         this.peliDato = datos;
         window.document.title = `${this.peliDato[0]?.titulo} - FilmsDo`;
-        console.log(this.peliDato)
         this.getPeliculas();
         this.loanding = false;
       });
@@ -61,7 +59,6 @@ export class ViewingMoviesComponent implements OnInit {
 
   getPeliculas() {
     let genero = this.peliDato[0]?.genero;
-    // let generoLimpio = genero?.split('_')[0];
     this.viewingMoviesService.getGenre(genero).subscribe((datos) => {
       this.datosPeliculas = datos;
       this.datosPeliculas.sort((a, b) => Math.random() - 0.5);

@@ -4,7 +4,7 @@
     class="{{clases || 'containerCarh'}}"
     *ngFor="let item of datosPelicula | slice: 0:viewing || numSlice; let top = index"
   >
-    <div class="Carh" (click)="routerMovies(item?._id)" *ngIf="item">
+    <div class="Carh" routerLink="/pelis/movies/{{item?._id}}" *ngIf="item">
       <div class="containerTop" *ngIf="MasVistas">
         <h4 class="h4Top">#{{ top + 1 }}</h4>
       </div>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="containerInfo" *ngIf="item">
-      <p class="tituloCarh" (click)="routerMovies(item?._id)">
+      <p class="tituloCarh" routerLink="/pelis/movies/{{item?._id}}">
         {{ item?.titulo }}
       </p>
       <div class="containerInfon">
