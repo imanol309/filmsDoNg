@@ -103,13 +103,13 @@ h4 {
 }
 
 
-.imgFlecha {
+.imgFlechaUsuario {
   height: 19px;
   transition: filter 0.2s ease;
   filter: opacity(0.5);
 }
 
-.seccioneUsuario:hover .imgFlecha {
+.seccioneUsuario:hover .imgFlechaUsuario {
   filter: opacity(1) drop-shadow(0 0 0 #ffffff);
 }
 
@@ -239,7 +239,7 @@ h4 {
     height: 35px;
   }
 
-  .imgFlecha {
+  .imgFlechaUsuario {
     height: 18px;
   }
 }
@@ -290,7 +290,7 @@ h4 {
     height: 33px;
   }
 
-  .imgFlecha {
+  .imgFlechaUsuario {
     height: 18px;
   }
 }
@@ -342,7 +342,7 @@ h4 {
     height: 30px;
   }
 
-  .imgFlecha {
+  .imgFlechaUsuario {
     height: 18px;
   }
 }
@@ -369,7 +369,7 @@ h4 {
     height: 26px;
   }
 
-  .imgFlecha {
+  .imgFlechaUsuario {
     height: 18px;
   }
 }
