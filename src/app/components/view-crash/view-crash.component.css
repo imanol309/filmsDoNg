@@ -192,7 +192,7 @@
   font-family: Monospace;
   cursor: pointer;
   font-size: 15px;
-  width: 15%;
+  width: 25%;
   height: 35%;
   background-color: #fafafa;
   color: rgb(0, 0, 0);
@@ -268,7 +268,7 @@
 
   .btnCargar {
     font-size: 15px;
-    width: 20%;
+    width: 55%;
     height: 35%;
   }
 
@@ -308,7 +308,7 @@
 
   .btnCargar {
     font-size: 13px;
-    width: 23%;
+    width: 55%;
     height: 35%;
   }
 
@@ -362,8 +362,8 @@
 
   .btnCargar {
     font-size: 12px;
-    width: 27%;
-    height: 35%;
+    width: 55%;
+    height: 30%;
   }
 
   .h4Top {
@@ -421,7 +421,7 @@
 
   .btnCargar {
     font-size: 12px;
-    width: 35%;
+    width: 55%;
     height: 30%;
   }
 
@@ -486,7 +486,7 @@
 
   .btnCargar {
     font-size: 10px;
-    width: 45%;
+    width: 55%;
     height: 30%;
   }
 
