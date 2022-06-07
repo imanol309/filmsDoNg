@@ -6,8 +6,8 @@
       <div class="{{sideLeft?.opened ? 'ralla rallaActiva' : 'ralla'}}" #botonMenuThree></div>
     </div>
     <div class="containerLogo">
-      <img src="../../../assets/img/icon/tv.png" alt="" class="imgLogo" routerLink="/pelis/home" />
-      <h4 class="tituloPrincipal" routerLink="/pelis/home">FilmsDo</h4>
+      <img src="../../../assets/img/icon/rollo-de-pelicula.png" alt="" class="imgLogo" routerLink="/pelis/home" />
+      <p class="tituloPrincipal" routerLink="/pelis/home">FilmsDo</p>
     </div>
   </div>
   <div class="seccionesPelis">
@@ -34,12 +34,13 @@
       <p class="pCuenta">Cuenta
       </p>
     </div>
-    <div class="seccioneUsuario" *ngIf="datoUsuario" [matMenuTriggerFor]="menu">
+    <div class="seccioneUsuario" *ngIf="datoUsuario" [matMenuTriggerFor]="menu"  #t="matMenuTrigger">
       <img src="{{rutaImg}}" alt="" class="imgUsuario" />
       <p class="pCuenta none">
         {{ datoUsuario?.name?.split(" ")[0] }}
       </p>
-      <img src="../../../assets/img/icon/caret-down.png" alt="" class="imgFlechaUsuario" />
+      <img src="../../../assets/img/icon/caret-down.png" alt=""
+        class="{{t.menuOpen ? 'imgFlechaUsuario imgFlechaRotate' : 'imgFlechaUsuario'}}" />
     </div>
     <mat-menu #menu="matMenu" class="containerMenu">
       <app-logout></app-logout>

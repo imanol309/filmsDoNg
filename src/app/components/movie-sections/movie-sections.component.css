@@ -14,13 +14,14 @@ h4 {
 }
 
 .seccionesImg {
-  width: 20%;
+  width: 15%;
   height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   gap: 7px;
+  
 }
 
 .containerMenu {
@@ -32,6 +33,7 @@ h4 {
   text-align: center;
   flex-direction: column;
   gap: 5px;
+  /* background-color: darkgoldenrod; */
 }
 
 .ralla {
@@ -61,7 +63,7 @@ h4 {
 }
 
 .imgLogo {
-  height: 35px;
+  height: 40px;
   cursor: pointer;
   transition: height 0.5s linear;
   margin: 0;
@@ -73,12 +75,11 @@ h4 {
 }
 
 .tituloPrincipal {
-  font-size: 28px;
+  font-size: 32px;
   font-family: monospace;
   color: rgba(255, 255, 255, 0.934);
   margin: 0;
   padding: 0;
-  padding-top: 7px;
   cursor: pointer;
 }
 
@@ -158,11 +159,11 @@ h4 {
 .imgFlechaUsuario {
   height: 19px;
   transition: filter 0.2s ease;
-  filter: opacity(0.5);
+  transition: transform .5s;
 }
 
-.seccioneUsuario:hover .imgFlechaUsuario {
-  filter: opacity(1) drop-shadow(0 0 0 #ffffff);
+.imgFlechaRotate {
+  transform: rotate(178deg);
 }
 
 .sideRigth {
@@ -213,6 +214,11 @@ h4 {
     width: 30%;
     border-right: 1px solid white;
   }
+
+  .ralla {
+    width: 23px;
+    height: 1px;
+  }
 }
 
 /* Para 800px */
@@ -240,6 +246,11 @@ h4 {
 
   .imgLogo:hover {
     height: 38px;
+  }
+
+  .ralla {
+    width: 20px;
+    height: 1px;
   }
 }
 
@@ -297,6 +308,11 @@ h4 {
   .imgFlechaUsuario {
     height: 18px;
   }
+
+  .ralla {
+    width: 20px;
+    height: 1px;
+  }
 }
 
 /* Para 480px */
@@ -352,6 +368,11 @@ h4 {
 
   .imgFlechaUsuario {
     height: 18px;
+  }
+
+  .ralla {
+    width: 18px;
+    height: 1px;
   }
 }
 
@@ -409,6 +430,11 @@ h4 {
   .imgFlechaUsuario {
     height: 18px;
   }
+
+  .ralla {
+    width: 13px;
+    height: 1px;
+  }
 }
 
 /* Para 1300px */
@@ -436,4 +462,10 @@ h4 {
   .imgFlechaUsuario {
     height: 18px;
   }
+
+  .ralla {
+    width: 25px;
+    height: 1px;
+  }
+  
 }
