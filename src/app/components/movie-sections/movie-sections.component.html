@@ -1,6 +1,14 @@
 <div class="containerSeccionesPelis">
   <div class="seccionesImg">
-    <img src="../../../assets/img/icon/google-play.png" alt="" class="imgLogo" (click)="sideLeft.toggle()" />
+    <div class="containerMenu" (click)="sideLeft.toggle()" >
+      <div class="ralla"></div>
+      <div class="ralla"></div>
+      <div class="ralla"></div>
+    </div>
+    <div class="containerLogo">
+      <img src="../../../assets/img/icon/tv.png" alt="" class="imgLogo" routerLink="/pelis/home"/>
+      <h4 class="tituloPrincipal" routerLink="/pelis/home">FilmsDo</h4>
+    </div>
   </div>
   <div class="seccionesPelis">
     <p href="" class="pSecciones" routerLink="/pelis/genre/Acción,Drama">
