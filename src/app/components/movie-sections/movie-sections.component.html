@@ -1,12 +1,12 @@
 <div class="containerSeccionesPelis">
   <div class="seccionesImg">
-    <div class="containerMenu" (click)="sideLeft.toggle()" >
-      <div class="ralla"></div>
-      <div class="ralla"></div>
-      <div class="ralla"></div>
+    <div class="containerMenu" (click)="sideLeft.toggle()">
+      <div class="{{sideLeft?.opened ? 'ralla rallaActiva' : 'ralla'}}" #botonMenuOne></div>
+      <div class="{{sideLeft?.opened ? 'ralla rallaActiva' : 'ralla'}}" #botonMenuTwo></div>
+      <div class="{{sideLeft?.opened ? 'ralla rallaActiva' : 'ralla'}}" #botonMenuThree></div>
     </div>
     <div class="containerLogo">
-      <img src="../../../assets/img/icon/tv.png" alt="" class="imgLogo" routerLink="/pelis/home"/>
+      <img src="../../../assets/img/icon/tv.png" alt="" class="imgLogo" routerLink="/pelis/home" />
       <h4 class="tituloPrincipal" routerLink="/pelis/home">FilmsDo</h4>
     </div>
   </div>

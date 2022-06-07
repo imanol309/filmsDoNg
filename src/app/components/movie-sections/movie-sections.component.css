@@ -14,7 +14,7 @@ h4 {
 }
 
 .seccionesImg {
-  width: 25%;
+  width: 20%;
   height: 8vh;
   display: flex;
   justify-content: space-between;
@@ -43,11 +43,9 @@ h4 {
   padding: 0;
   cursor: pointer;
   transition: transform .5s;
-  
-  /* transition: 1s linear; */
 }
 
-.containerMenu:hover .rallaActiva {
+.rallaActiva {
   transform: rotate(0.40turn);
   border: 1px solid #7878fc;
 }
