@@ -34,7 +34,7 @@
       <p class="pCuenta">Cuenta
       </p>
     </div>
-    <div class="seccioneUsuario" *ngIf="datoUsuario" [matMenuTriggerFor]="menu"  #t="matMenuTrigger">
+    <div class="seccioneUsuario" *ngIf="datoUsuario" [matMenuTriggerFor]="menu" #t="matMenuTrigger">
       <img src="{{rutaImg}}" alt="" class="imgUsuario" />
       <p class="pCuenta none">
         {{ datoUsuario?.name?.split(" ")[0] }}

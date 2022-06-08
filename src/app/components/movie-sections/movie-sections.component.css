@@ -20,8 +20,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  gap: 7px;
-  
+  gap: 7px
 }
 
 .containerMenu {
@@ -33,7 +32,6 @@ h4 {
   text-align: center;
   flex-direction: column;
   gap: 5px;
-  /* background-color: darkgoldenrod; */
 }
 
 .ralla {
@@ -44,11 +42,11 @@ h4 {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .rallaActiva {
-  transform: rotate(0.40turn);
+  transform: rotate(0.4turn);
   border: 1px solid #7878fc;
 }
 
@@ -159,7 +157,7 @@ h4 {
 .imgFlechaUsuario {
   height: 19px;
   transition: filter 0.2s ease;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .imgFlechaRotate {
@@ -253,7 +251,7 @@ h4 {
   }
 
   .seccionesImg {
-    width: 35%;
+    width: 40%;
   }
 
   .imgLogo:hover {
@@ -286,7 +284,7 @@ h4 {
   }
 
   .seccionesImg {
-    width: 35%;
+    width: 45%;
   }
 
   .tituloPrincipal {
@@ -306,7 +304,7 @@ h4 {
   }
 
   .pCuenta {
-    font-size: 17px;
+    display: none;
   }
 
   .none {
@@ -347,9 +345,9 @@ h4 {
   }
 
   .seccionesImg {
-    width: 45%;
+    width: 55%;
   }
-  
+
   .tituloPrincipal {
     font-size: 25px;
   }
@@ -367,7 +365,7 @@ h4 {
   }
 
   .pCuenta {
-    font-size: 15px;
+    display: none;
   }
 
   .none {
@@ -407,7 +405,7 @@ h4 {
   }
 
   .seccionesImg {
-    width: 55%;
+    width: 60%;
   }
 
   .tituloPrincipal {
@@ -427,7 +425,7 @@ h4 {
   }
 
   .pCuenta {
-    font-size: 13px;
+    display: none;
   }
 
   .none {
@@ -461,8 +459,11 @@ h4 {
     width: 9px;
     height: 1px;
   }
-}
 
+  .seccionesImg {
+    width: 55%;
+  }
+}
 
 /* Para 1300px */
 @media only screen and (max-height: 680px) and (min-height: 50px) {
@@ -494,5 +495,4 @@ h4 {
     width: 25px;
     height: 1px;
   }
-  
 }
