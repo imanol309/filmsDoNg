@@ -363,7 +363,7 @@
   .btnCargar {
     font-size: 12px;
     width: 55%;
-    height: 30%;
+    height: 40%;
   }
 
   .h4Top {
@@ -420,9 +420,9 @@
   }
 
   .btnCargar {
-    font-size: 12px;
+    font-size: 13px;
     width: 55%;
-    height: 30%;
+    height: 40%;
   }
 
   .btnCargar:hover {
@@ -485,9 +485,9 @@
   }
 
   .btnCargar {
-    font-size: 10px;
+    font-size: 11px;
     width: 55%;
-    height: 30%;
+    height: 40%;
   }
 
   .btnCargar:hover {
