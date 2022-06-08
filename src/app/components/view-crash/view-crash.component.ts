@@ -57,7 +57,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
 
   cargarMas() {
     if (this.numSlice < this.datosPelicula.length) {
-      this.numSlice = this.numSlice + 15;
+      this.numSlice = this.numSlice + 10;
       if (this.numSlice > this.datosPelicula.length) {
         this.cssVer = false;
       }
