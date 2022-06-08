@@ -98,8 +98,13 @@ h4 {
 
 .containerValoracion {
   display: flex;
-  width: 50%;
+  width: 100%;
   gap: 8px;
+  color: #e34c16;
+}
+
+.containerValoracion h4 {
+  color: #e34c16;
 }
 
 .containerDirector {
@@ -276,7 +281,7 @@ h4 {
   }
 
   .sinopsis {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .colorGris {
@@ -380,7 +385,7 @@ h4 {
 
   .imgCaratula {
     height: 270px;
-    width: 165px;
+    width: 175px;
     box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
   }
 
@@ -410,7 +415,7 @@ h4 {
   }
 
   .sinopsis {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .colorGris {
@@ -457,8 +462,8 @@ h4 {
   }
 
   .imgCaratula {
-    height: 250px;
-    width: 150px;
+    height: 260px;
+    width: 170px;
     box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
   }
 
@@ -474,7 +479,7 @@ h4 {
   }
 
   .containerImgCaratula {
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -495,7 +500,7 @@ h4 {
   }
 
   .sinopsis {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   .colorGris {
@@ -542,8 +547,8 @@ h4 {
   }
 
   .imgCaratula {
-    height: 220px;
-    width: 130px;
+    height: 230px;
+    width: 140px;
     box-shadow: 5px 5px 40px rgba(245, 222, 179, 0);
   }
   .containerImg {
@@ -571,7 +576,7 @@ h4 {
   }
 
   .sinopsis {
-    font-size: 15px;
+    font-size: 11px;
   }
 
   .colorGris {
