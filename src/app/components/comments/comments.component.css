@@ -1,0 +1,103 @@
+.containerComentarios {
+  width: 100%;
+  background-color: rgb(238, 246, 253);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  word-wrap: break-word;
+}
+
+.containerOpcionnes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.693);
+  align-items: center;
+  text-align: center;
+}
+
+.numeroComments {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+}
+
+.containerSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.containerSelect h4 {
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.comentarios {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.imgUsuarios {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imgLogoUsuario {
+  width: 50px;
+  height: 45px;
+}
+
+.inforComentarios {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.noneMP {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.containerTextArea {
+  width: 100%;
+  display: flex;
+  margin-top: 3%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.containertextArea {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.textArea {
+  width: 100%;
+  height: auto;
+  resize: none;
+}
+
+.button {
+  height: 40px;
+}
