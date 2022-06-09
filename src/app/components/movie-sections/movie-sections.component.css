@@ -472,7 +472,7 @@ h4 {
 /* Para 1300px */
 @media only screen and (max-height: 680px) and (min-height: 50px) {
   .imgLogo {
-    height: 22px;
+    height: 26px;
   }
 
   .pSecciones {
@@ -496,7 +496,12 @@ h4 {
   }
 
   .ralla {
-    width: 25px;
+    width: 22px;
     height: 1px;
   }
+
+  .tituloPrincipal {
+    font-size: 21px;
+  }
+  
 }

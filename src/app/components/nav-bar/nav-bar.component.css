@@ -10,9 +10,8 @@
   height: 80vh;
   min-width: 90%;
   display: flex;
-  justify-content:  flex-start;
+  justify-content: flex-start;
   flex-direction: column;
-  
 }
 
 .NavbarPrincipal::-webkit-scrollbar {
@@ -71,7 +70,6 @@
   background-color: rgba(27, 26, 26, 0.734);
   filter: opacity(1);
 }
-
 
 .secciones {
   color: rgb(255, 255, 255);
@@ -162,7 +160,7 @@
   /* .seccionesPelis {
     display: flex;
   } */
-  
+
   .imgSecciones {
     height: 19px;
   }
@@ -195,5 +193,19 @@
 
   .imgSecciones {
     height: 15px;
+  }
+}
+/* Para 850px height*/
+
+@media only screen and (max-height: 850px) and (min-height: 600px) {
+  .containerSecciones {
+    height: 8vh;
+  }
+}
+
+/* Para 600px height*/
+@media only screen and (max-height: 600px) and (min-height: 5px) {
+  .containerSecciones {
+    height: 10vh;
   }
 }
