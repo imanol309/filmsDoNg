@@ -19,18 +19,21 @@
       <p class="fechaComentario noneMP">Fecha: {{comments.signupDate}}</p>
     </div>
   </div>
-  <div class="containerTextArea">
+  <div class="containerTextArea" *ngIf="datosUsuario">
     <div class="imgUsuarios">
       <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario">
     </div>
     <div class="containertextArea">
-      <form action="" 
-      [formGroup]="form"
-      (ngSubmit)="publicar()">
+      <form action="" [formGroup]="form" (ngSubmit)="publicar()">
         <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
         <button class="submit" [disabled]="!form.valid"
           [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
       </form>
+    </div>
+  </div>
+  <div class="containerNocuenta" *ngIf="!datosUsuario">
+    <div class="texto">
+      <h4 class="textoCondiciones">Inicia seccion o resgistar si quieres hacer un comentario</h4>
     </div>
   </div>
 </div>

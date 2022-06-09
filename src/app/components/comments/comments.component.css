@@ -102,3 +102,26 @@
 .button {
   height: 40px;
 }
+
+
+.containerNocuenta {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.texto {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.texto h4 {
+  font-family: monospace;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+}
