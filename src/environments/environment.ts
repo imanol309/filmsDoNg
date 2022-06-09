@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   URL_API: 'https://api-peliculas-do.herokuapp.com',
+  SECRET_TOKEN: "luffy7585"
 };
 
 /*

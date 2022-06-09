@@ -80,7 +80,7 @@
           </mat-error>
         </div>
         <div class="button">
-          <button type="submit" [disabled]="formLogin.invalid" class="buttonIS">
+          <button type="submit" [disabled]="!formLogin.valid" class="buttonIS">
             Iniciar Sesión
           </button>
         </div>

@@ -9,7 +9,7 @@
       </select>
     </div>
   </div>
-  <div class="comentarios" *ngFor="let comments of datosComentarios">
+  <div class="comentarios" *ngFor="let comments of datosComentarios.comments">
     <div class="imgUsuarios">
       <img src="../../../assets/img/perfil/{{comments.logo}}.png" alt="" class="imgLogoUsuario">
     </div>
@@ -21,12 +21,16 @@
   </div>
   <div class="containerTextArea">
     <div class="imgUsuarios">
-      <img src="../../../assets/img/perfil/{{datosComentarios[0].logo}}.png" alt="" class="imgLogoUsuario">
+      <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario">
     </div>
     <div class="containertextArea">
-      <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
-      <button class="button" [disabled]="!form.valid" (click)="publicar()"
-        [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
+      <form action="" 
+      [formGroup]="form"
+      (ngSubmit)="publicar()">
+        <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
+        <button class="submit" [disabled]="!form.valid"
+          [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
+      </form>
     </div>
   </div>
 </div>

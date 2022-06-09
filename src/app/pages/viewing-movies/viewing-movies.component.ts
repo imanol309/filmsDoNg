@@ -51,7 +51,6 @@ export class ViewingMoviesComponent implements OnInit {
             });
         }
         this.peliDato = datos;
-        console.log(this.peliDato)
         window.document.title = `${this.peliDato[0]?.titulo} - FilmsDo`;
         this.getPeliculas();
         this.loanding = false;

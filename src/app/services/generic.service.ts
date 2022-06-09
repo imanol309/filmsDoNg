@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { throwError, Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { homeLoginSchema } from '../pages/home/models/home.model';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -56,6 +57,26 @@ export class GenericService {
         {
           id: datos,
         }
+      )
+      .pipe(catchError((err) => throwError(err)));
+  }
+
+  putAddComment(datos): Observable<any> {
+    const datosUsuario = JSON.parse(localStorage.getItem('usuario'));
+    const headers = new HttpHeaders({
+      Authorization: environment.SECRET_TOKEN,
+    });
+    return this.httpClient
+      .patch<any>(
+        `${environment.URL_API}/api/modificarPelis/comments/patch/${datos._id}`,
+        {
+          id: datosUsuario._id,
+          email: datosUsuario.email,
+          name: datosUsuario.name,
+          logo: datosUsuario.logo,
+          message: datos.message,
+        },
+        { headers }
       )
       .pipe(catchError((err) => throwError(err)));
   }
