@@ -210,6 +210,15 @@ h4 {
   width: 75%;
 }
 
+.containerComments {
+  width: 80%;
+}
+
+.commentsTitulo {
+  color: white;
+  font-size: 29px;
+}
+
 @media only screen and (max-width: 1450px) and (min-width: 980px) {
   .containerH4 {
     width: 90%;

@@ -11,6 +11,7 @@ import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-l
 import { SafePipe } from '../pipe/seguridad-url.pipe';
 import { RegistrationComponent } from '../components/Registration/Registration.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { CommentsComponent } from '../components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from '../components/footer/footer.component';
     SpinnerLoadingComponent,
     SafePipe,
     RegistrationComponent,
-    FooterComponent
+    FooterComponent,
+    CommentsComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { FooterComponent } from '../components/footer/footer.component';
     SpinnerLoadingComponent,
     SafePipe,
     RegistrationComponent,
-    FooterComponent
+    FooterComponent,
+    CommentsComponent
   ],
 })
 export class pagesModule {}
