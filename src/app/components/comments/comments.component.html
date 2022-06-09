@@ -1,6 +1,6 @@
 <div class="containerComentarios">
   <div class="containerOpcionnes">
-    <h4 class="numeroComments"> 0 Comentarios</h4>
+    <h4 class="numeroComments"> {{datosComentarios.length}} Comentarios</h4>
     <div class="containerSelect">
       <h4>Ordenar por</h4>
       <select class="">
@@ -9,23 +9,24 @@
       </select>
     </div>
   </div>
-  <div class="comentarios">
+  <div class="comentarios" *ngFor="let comments of datosComentarios">
     <div class="imgUsuarios">
-      <img src="../../../assets/img/perfil/ladron.png" alt="" class="imgLogoUsuario"> 
+      <img src="../../../assets/img/perfil/{{comments.logo}}.png" alt="" class="imgLogoUsuario">
     </div>
     <div class="inforComentarios">
-      <h4 class="nombreComentario noneMP">Imanol PEREZ</h4>
-      <p class="comentarioTextp noneMP">Comentario</p>
-      <p class="fechaComentario noneMP">Fecha: 02-08-2022</p>
+      <h4 class="nombreComentario noneMP">{{comments.name}}</h4>
+      <p class="comentarioTextp noneMP">{{comments.message}}</p>
+      <p class="fechaComentario noneMP">Fecha: {{comments.signupDate}}</p>
     </div>
   </div>
   <div class="containerTextArea">
     <div class="imgUsuarios">
-      <img src="../../../assets/img/perfil/ladron.png" alt="" class="imgLogoUsuario">
+      <img src="../../../assets/img/perfil/{{datosComentarios[0].logo}}.png" alt="" class="imgLogoUsuario">
     </div>
     <div class="containertextArea">
-      <textarea name="" id="" cols="50" rows="5" class="textArea"></textarea>
-      <button class="button">Publicar</button>
+      <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
+      <button class="button" [disabled]="!form.valid" (click)="publicar()"
+        [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
     </div>
   </div>
 </div>
