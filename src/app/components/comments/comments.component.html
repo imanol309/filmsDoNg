@@ -1,6 +1,6 @@
 <div class="containerComentarios">
   <div class="containerOpcionnes">
-    <h4 class="numeroComments"> {{datosComentarios.comments.length}} Comentarios</h4>
+    <h4 class="numeroComments"> {{datosComentarios?.comments?.length}} Comentarios</h4>
     <div class="containerSelect">
       <h4>Ordenar por</h4>
       <select class="">
@@ -19,20 +19,19 @@
       <p class="fechaComentario noneMP">Fecha: {{comments.signupDate?.slice(0, 10)}}</p>
     </div>
     <div class="containerEliminar">
-      <img src="../../../assets/img/icon/basura.png" alt="" class="basuraIcon">
+      <img src="../../../assets/img/icon/basura.png" alt="" class="basuraIcon"
+        (click)="eliminarComentario(comments._id)">
     </div>
   </div>
   <div class="containerTextArea" *ngIf="datosUsuario">
     <div class="imgUsuarios">
-      <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario" (click)="eliminarComentario()">
+      <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario">
     </div>
-    <div class="containertextArea">
-      <form action="" [formGroup]="form" (ngSubmit)="publicar()">
-        <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
-        <button class="submit" [disabled]="!form.valid"
-          [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
-      </form>
-    </div>
+    <form action="" [formGroup]="form" (ngSubmit)="publicar()" class="containertextArea">
+      <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
+      <button class="submit" [disabled]="!form.valid"
+        [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
+    </form>
   </div>
   <div class="containerNocuenta" *ngIf="!datosUsuario">
     <div class="texto">

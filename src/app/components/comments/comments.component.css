@@ -89,20 +89,24 @@
   width: 90%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
   word-wrap: break-word;
+  margin-bottom: 2%;
 }
 
 .textArea {
-  width: 100%;
+  width: 85%;
   height: auto;
   resize: none;
 }
 
-.button {
+.submit {
+  width: 55%;
   height: 40px;
+  margin-top: 2%;
 }
-
 
 .containerNocuenta {
   width: 100%;

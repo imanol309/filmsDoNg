@@ -11,6 +11,7 @@ export class CommentsComponent implements OnInit {
   form: FormGroup;
   datosUsuario: any;
   @Input() datosComentarios: any;
+
   constructor(private fb: FormBuilder, private genericService: GenericService) {
     this.form = this.fb.group({
       message: ['', [Validators.required, Validators.maxLength(1000)]],
@@ -28,11 +29,16 @@ export class CommentsComponent implements OnInit {
     this.genericService.putAddComment(datosComentarios).subscribe((datos) => {
       this.datosComentarios = datos?.commentsNew;
       this.form.reset();
-      console.log(datos);
     });
   }
 
-  eliminarComentario() {
-    
+  eliminarComentario(idComment) {
+    const datosComentarios = {
+      _id: this.datosComentarios?._id,
+      _idComment: idComment,
+    };
+    this.genericService.deleteComment(datosComentarios).subscribe((datos) => {
+      this.datosComentarios = datos?.moviesNew;
+    });
   }
 }
