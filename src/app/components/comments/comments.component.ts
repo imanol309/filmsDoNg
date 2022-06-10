@@ -31,4 +31,8 @@ export class CommentsComponent implements OnInit {
       console.log(datos);
     });
   }
+
+  eliminarComentario() {
+    
+  }
 }

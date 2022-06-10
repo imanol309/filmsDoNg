@@ -1,6 +1,6 @@
 <div class="containerComentarios">
   <div class="containerOpcionnes">
-    <h4 class="numeroComments"> {{datosComentarios.length}} Comentarios</h4>
+    <h4 class="numeroComments"> {{datosComentarios.comments.length}} Comentarios</h4>
     <div class="containerSelect">
       <h4>Ordenar por</h4>
       <select class="">
@@ -16,12 +16,15 @@
     <div class="inforComentarios">
       <h4 class="nombreComentario noneMP">{{comments.name}}</h4>
       <p class="comentarioTextp noneMP">{{comments.message}}</p>
-      <p class="fechaComentario noneMP">Fecha: {{comments.signupDate}}</p>
+      <p class="fechaComentario noneMP">Fecha: {{comments.signupDate?.slice(0, 10)}}</p>
+    </div>
+    <div class="containerEliminar">
+      <img src="../../../assets/img/icon/basura.png" alt="" class="basuraIcon">
     </div>
   </div>
   <div class="containerTextArea" *ngIf="datosUsuario">
     <div class="imgUsuarios">
-      <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario">
+      <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario" (click)="eliminarComentario()">
     </div>
     <div class="containertextArea">
       <form action="" [formGroup]="form" (ngSubmit)="publicar()">

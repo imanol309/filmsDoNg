@@ -80,4 +80,19 @@ export class GenericService {
       )
       .pipe(catchError((err) => throwError(err)));
   }
+
+  deleteComment(datos): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: environment.SECRET_TOKEN,
+    });
+    return this.httpClient
+      .patch<any>(
+        `${environment.URL_API}/api/eliminarPelis/comments/${datos._id}`,
+        {
+          id: datos._idComment,
+        },
+        { headers }
+      )
+      .pipe(catchError((err) => throwError(err)));
+  }
 }

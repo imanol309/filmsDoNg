@@ -64,7 +64,7 @@
 }
 
 .inforComentarios {
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -124,4 +124,18 @@
   color: rgb(0, 0, 0);
   margin: 0;
   padding: 0;
+}
+
+.containerEliminar {
+  width: 10%;
+}
+
+.basuraIcon {
+  height: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.basuraIcon:hover {
+  transform: scale(1.5);
 }
