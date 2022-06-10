@@ -20,7 +20,7 @@
     </div>
     <div class="containerEliminar">
       <img src="../../../assets/img/icon/basura.png" alt="" class="basuraIcon"
-        (click)="eliminarComentario(comments._id)">
+        (click)="eliminarComentario(comments._id)" *ngIf="comments.emailUser === datosUsuario.email">
     </div>
   </div>
   <div class="containerTextArea" *ngIf="datosUsuario">
