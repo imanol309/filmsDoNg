@@ -14,9 +14,11 @@
       <img src="../../../assets/img/perfil/{{comments.logo}}.png" alt="" class="imgLogoUsuario">
     </div>
     <div class="inforComentarios">
-      <h4 class="nombreComentario noneMP">{{comments.name}}</h4>
+      <div class="containerNombre">
+        <h4 class="nombreComentario noneMP">{{comments.name}} comento el </h4>
+        <p class="fechaComentario">{{comments.signupDate?.slice(0, 10)}}</p>
+      </div>
       <p class="comentarioTextp noneMP">{{comments.message}}</p>
-      <p class="fechaComentario noneMP">Fecha: {{comments.signupDate?.slice(0, 10)}}</p>
     </div>
     <div class="containerEliminar">
       <img src="../../../assets/img/icon/basura.png" alt="" class="basuraIcon"
@@ -29,8 +31,10 @@
     </div>
     <form action="" [formGroup]="form" (ngSubmit)="publicar()" class="containertextArea">
       <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
-      <button class="submit" [disabled]="!form.valid"
-        [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
+      <div class="containerForm">
+        <button class="submit" [disabled]="!form.valid"
+          [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
+      </div>
     </form>
   </div>
   <div class="containerNocuenta" *ngIf="!datosUsuario">

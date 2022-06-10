@@ -1,6 +1,5 @@
 .containerComentarios {
   width: 100%;
-  background-color: rgb(238, 246, 253);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,15 +7,19 @@
   margin-top: 3%;
   margin-bottom: 3%;
   word-wrap: break-word;
+  border: 1px solid rgba(255, 255, 255, 0.782);
+  
 }
 
 .containerOpcionnes {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.693);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.693);
   align-items: center;
   text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .numeroComments {
@@ -25,6 +28,7 @@
   text-align: center;
   align-items: center;
   margin-left: 1%;
+  color: white;
 }
 
 .containerSelect {
@@ -33,9 +37,11 @@
   align-items: center;
   text-align: center;
   gap: 5px;
+  margin-right: 1%;
 }
 
 .containerSelect h4 {
+  color: white;
   text-align: center;
   align-items: center;
   margin: 0;
@@ -46,21 +52,23 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   margin-top: 2%;
 }
 
 .imgUsuarios {
-  width: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 
 .imgLogoUsuario {
   width: 50px;
   height: 45px;
+  background-color: rgb(0, 0, 0);
+  padding: 3%;
+  border-radius: 50%;
 }
 
 .inforComentarios {
@@ -68,12 +76,38 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  background-color: #181818;
+}
+
+.containerNombre {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+  background-color: #202020;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.fechaComentario {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: white;
 }
 
 .noneMP {
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
+  color: white;
+  margin-left: 1%;
+}
+
+.comentarioTextp {
+  
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .containerTextArea {
@@ -81,31 +115,36 @@
   display: flex;
   margin-top: 3%;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
   text-align: center;
 }
 
 .containertextArea {
   width: 90%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-start;
   flex-direction: column;
   word-wrap: break-word;
   margin-bottom: 2%;
+}
+.containerForm {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .textArea {
   width: 85%;
   height: auto;
   resize: none;
+  color: white;
+  background-color: rgba(184, 135, 11, 0);
 }
 
 .submit {
-  width: 55%;
+  width: 35%;
   height: 40px;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 .containerNocuenta {
@@ -125,9 +164,9 @@
 
 .texto h4 {
   font-family: monospace;
-  color: rgb(0, 0, 0);
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 .containerEliminar {
@@ -138,6 +177,7 @@
   height: 25px;
   cursor: pointer;
   transition: 0.5s;
+  color: white;
 }
 
 .basuraIcon:hover {
