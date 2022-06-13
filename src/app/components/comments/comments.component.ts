@@ -1,5 +1,11 @@
-import { Component, DoCheck, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { GenericService } from 'src/app/services/generic.service';
 
 @Component({
@@ -7,8 +13,7 @@ import { GenericService } from 'src/app/services/generic.service';
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.css'],
 })
-export class CommentsComponent implements OnInit, DoCheck {
-  form: FormGroup;
+export class CommentsComponent implements OnInit {
   datosUsuario: any;
   @Input() datosComentarios: any;
   @ViewChild('richText') richText!: ElementRef;
@@ -16,37 +21,27 @@ export class CommentsComponent implements OnInit, DoCheck {
   @ViewChild('enviar') enviar: ElementRef;
   valorMessage: any;
 
-  constructor(private fb: FormBuilder, private genericService: GenericService, private renderer: Renderer2) {
-    this.form = this.fb.group({
-      message: ['', [Validators.required, Validators.maxLength(1000)]],
-    });
+  constructor(
+    private genericService: GenericService,
+    private renderer: Renderer2
+  ) {
     this.datosUsuario = JSON.parse(localStorage.getItem('usuario'));
   }
 
   ngOnInit() {
-    this.valorMessage = this.richText?.nativeElement.innerHTML
-  }
-
-  ngDoCheck() {
-    this.form.controls['message'].setValue(this.richText?.nativeElement.innerHTML)
-    console.log(this.richText?.nativeElement.innerHTML)
+    this.valorMessage = this.richText?.nativeElement.innerHTML;
   }
 
   publicar() {
-    console.log(this.richText?.nativeElement.innerHTML);
-    // const datosComentarios = {
-    //   _id: this.datosComentarios._id,
-    //   message: this.form.controls['message'].value,
-    // };
-    // this.genericService.putAddComment(datosComentarios).subscribe((datos) => {
-    //   this.datosComentarios = datos?.commentsNew;
-    //   this.form.reset();
-    // });
-  }
-
-  activarAnimacion() {
-    this.renderer.addClass(this.borrar.nativeElement, 'ver')
-    this.renderer.addClass(this.enviar.nativeElement, 'ver')
+    console.log(this.richText.nativeElement.innerHTML);
+    const datosComentarios = {
+      _id: this.datosComentarios._id,
+      message: this.richText.nativeElement.innerHTML,
+    };
+    this.genericService.putAddComment(datosComentarios).subscribe((datos) => {
+      this.datosComentarios = datos?.commentsNew;
+      this.richText.nativeElement.innerHTML = '';
+    });
   }
 
   eliminarComentario(idComment) {
@@ -57,5 +52,22 @@ export class CommentsComponent implements OnInit, DoCheck {
     this.genericService.deleteComment(datosComentarios).subscribe((datos) => {
       this.datosComentarios = datos?.moviesNew;
     });
+  }
+
+  borrarTexto() {
+    this.richText.nativeElement.innerHTML = '';
+  }
+
+  activarAnimacion() {
+    this.renderer.setStyle(
+      this.borrar.nativeElement,
+      'display',
+      'inline-block'
+    );
+    this.renderer.setStyle(
+      this.enviar.nativeElement,
+      'display',
+      'inline-block'
+    );
   }
 }

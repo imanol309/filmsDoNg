@@ -1,5 +1,5 @@
 .containerComentarios {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +59,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   margin-right: 5px;
+  height: auto;
 }
 
 .imgLogoUsuario {
@@ -73,16 +74,25 @@
   width: 80%;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  background-color: #181818;
+  gap: 1px;
+}
+
+.comentarioTextp {
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-left: 1%;
 }
 
 .containerNombre {
+  width: 100%;
   display: flex;
   align-items: center;
   text-align: center;
   gap: 7px;
-  background-color: #202020;
   padding-top: 1%;
   padding-bottom: 1%;
 }
@@ -91,20 +101,19 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  color: white;
+  color: rgb(149, 149, 149);
+  font-size: 13px;
+  font-family: monospace;
 }
 
-.noneMP {
+.nombreComentario {
   margin: 0;
   padding: 0;
   text-align: left;
   color: white;
   margin-left: 1%;
-}
-
-.comentarioTextp {
-  padding-top: 1%;
-  padding-bottom: 1%;
+  font-family: monospace;
+  font-size: 17px;
 }
 
 .containerTextArea {
@@ -137,6 +146,7 @@
   color: white;
   border-bottom: 1px solid rgb(255, 255, 255);
   background-color: rgba(184, 135, 11, 0);
+  cursor: pointer;
 }
 
 .textArea:empty::before {
@@ -204,6 +214,8 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  animation: square-animation 1s ease-in;
+  margin-top: 1%;
 }
 
 .buttonEnviar span {
@@ -246,6 +258,18 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  animation: square-animation 1s ease-in;
+  margin-top: 1%;
+}
+
+@keyframes square-animation {
+  100% {
+    margin-top: 1%;
+  }
+
+  0% {
+    margin-top: 0;
+  }
 }
 
 .buttonBorrar span {
@@ -273,10 +297,6 @@
   right: 0;
 }
 
-.ver {
-  display: inline-block;
-}
-
 /* From uiverse.io by @hannahyockel */
 
 button {
@@ -284,11 +304,12 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 5%;
   border: 0px solid transparent;
   background-color: rgba(100, 77, 237, 0.08);
   border-radius: 1.25em;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 
 button:hover {
@@ -314,7 +335,7 @@ button:hover {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: 25%;
+  top: 18%;
   left: 110%;
 }
 
@@ -331,4 +352,56 @@ button:hover {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
+}
+
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+  .imgLogoUsuario {
+    width: 30px;
+    height: 29px;
+    padding: 3%;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+  .nombreComentario {
+    font-size: 15px;
+  }
+
+  .fechaComentario {
+    font-size: 11px;
+  }
+
+  .comentarioTextp {
+    font-size: 12px;
+  }
+
+  .textArea:empty::before {
+    font-size: 11px;
+  }
+
+  .buttonBorrar {
+    font-size: 11px;
+    width: 65px;
+    height: 30px;
+  }
+
+  .buttonEnviar {
+    font-size: 11px;
+    width: 67px;
+    height: 32px;
+  }
+
+  .containerTextArea {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+}
+
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
 }
