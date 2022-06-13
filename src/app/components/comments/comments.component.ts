@@ -1,4 +1,4 @@
-import { Component, DoCheck, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, DoCheck, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenericService } from 'src/app/services/generic.service';
 
@@ -12,15 +12,20 @@ export class CommentsComponent implements OnInit, DoCheck {
   datosUsuario: any;
   @Input() datosComentarios: any;
   @ViewChild('richText') richText!: ElementRef;
+  @ViewChild('borrar') borrar: ElementRef;
+  @ViewChild('enviar') enviar: ElementRef;
+  valorMessage: any;
 
-  constructor(private fb: FormBuilder, private genericService: GenericService) {
+  constructor(private fb: FormBuilder, private genericService: GenericService, private renderer: Renderer2) {
     this.form = this.fb.group({
       message: ['', [Validators.required, Validators.maxLength(1000)]],
     });
     this.datosUsuario = JSON.parse(localStorage.getItem('usuario'));
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.valorMessage = this.richText?.nativeElement.innerHTML
+  }
 
   ngDoCheck() {
     this.form.controls['message'].setValue(this.richText?.nativeElement.innerHTML)
@@ -37,6 +42,11 @@ export class CommentsComponent implements OnInit, DoCheck {
     //   this.datosComentarios = datos?.commentsNew;
     //   this.form.reset();
     // });
+  }
+
+  activarAnimacion() {
+    this.renderer.addClass(this.borrar.nativeElement, 'ver')
+    this.renderer.addClass(this.enviar.nativeElement, 'ver')
   }
 
   eliminarComentario(idComment) {
