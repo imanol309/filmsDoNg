@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, DoCheck, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenericService } from 'src/app/services/generic.service';
 
@@ -7,10 +7,11 @@ import { GenericService } from 'src/app/services/generic.service';
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.css'],
 })
-export class CommentsComponent implements OnInit {
+export class CommentsComponent implements OnInit, DoCheck {
   form: FormGroup;
   datosUsuario: any;
   @Input() datosComentarios: any;
+  @ViewChild('richText') richText!: ElementRef;
 
   constructor(private fb: FormBuilder, private genericService: GenericService) {
     this.form = this.fb.group({
@@ -21,15 +22,21 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit() {}
 
+  ngDoCheck() {
+    this.form.controls['message'].setValue(this.richText?.nativeElement.innerHTML)
+    console.log(this.richText?.nativeElement.innerHTML)
+  }
+
   publicar() {
-    const datosComentarios = {
-      _id: this.datosComentarios._id,
-      message: this.form.controls['message'].value,
-    };
-    this.genericService.putAddComment(datosComentarios).subscribe((datos) => {
-      this.datosComentarios = datos?.commentsNew;
-      this.form.reset();
-    });
+    console.log(this.richText?.nativeElement.innerHTML);
+    // const datosComentarios = {
+    //   _id: this.datosComentarios._id,
+    //   message: this.form.controls['message'].value,
+    // };
+    // this.genericService.putAddComment(datosComentarios).subscribe((datos) => {
+    //   this.datosComentarios = datos?.commentsNew;
+    //   this.form.reset();
+    // });
   }
 
   eliminarComentario(idComment) {

@@ -9,6 +9,19 @@
       </select>
     </div>
   </div>
+  <div class="containerTextArea" *ngIf="datosUsuario">
+    <div class="imgUsuarios">
+      <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario">
+    </div>
+    <form action="" [formGroup]="form" (ngSubmit)="publicar()" class="containertextArea">
+      <div contenteditable class="textArea" formControlName="message" #richText></div>
+      <!-- <textarea name="" id="" cols="50" rows="5" class="textArea"  ></textarea> -->
+      <div class="containerForm">
+        <button class="submit" [disabled]="!form.valid"
+          [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
+      </div>
+    </form>
+  </div>
   <div class="comentarios" *ngFor="let comments of datosComentarios.comments">
     <div class="imgUsuarios">
       <img src="../../../assets/img/perfil/{{comments.logo}}.png" alt="" class="imgLogoUsuario">
@@ -25,18 +38,7 @@
         (click)="eliminarComentario(comments._id)" *ngIf="comments.emailUser === datosUsuario.email">
     </div>
   </div>
-  <div class="containerTextArea" *ngIf="datosUsuario">
-    <div class="imgUsuarios">
-      <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario">
-    </div>
-    <form action="" [formGroup]="form" (ngSubmit)="publicar()" class="containertextArea">
-      <textarea name="" id="" cols="50" rows="5" class="textArea" formControlName="message"></textarea>
-      <div class="containerForm">
-        <button class="submit" [disabled]="!form.valid"
-          [ngStyle]="{ cursor: form.valid ? 'pointer' : 'default' }">Publicar</button>
-      </div>
-    </form>
-  </div>
+
   <div class="containerNocuenta" *ngIf="!datosUsuario">
     <div class="texto">
       <h4 class="textoCondiciones">Inicia seccion o resgistar si quieres hacer un comentario</h4>
