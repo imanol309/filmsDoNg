@@ -7,15 +7,12 @@
   margin-top: 3%;
   margin-bottom: 3%;
   word-wrap: break-word;
-  /* border: 1px solid rgba(255, 255, 255, 0.782); */
-  
 }
 
 .containerOpcionnes {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.693); */
   align-items: center;
   text-align: center;
   padding-top: 1%;
@@ -29,6 +26,7 @@
   align-items: center;
   margin-left: 1%;
   color: white;
+  font-family: monospace;
 }
 
 .containerSelect {
@@ -38,6 +36,7 @@
   text-align: center;
   gap: 5px;
   margin-right: 1%;
+  width: 50%;
 }
 
 .containerSelect h4 {
@@ -51,10 +50,9 @@
 .comentarios {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   text-align: center;
-  margin-top: 2%;
 }
 
 .imgUsuarios {
@@ -62,11 +60,13 @@
   justify-content: flex-end;
   align-items: flex-start;
   margin-right: 5px;
+  width: 10%;
 }
 
 .imgLogoUsuario {
   width: 50px;
   height: 49px;
+  margin: 0;
   padding: 3%;
   border-radius: 50%;
   border: 1px solid rgb(255, 255, 255);
@@ -76,16 +76,26 @@
   width: 80%;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  background-color: #181818;
+  gap: 1px;
+}
+
+.comentarioTextp {
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-left: 2%;
+  font-family: monospace;
 }
 
 .containerNombre {
+  width: 100%;
   display: flex;
   align-items: center;
   text-align: center;
   gap: 7px;
-  background-color: #202020;
   padding-top: 1%;
   padding-bottom: 1%;
 }
@@ -94,29 +104,28 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  color: white;
+  color: rgb(149, 149, 149);
+  font-size: 13px;
+  font-family: monospace;
 }
 
-.noneMP {
+.nombreComentario {
   margin: 0;
   padding: 0;
   text-align: left;
   color: white;
   margin-left: 1%;
-}
-
-.comentarioTextp {
-  
-  padding-top: 1%;
-  padding-bottom: 1%;
+  font-family: monospace;
+  font-size: 17px;
 }
 
 .containerTextArea {
   width: 100%;
   display: flex;
-  margin-top: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
   text-align: center;
 }
 
@@ -136,10 +145,19 @@
 
 .textArea {
   width: 85%;
-  height: auto;
-  resize: none;
+  padding: 0.5rem;
+  text-align: left;
   color: white;
+  border-bottom: 1px solid rgb(255, 255, 255);
   background-color: rgba(184, 135, 11, 0);
+  cursor: pointer;
+}
+
+.textArea:empty::before {
+  position: absolute;
+  content: "Deja un comentario...";
+  font-family: monospace;
+  font-size: 15px;
 }
 
 .submit {
@@ -157,17 +175,25 @@
   text-align: center;
 }
 
-.texto {
-  width: 100%;
-  align-items: center;
-  text-align: center;
-}
-
-.texto h4 {
+.textoCondiciones {
   font-family: monospace;
   margin: 0;
   padding: 0;
+  background-color: #fafafa;
+  color: rgb(0, 0, 0);
+  border: 1px solid #17c3b200;
+  font-family: monospace;
+  transition: 0.5s linear;
+  cursor: pointer;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: auto;
+}
+
+.textoCondiciones:hover {
+  background-color: #fafafa00;
   color: white;
+  border: 1px solid #17c3b2;
 }
 
 .containerEliminar {
@@ -183,4 +209,300 @@
 
 .basuraIcon:hover {
   transform: scale(1.5);
+}
+
+/* From uiverse.io by @NorthFishHasNa */
+
+.buttonEnviar {
+  display: none;
+  border-radius: 4px;
+  background-color: #3d405b;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 13px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  animation: square-animation 1s ease-in;
+  margin-top: 1%;
+}
+
+.buttonEnviar span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonEnviar span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.buttonEnviar:hover span {
+  padding-right: 15px;
+}
+
+.buttonEnviar:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* botton de borrar */
+
+.buttonBorrar {
+  display: none;
+  border-radius: 4px;
+  background-color: #ae3939;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 13px;
+  width: 113px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  animation: square-animation 1s ease-in;
+  margin-top: 1%;
+}
+
+@keyframes square-animation {
+  100% {
+    margin-top: 1%;
+  }
+
+  0% {
+    margin-top: 0;
+  }
+}
+
+.buttonBorrar span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonBorrar span:after {
+  content: "x";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.buttonBorrar:hover span {
+  padding-right: 15px;
+}
+
+.buttonBorrar:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* From uiverse.io by @hannahyockel */
+
+button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  border: 0px solid transparent;
+  background-color: rgba(100, 77, 237, 0.08);
+  border-radius: 1.25em;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
+    8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+    17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+    36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+    99px 72px 143px rgba(0, 0, 0, 0.08);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 39px;
+  width: 40px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.svgEliminar {
+  height: 35px;
+  width: 35px;
+}
+
+/* Para 600px */
+@media only screen and (max-width: 620px) and (min-width: 501px) {
+  .containerSelect {
+    width: 50%;
+  }
+
+  .tooltip {
+    height: 35px;
+    width: 35px;
+  }
+
+  .svgEliminar {
+    height: 30px;
+    width: 30px;
+  }
+
+  .textoCondiciones {
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+   }
+}
+
+/* Para 480px */
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+  .imgLogoUsuario {
+    width: 30px;
+    height: 29px;
+  }
+
+  .nombreComentario {
+    font-size: 15px;
+  }
+
+  .fechaComentario {
+    font-size: 11px;
+  }
+
+  .comentarioTextp {
+    font-size: 12px;
+  }
+
+  .textArea:empty::before {
+    font-size: 11px;
+  }
+
+  .buttonBorrar {
+    font-size: 11px;
+    width: 65px;
+    height: 30px;
+  }
+
+  .buttonEnviar {
+    font-size: 11px;
+    width: 67px;
+    height: 32px;
+  }
+
+  .containerTextArea {
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+
+  .containerSelect {
+    width: 50%;
+  }
+
+  .tooltip {
+    height: 30px;
+    width: 30px;
+  }
+
+  .svgEliminar {
+    height: 25px;
+    width: 25px;
+  }
+
+  .textoCondiciones {
+   font-size: 14px;
+   padding-left: 2px;
+   padding-right: 2px;
+  }
+  
+}
+
+/* Para 320px */
+@media only screen and (max-width: 340px) and (min-width: 5px) {
+  .imgLogoUsuario {
+    width: 30px;
+    height: 29px;
+  }
+
+  .nombreComentario {
+    font-size: 15px;
+  }
+
+  .fechaComentario {
+    font-size: 11px;
+  }
+
+  .comentarioTextp {
+    font-size: 12px;
+  }
+
+  .textArea:empty::before {
+    font-size: 9px;
+  }
+
+  .buttonBorrar {
+    font-size: 9px;
+    width: 55px;
+    height: 25px;
+  }
+
+  .buttonEnviar {
+    font-size: 9px;
+    width: 57px;
+    height: 27px;
+  }
+
+  .containerTextArea {
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+
+  .numeroComments {
+    font-size: 10px;
+  }
+
+  .containerSelect {
+    width: 50%;
+  }
+
+  .containerSelect h4 {
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+  }
+
+  .tooltip {
+    height: 30px;
+    width: 30px;
+  }
+
+  .svgEliminar {
+    height: 25px;
+    width: 25px;
+  }
+
+  .textoCondiciones {
+    font-size: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+   }
 }
