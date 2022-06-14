@@ -18,6 +18,9 @@
       </div>
     </div>
   </div>
+  <div class="containerNocuenta" *ngIf="!datosUsuario">
+    <h4 class="textoCondiciones">Inicia seccion o registrate si quieres hacer un comentario</h4>
+  </div>
   <div class="comentarios" *ngFor="let comments of datosComentarios.comments">
     <div class="imgUsuarios">
       <img src="../../../assets/img/perfil/{{comments.logo}}.png" alt="" class="imgLogoUsuario">
@@ -41,9 +44,5 @@
     </div>
   </div>
 
-  <div class="containerNocuenta" *ngIf="!datosUsuario">
-    <div class="texto">
-      <h4 class="textoCondiciones">Inicia seccion o resgistar si quieres hacer un comentario</h4>
-    </div>
-  </div>
+
 </div>

@@ -87,6 +87,7 @@
   padding: 0;
   text-align: left;
   margin-left: 2%;
+  font-family: monospace;
 }
 
 .containerNombre {
@@ -174,17 +175,25 @@
   text-align: center;
 }
 
-.texto {
-  width: 100%;
-  align-items: center;
-  text-align: center;
-}
-
-.texto h4 {
+.textoCondiciones {
   font-family: monospace;
   margin: 0;
   padding: 0;
+  background-color: #fafafa;
+  color: rgb(0, 0, 0);
+  border: 1px solid #17c3b200;
+  font-family: monospace;
+  transition: 0.5s linear;
+  cursor: pointer;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: auto;
+}
+
+.textoCondiciones:hover {
+  background-color: #fafafa00;
   color: white;
+  border: 1px solid #17c3b2;
 }
 
 .containerEliminar {
@@ -354,6 +363,12 @@ button:hover {
     height: 30px;
     width: 30px;
   }
+
+  .textoCondiciones {
+    font-size: 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+   }
 }
 
 /* Para 480px */
@@ -409,6 +424,13 @@ button:hover {
     height: 25px;
     width: 25px;
   }
+
+  .textoCondiciones {
+   font-size: 14px;
+   padding-left: 2px;
+   padding-right: 2px;
+  }
+  
 }
 
 /* Para 320px */
@@ -477,4 +499,10 @@ button:hover {
     height: 25px;
     width: 25px;
   }
+
+  .textoCondiciones {
+    font-size: 14px;
+    padding-left: 2px;
+    padding-right: 2px;
+   }
 }
