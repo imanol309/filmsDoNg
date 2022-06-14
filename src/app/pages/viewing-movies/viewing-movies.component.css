@@ -30,6 +30,7 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  width: 100%;
 }
 
 .containerTitulo {
@@ -211,15 +212,16 @@ h4 {
 }
 
 .containerComments {
-  width: 80%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 75%;
 }
 
 .commentsTitulo {
   color: white;
   font-size: 29px;
+  font-family: monospace;
 }
 
 @media only screen and (max-width: 1450px) and (min-width: 980px) {
@@ -333,7 +335,7 @@ h4 {
   }
 
   .videoIframe {
-    width: 90%;
+    width: 95%;
     height: 400px;
   }
 
@@ -369,6 +371,10 @@ h4 {
     color: white;
     font-size: 13px;
   }
+
+  .commentsTitulo {
+    font-size: 27px;
+  }
 }
 
 /* Para 600px */
@@ -383,7 +389,7 @@ h4 {
   }
 
   .videoIframe {
-    width: 90%;
+    width: 95%;
     height: 380px;
   }
 
@@ -449,7 +455,11 @@ h4 {
   }
 
   .containerComments {
-    width: 95%;
+    width: 90%;
+  }
+
+  .commentsTitulo {
+    font-size: 25px;
   }
 }
 
@@ -465,7 +475,7 @@ h4 {
   }
 
   .videoIframe {
-    width: 90%;
+    width: 95%;
     height: 300px;
   }
 
@@ -539,6 +549,10 @@ h4 {
   .containerComments {
     width: 95%;
   }
+
+  .commentsTitulo {
+    font-size: 25px;
+  }
 }
 
 /* Para 320px */
@@ -553,7 +567,7 @@ h4 {
   }
 
   .videoIframe {
-    width: 90%;
+    width: 95%;
     height: 250px;
   }
 
@@ -617,5 +631,9 @@ h4 {
   }
   .containerComments {
     width: 95%;
+  }
+
+  .commentsTitulo {
+    font-size: 22px;
   }
 }

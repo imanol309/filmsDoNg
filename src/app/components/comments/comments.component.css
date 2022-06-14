@@ -1,5 +1,5 @@
 .containerComentarios {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +26,7 @@
   align-items: center;
   margin-left: 1%;
   color: white;
+  font-family: monospace;
 }
 
 .containerSelect {
@@ -35,6 +36,7 @@
   text-align: center;
   gap: 5px;
   margin-right: 1%;
+  width: 50%;
 }
 
 .containerSelect h4 {
@@ -48,10 +50,10 @@
 .comentarios {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   text-align: center;
-  margin-top: 1%;
+  margin-top: 5%;
 }
 
 .imgUsuarios {
@@ -59,12 +61,13 @@
   justify-content: flex-end;
   align-items: flex-start;
   margin-right: 5px;
-  height: auto;
+  width: 10%;
 }
 
 .imgLogoUsuario {
   width: 50px;
   height: 49px;
+  margin: 0;
   padding: 3%;
   border-radius: 50%;
   border: 1px solid rgb(255, 255, 255);
@@ -84,7 +87,7 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 .containerNombre {
@@ -323,39 +326,15 @@ button:hover {
 .tooltip {
   position: relative;
   display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 4em;
-  background-color: rgba(0, 0, 0, 0.253);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 18%;
-  left: 110%;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+  margin: 0;
+  padding: 0;
 }
 
 /* Para 600px */
 @media only screen and (max-width: 620px) and (min-width: 501px) {
+  .containerSelect {
+    width: 50%;
+  }
 }
 
 /* Para 480px */
@@ -363,9 +342,6 @@ button:hover {
   .imgLogoUsuario {
     width: 30px;
     height: 29px;
-    padding: 3%;
-    border-radius: 50%;
-    border: 1px solid rgb(255, 255, 255);
   }
 
   .nombreComentario {
@@ -400,8 +376,67 @@ button:hover {
     margin-top: 3%;
     margin-bottom: 3%;
   }
+
+  .containerSelect {
+    width: 50%;
+  }
+
 }
 
 /* Para 320px */
 @media only screen and (max-width: 340px) and (min-width: 5px) {
+  .imgLogoUsuario {
+    width: 30px;
+    height: 29px;
+  }
+
+  .nombreComentario {
+    font-size: 15px;
+  }
+
+  .fechaComentario {
+    font-size: 11px;
+  }
+
+  .comentarioTextp {
+    font-size: 12px;
+  }
+
+  .textArea:empty::before {
+    font-size: 9px;
+  }
+
+  .buttonBorrar {
+    font-size: 9px;
+    width: 55px;
+    height: 25px;
+  }
+
+  .buttonEnviar {
+    font-size: 9px;
+    width: 57px;
+    height: 27px;
+  }
+
+  .containerTextArea {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  .numeroComments {
+    font-size: 10px;
+  }
+
+  .containerSelect {
+    width: 50%;
+  }
+  
+  .containerSelect h4 {
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+  }
 }

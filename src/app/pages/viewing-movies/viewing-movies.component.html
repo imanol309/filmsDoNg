@@ -1,71 +1,70 @@
-<div class="containerView">
-  <div class="movieSectionsContainer">
-    <div class="containerMovies" *ngFor="let datos of peliDato">
-      <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
-      <div class="containerTitulo">
-        <div class="containerH4">
-          <h4 class="tituloH4">{{datos?.titulo}}</h4>
-          <h4 class="generoH4">{{datos?.genero?.split("_").join(" · ")}}</h4>
-        </div>
+<div class="movieSectionsContainer">
+  <div class="containerMovies" *ngFor="let datos of peliDato">
+    <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
+    <div class="containerTitulo">
+      <div class="containerH4">
+        <h4 class="tituloH4">{{datos?.titulo}}</h4>
+        <h4 class="generoH4">{{datos?.genero?.split("_").join(" · ")}}</h4>
       </div>
-      <div class="containerIframe">
-        <iframe [src]='transform(datos?.video)' allowfullscreen allowtransparency allow="autoplay" scrolling="no"
-          frameborder="0" class="videoIframe">
-        </iframe>
-      </div>
-      <div class="containerCarhInfo">
-        <div class="containerCarhView">
-          <div class="containerImg">
-            <div class="containerImgCaratula">
-              <img src="{{ datos?.img }}" alt="" srcset="" class="imgCaratula" />
-            </div>
-            <div class="containerMovil">
-              <h4 class="titulo movil">{{ datos?.titulo }}</h4>
-              <div class="containerValoracion">
-                <h4>{{ datos?.time}} Min</h4>
-                <h4>{{ datos?.year?.slice(0, 4)}}</h4>
-              </div>
-            </div>
+    </div>
+    <div class="containerIframe">
+      <iframe [src]='transform(datos?.video)' allowfullscreen allowtransparency allow="autoplay" scrolling="no"
+        frameborder="0" class="videoIframe">
+      </iframe>
+    </div>
+    <div class="containerCarhInfo">
+      <div class="containerCarhView">
+        <div class="containerImg">
+          <div class="containerImgCaratula">
+            <img src="{{ datos?.img }}" alt="" srcset="" class="imgCaratula" />
           </div>
-          <div class="containerTexto">
-            <h4 class="titulo none">{{ datos?.titulo }}</h4>
-            <div class="containerValoracion none">
+          <div class="containerMovil">
+            <h4 class="titulo movil">{{ datos?.titulo }}</h4>
+            <div class="containerValoracion">
               <h4>{{ datos?.time}} Min</h4>
               <h4>{{ datos?.year?.slice(0, 4)}}</h4>
             </div>
-            <p class="sinopsis">
-              {{ datos?.descripcion}}
-            </p>
-            <div class="containerDirector">
-              <div class="containerInfo">
-                <h4 class="colorGris">Director:</h4>
-                <h4 class="h4white">{{ datos?.Director }}</h4>
-              </div>
-              <div class="containerInfo">
-                <h4 class="colorGris">Elenco:</h4>
-                <h4 class="reparto h4white">{{ datos?.Reparto }}</h4>
-              </div>
-              <div class="containerInfo">
-                <h4 class="colorGris">Generos:</h4>
-                <h4 class="h4white">{{ datos?.genero }}</h4>
-              </div>
-              <div class="containerInfo">
-                <h4 class="colorGris">Subtitulos:</h4>
-                <h4 class="h4white">Opcional</h4>
-              </div>
-              <div class="containerInfo">
-                <h4 class="colorGris">Idiomas de audio:</h4>
-                <h4 class="h4white">Español</h4>
-              </div>
+          </div>
+        </div>
+        <div class="containerTexto">
+          <h4 class="titulo none">{{ datos?.titulo }}</h4>
+          <div class="containerValoracion none">
+            <h4>{{ datos?.time}} Min</h4>
+            <h4>{{ datos?.year?.slice(0, 4)}}</h4>
+          </div>
+          <p class="sinopsis">
+            {{ datos?.descripcion}}
+          </p>
+          <div class="containerDirector">
+            <div class="containerInfo">
+              <h4 class="colorGris">Director:</h4>
+              <h4 class="h4white">{{ datos?.Director }}</h4>
+            </div>
+            <div class="containerInfo">
+              <h4 class="colorGris">Elenco:</h4>
+              <h4 class="reparto h4white">{{ datos?.Reparto }}</h4>
+            </div>
+            <div class="containerInfo">
+              <h4 class="colorGris">Generos:</h4>
+              <h4 class="h4white">{{ datos?.genero }}</h4>
+            </div>
+            <div class="containerInfo">
+              <h4 class="colorGris">Subtitulos:</h4>
+              <h4 class="h4white">Opcional</h4>
+            </div>
+            <div class="containerInfo">
+              <h4 class="colorGris">Idiomas de audio:</h4>
+              <h4 class="h4white">Español</h4>
             </div>
           </div>
         </div>
       </div>
-      <div class="containerComments">
-        <h4 class="commentsTitulo">Comentarios:</h4>
-        <app-comments [datosComentarios]="peliDato[0]"></app-comments>
-      </div>
-      <!-- <div class="containerPeliculaSugeridas">
+    </div>
+    <div class="containerComments">
+      <h4 class="commentsTitulo">Comentarios:</h4>
+      <app-comments [datosComentarios]="peliDato[0]"></app-comments>
+    </div>
+    <!-- <div class="containerPeliculaSugeridas">
         <div class="containerPuede">
           <h4 class="h4Puede">RELACIONADOS:</h4>
         </div>
@@ -80,6 +79,5 @@
         ></app-view-crash>
         </div>
       </div> -->
-    </div>
   </div>
 </div>
