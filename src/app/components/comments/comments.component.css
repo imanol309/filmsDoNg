@@ -53,7 +53,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   text-align: center;
-  margin-top: 5%;
 }
 
 .imgUsuarios {
@@ -123,6 +122,7 @@
   width: 100%;
   display: flex;
   margin-top: 2%;
+  margin-bottom: 3%;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
@@ -328,12 +328,31 @@ button:hover {
   display: inline-block;
   margin: 0;
   padding: 0;
+  height: 39px;
+  width: 40px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.svgEliminar {
+  height: 35px;
+  width: 35px;
 }
 
 /* Para 600px */
 @media only screen and (max-width: 620px) and (min-width: 501px) {
   .containerSelect {
     width: 50%;
+  }
+
+  .tooltip {
+    height: 35px;
+    width: 35px;
+  }
+
+  .svgEliminar {
+    height: 30px;
+    width: 30px;
   }
 }
 
@@ -374,13 +393,22 @@ button:hover {
 
   .containerTextArea {
     margin-top: 3%;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
   }
 
   .containerSelect {
     width: 50%;
   }
 
+  .tooltip {
+    height: 30px;
+    width: 30px;
+  }
+
+  .svgEliminar {
+    height: 25px;
+    width: 25px;
+  }
 }
 
 /* Para 320px */
@@ -420,7 +448,7 @@ button:hover {
 
   .containerTextArea {
     margin-top: 3%;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
   }
 
   .numeroComments {
@@ -430,7 +458,7 @@ button:hover {
   .containerSelect {
     width: 50%;
   }
-  
+
   .containerSelect h4 {
     color: white;
     text-align: center;
@@ -438,5 +466,15 @@ button:hover {
     margin: 0;
     padding: 0;
     font-size: 10px;
+  }
+
+  .tooltip {
+    height: 30px;
+    width: 30px;
+  }
+
+  .svgEliminar {
+    height: 25px;
+    width: 25px;
   }
 }
