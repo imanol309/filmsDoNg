@@ -30,6 +30,7 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit() {
     this.valorMessage = this.richText?.nativeElement.innerHTML;
+    console.log(this.datosComentarios.comments)
   }
 
   publicar() {
