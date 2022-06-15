@@ -2,7 +2,7 @@
   <div class="containerMovies" *ngFor="let datos of peliDato">
     <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
     <div class="containerTitulo">
-      <div class="containerH4">
+      <div class="containerH4" #myPrincipal>
         <h4 class="tituloH4">{{datos?.titulo}}</h4>
         <h4 class="generoH4">{{datos?.genero?.split("_").join(" · ")}}</h4>
       </div>
@@ -65,19 +65,13 @@
       <app-comments [datosComentarios]="peliDato[0]"></app-comments>
     </div>
     <!-- <div class="containerPeliculaSugeridas">
-        <div class="containerPuede">
-          <h4 class="h4Puede">RELACIONADOS:</h4>
-        </div>
-        <div class="peliculasSugeridas">
-          <app-view-crash
-          [datosPelicula]="datosPeliculas"
-          [Css]="css"
-          [loanding]="loandingGet"
-          [viewing]="8"
-          [clases]="'containerCarhView'"
-          [boton]="false"
-        ></app-view-crash>
-        </div>
-      </div> -->
+      <div class="containerPuede">
+        <h4 class="h4Puede">RELACIONADOS:</h4>
+      </div>
+      <div class="peliculasSugeridas">
+        <app-view-crash [datosPelicula]="datosPeliculas" [Css]="css" [loanding]="loandingGet" [viewing]="8"
+          [clases]="'containerCarhView'" [boton]="false"></app-view-crash>
+      </div>
+    </div> -->
   </div>
 </div>

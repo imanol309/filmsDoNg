@@ -40,7 +40,7 @@ h4 {
   justify-content: center;
   height: 110px;
   align-items: center;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 .containerH4 {
@@ -194,7 +194,7 @@ h4 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 3%;
+  margin-top: 1%;
 }
 
 .containerPuede {

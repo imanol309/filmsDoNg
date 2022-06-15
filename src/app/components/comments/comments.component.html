@@ -7,7 +7,7 @@
       <img src="../../../assets/img/perfil/{{datosUsuario.logo}}.png" alt="" class="imgLogoUsuario">
     </div>
     <div class="containertextArea">
-      <div contenteditable class="textArea" formControlName="message" #richText (click)="activarAnimacion()"></div>
+      <div contenteditable class="textArea" #richText (click)="activarAnimacion()"></div>
       <div class="containerForm">
         <button class="buttonBorrar" #borrar (click)="borrarTexto()">
           <span>Borrar</span>

@@ -7,45 +7,50 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'home', 
+        path: 'home',
         loadChildren: () =>
           import('./home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'movies/:idpeli', 
+        path: 'movies/:idpeli',
         loadChildren: () =>
-          import('./viewing-movies/viewing-movies.module').then((m) => m.ViewingMoviesModule),
+          import('./viewing-movies/viewing-movies.module').then(
+            (m) => m.ViewingMoviesModule
+          ),
       },
       {
-        path: 'genre/:parameter', 
+        path: 'genre/:parameter',
         loadChildren: () =>
           import('./genre/genre.module').then((m) => m.GenreModule),
       },
       {
-        path: 'moreView', 
+        path: 'moreView',
         loadChildren: () =>
           import('./more-view/more-view.module').then((m) => m.MoreViewModule),
       },
       {
-        path: 'favoriteList', 
+        path: 'favoriteList',
         loadChildren: () =>
-          import('./list-movies/list-movies.module').then((m) => m.ListMoviesModule),
-          canActivate: [VigilanteDobleGuard]
+          import('./list-movies/list-movies.module').then(
+            (m) => m.ListMoviesModule
+          ),
+        canActivate: [VigilanteDobleGuard],
       },
       {
-        path: 'seach', 
+        path: 'seach',
         loadChildren: () =>
           import('./seach/seach.module').then((m) => m.SeachModule),
       },
       {
-        path: '**', redirectTo: 'home'
-      }
-    ]
-  }
+        path: '**',
+        redirectTo: 'home',
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class pagesRoutingModule { }
+export class pagesRoutingModule {}
