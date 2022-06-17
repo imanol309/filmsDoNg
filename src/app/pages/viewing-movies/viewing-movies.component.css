@@ -183,9 +183,9 @@ h4 {
 .videoIframe {
   margin: 0;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.543);
+  border: 1px solid #ffffff5a;
   width: 80%;
-  height: 750px;
+  height: 800px;
 }
 
 .containerPeliculaSugeridas {
@@ -236,7 +236,7 @@ h4 {
 
   .videoIframe {
     width: 90%;
-    height: 520px;
+    height: 620px;
   }
 
   .containerCarhView {
@@ -336,7 +336,7 @@ h4 {
 
   .videoIframe {
     width: 95%;
-    height: 400px;
+    height: 450px;
   }
 
   .none {
