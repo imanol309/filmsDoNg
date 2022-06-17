@@ -46,7 +46,7 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  border-bottom: 1px solid #ffffff7a;
+  border-bottom: 1px solid #ffffff5a;
   padding-bottom: 4%;
 }
 
@@ -95,7 +95,7 @@
 
 .navBarContacto {
   padding-top: 3%;
-  border-top: 1px solid #ffffff7d;
+  border-top: 1px solid #ffffff5a;
   width: 90%;
   display: flex;
   justify-content: center;

@@ -20,7 +20,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  gap: 7px
+  gap: 7px;
 }
 
 .containerMenu {
@@ -35,7 +35,7 @@ h4 {
 }
 
 .ralla {
-  width: 28px;
+  width: 23px;
   height: 1%;
   background-color: white;
   border-radius: 18%;
@@ -57,7 +57,7 @@ h4 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 7px;
+  gap: 1px;
 }
 
 .imgLogo {
@@ -119,7 +119,7 @@ h4 {
   text-overflow: ellipsis;
 }
 
-.pCuenta:hover {
+.seccioneUsuario:hover .pCuenta {
   filter: opacity(1);
 }
 
@@ -140,7 +140,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 3px;
   width: auto;
   margin-right: 8%;
 }
@@ -168,14 +168,14 @@ h4 {
   width: 30%;
   height: 92vh;
   background-color: #0d1017;
-  border-left: 1px solid white;
+  border-left:  1px solid #ffffff5a;
 }
 
 .sideLeft {
   width: 15%;
   height: 92vh;
   background-color: #0d1017;
-  border-right: 1px solid white;
+  border-right:  1px solid #ffffff5a;
 }
 
 /* Para 1300px */
@@ -194,9 +194,9 @@ h4 {
   }
 
   .seccionesImg {
-    width: 30%;
+    width: 25%;
   }
-  
+
   .sideRigth {
     width: 45%;
   }
@@ -227,7 +227,7 @@ h4 {
   }
 
   .seccionesImg {
-    width: 30%;
+    width: 35%;
   }
 }
 
@@ -255,7 +255,7 @@ h4 {
   }
 
   .seccionesImg {
-    width: 40%;
+    width: 35%;
   }
 
   .imgLogo:hover {
@@ -324,7 +324,7 @@ h4 {
   }
 
   .ralla {
-    width: 20px;
+    width: 19px;
     height: 1px;
   }
 }
@@ -349,7 +349,7 @@ h4 {
   }
 
   .seccionesImg {
-    width: 55%;
+    width: 45%;
   }
 
   .tituloPrincipal {
@@ -384,7 +384,7 @@ h4 {
   }
 
   .ralla {
-    width: 18px;
+    width: 17px;
     height: 1px;
   }
 }
@@ -409,7 +409,7 @@ h4 {
   }
 
   .seccionesImg {
-    width: 60%;
+    width: 55%;
   }
 
   .tituloPrincipal {
@@ -503,5 +503,4 @@ h4 {
   .tituloPrincipal {
     font-size: 21px;
   }
-  
 }

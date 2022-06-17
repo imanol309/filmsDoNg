@@ -42,7 +42,13 @@ export class ViewingMoviesComponent implements OnInit, AfterViewInit {
     this.subs.unsubscribe();
   }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 
   funcion() {
     this.rutaActiva.paramMap.subscribe((params) => {
@@ -66,7 +72,6 @@ export class ViewingMoviesComponent implements OnInit, AfterViewInit {
         }
 
         this.peliDato = datos;
-        console.log(this.peliDato);
         window.document.title = `${this.peliDato[0]?.titulo} - FilmsDo`;
         this.getPeliculas();
         this.loanding = false;
