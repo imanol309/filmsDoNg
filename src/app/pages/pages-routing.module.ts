@@ -37,7 +37,7 @@ const routes: Routes = [
         canActivate: [VigilanteDobleGuard],
       },
       {
-        path: 'seach',
+        path: 'seach/:tituloPelis',
         loadChildren: () =>
           import('./seach/seach.module').then((m) => m.SeachModule),
       },
