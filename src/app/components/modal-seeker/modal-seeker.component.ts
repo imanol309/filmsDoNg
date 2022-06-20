@@ -37,9 +37,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
         .map((v) => v[0]?.toUpperCase() + v.substr(1))
         .join(' ');
     }
-
     this.router.navigate(['/pelis/seach/', capitalizeWords(value)]);
-    
   }
 
   borrar() {

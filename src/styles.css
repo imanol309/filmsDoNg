@@ -67,6 +67,12 @@ mat-dialog-container::-webkit-scrollbar-thumb {
   mat-dialog-container {
     border: solid 0px #8e9494;
   }
+
+  html::-webkit-scrollbar {
+    background: #161717;
+    width: 10px;
+  }
+  
 }
 
 /* CSS PARA EL BOTON DE SUBIR A LA PARTE DE ARRIBA DE LAS PAGINAS */

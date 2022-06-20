@@ -53,6 +53,7 @@ export class ViewingMoviesComponent implements OnInit, AfterViewInit {
   funcion() {
     this.rutaActiva.paramMap.subscribe((params) => {
       this.peliID = params.get('idpeli');
+      console.log(this.peliID)
       this.datosUnicos(this.peliID);
     });
   }

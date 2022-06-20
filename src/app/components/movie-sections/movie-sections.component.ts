@@ -16,6 +16,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class MovieSectionsComponent implements OnInit {
   datoUsuario;
   rutaImg;
+  abrirBuscador: boolean = false;
   @ViewChild('sideRight') sideRight: MatSidenav;
   @ViewChild('sideLeft') sideLeft: MatSidenav;
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;

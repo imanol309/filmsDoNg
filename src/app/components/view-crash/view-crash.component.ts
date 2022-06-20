@@ -90,7 +90,7 @@ export class ViewCrashComponent implements OnInit, OnDestroy {
 
   forGuardad() {
     this.arrayId = [];
-    this.datoUsuario.favoriteMovies?.map((x) => {
+    this.datoUsuario?.favoriteMovies?.map((x) => {
       this.arrayId.push(x._id);
     });
   }

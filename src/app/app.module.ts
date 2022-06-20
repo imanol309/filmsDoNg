@@ -12,6 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoutComponent } from './components/logout/logout.component';
+import { pagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    pagesModule
   ],
   providers: [],
   bootstrap: [AppComponent],

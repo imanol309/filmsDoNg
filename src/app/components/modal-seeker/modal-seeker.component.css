@@ -1,17 +1,16 @@
 .containerModal {
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
-  margin-bottom: 3%;
   justify-content: center;
-  margin-top: 2%;
 }
 
 .input {
-  width: 65%;
-  height: 50px;
-  border: 1px solid #e6e4e4;
+  width: 700px;
+  height: 40px;
+  border: solid 1px #8e9494;
   outline: none;
   caret-color: #ffffff;
   color: white;
@@ -24,8 +23,8 @@
 }
 
 .input::placeholder {
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 18px;
+  color: #ffffff88;
 }
 
 .input:focus {
@@ -40,11 +39,11 @@
 }
 
 .containerCLose {
-  width: 5%;
+  width: 8%;
   align-items: center;
   display: flex;
   justify-content: center;
-  border: 1px solid #ffffff;
+  border: solid 1px #8e9494;
   transition: 0.5s linear;
   cursor: pointer;
 }
@@ -103,10 +102,17 @@ li {
 }
 
 /* Para 960px */
+@media only screen and (max-width: 1300px) and (min-width: 980px) {
+  .input {
+    width: 500px;
+  }
+}
+
+/* Para 960px */
 @media only screen and (max-width: 980px) and (min-width: 821px) {
   .input {
-    height: 45px;
     font-size: 18px;
+    width: 350px;
   }
 
   .containerCLose {
@@ -115,21 +121,28 @@ li {
 }
 
 /* Para 800px */
-@media only screen and (max-width: 820px) and (min-width: 621px) {
+@media only screen and (max-width: 820px) and (min-width: 621px) {  
   .input {
-    height: 45px;
     font-size: 16px;
+    width: 40vh;
+    width: 250px;
   }
 
   .containerCLose {
     width: 10%;
+  }
+
+  .input::placeholder {
+    font-size: 16px;
+    color: #ffffff88;
   }
 }
 
 /* Para 600px */
 @media only screen and (max-width: 620px) and (min-width: 501px) {
   .input {
-    height: 40px;
+    width: 35vh;
+    width: 35vh;
     font-size: 14px;
   }
 
@@ -165,7 +178,8 @@ li {
 /* Para 480px */
 @media only screen and (max-width: 500px) and (min-width: 341px) {
   .input {
-    height: 40px;
+    height: 43px;
+    width: 35vh;
     font-size: 12px;
   }
 
@@ -179,9 +193,6 @@ li {
 
   .containerCLose {
     width: 15%;
-  }
-  .input {
-    width: 85%;
   }
 
   .textResult {
@@ -202,6 +213,7 @@ li {
 @media only screen and (max-width: 340px) and (min-width: 5px) {
   .input {
     height: 40px;
+    width: 45vh;
     font-size: 10px;
   }
 
