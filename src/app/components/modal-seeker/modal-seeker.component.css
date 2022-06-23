@@ -245,3 +245,19 @@ li {
     width: 100%;
   }
 }
+
+/* Para 1300px */
+@media only screen and (max-height: 680px) and (min-height: 50px) {
+  .input {
+    height: 30px;
+  }
+
+  .input::placeholder {
+    font-size: 14px;
+  }
+
+  .imgClose {
+    height: 15px;
+  }
+  
+}
