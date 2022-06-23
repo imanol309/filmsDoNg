@@ -20,7 +20,6 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   src: String;
   verInfo: boolean = false;
   loanding: boolean = false;
-  @ViewChild('input') input: ElementRef;
 
   constructor(private router: Router) {}
 
@@ -29,6 +28,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {}
 
   search(value: any): any {
+
     function capitalizeWords(val) {
       return val
         .toLowerCase()
@@ -41,7 +41,7 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   }
 
   borrar() {
-    this.input.nativeElement.value = '';
+    this.src = ''
     this.data$ = [];
   }
 }
