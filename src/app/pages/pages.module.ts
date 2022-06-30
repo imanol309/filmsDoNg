@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-loading.component';
-import { SafePipe } from '../pipe/seguridad-url.pipe';
 import { RegistrationComponent } from '../components/Registration/Registration.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { CommentsComponent } from '../components/comments/comments.component';
@@ -19,7 +18,6 @@ import { CommentsComponent } from '../components/comments/comments.component';
     ModalSeekerComponent,
     ViewCrashRowComponent,
     SpinnerLoadingComponent,
-    SafePipe,
     RegistrationComponent,
     FooterComponent,
     CommentsComponent
@@ -37,7 +35,6 @@ import { CommentsComponent } from '../components/comments/comments.component';
     ViewCrashRowComponent,
     MatSidenavModule,
     SpinnerLoadingComponent,
-    SafePipe,
     RegistrationComponent,
     FooterComponent,
     CommentsComponent

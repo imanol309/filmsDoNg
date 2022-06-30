@@ -10,7 +10,7 @@
 .input {
   width: 700px;
   height: 40px;
-  border: solid 1px #8e9494;
+  border: solid 1px #8e94949d;
   outline: none;
   caret-color: #ffffff;
   color: white;
@@ -28,7 +28,7 @@
 }
 
 .input:focus {
-  border: 2px solid #fd0a0acd;
+  border: 1px solid #fd0a0acd;
   caret-color: #fd0a0acd;
   color: #ffffffcd;
   box-shadow: 4px 4px 10px #070707;
@@ -43,7 +43,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  border: solid 1px #8e9494;
+  border: solid 1px #8e94949d;
   transition: 0.5s linear;
   cursor: pointer;
 }
@@ -54,7 +54,7 @@
 }
 
 .containerCLose:hover {
-  border: 2px solid #fa4753;
+  border: 1px solid #fd0a0acd;
   filter: opacity(0.4) drop-shadow(0 0 0 red);
 }
 

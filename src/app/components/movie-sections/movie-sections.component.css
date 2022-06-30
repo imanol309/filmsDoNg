@@ -164,6 +164,7 @@ h4 {
   gap: 3px;
   width: auto;
   margin-right: 8%;
+  cursor: pointer;
 }
 
 .seccioneUsuario:hover .imgUsuario {
@@ -181,6 +182,7 @@ h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  
 }
 
 .seccioneUsuario:hover .pCuenta {
