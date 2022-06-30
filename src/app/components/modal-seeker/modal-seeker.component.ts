@@ -28,7 +28,6 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {}
 
   search(value: any): any {
-
     function capitalizeWords(val) {
       return val
         .toLowerCase()
@@ -43,5 +42,6 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
   borrar() {
     this.src = ''
     this.data$ = [];
+    this.router.navigate(['/pelis/home']);
   }
 }
