@@ -7,16 +7,8 @@
     <div class="containerResultado">
       <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
       <app-view-crash [datosPelicula]="data$" [Css]="true" [clases]="'containerCarhView'"></app-view-crash>
+      <div class="containerSinResultado" *ngIf="data$[0] === undefined">
+          <p class="text">No se han encontrado resultados para tu búsqueda <strong>({{peliTitulo}})</strong></p>
+      </div>
     </div>
-  </div>
-    <!-- <div *ngIf="verInfo" class="containerIAlsoLike">
-    <div class="containerTest">
-      <h4 class="textResult" >Puede que tambien te guste</h4>
-    </div>
-    <div class="containerViewLo">
-      <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
-      <app-view-crash [datosPelicula]="pelisRandom" [Css]="true"></app-view-crash>
-    </div>
-  </div> -->
-  <!-- <app-modal-seeker></app-modal-seeker> -->
 </div>
