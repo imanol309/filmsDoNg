@@ -34,6 +34,7 @@ export class ListMoviesComponent implements OnInit, OnDestroy {
       .postLogin(datosFormulario)
       .subscribe((value) => {
         this.datoUsuario = value?.DatosLogin?.favoriteMovies;
+        this.datoUsuario.reverse()
         localStorage.setItem(
           'usuario',
           JSON.stringify(value?.DatosLogin)

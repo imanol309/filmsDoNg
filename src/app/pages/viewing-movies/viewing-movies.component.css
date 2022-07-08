@@ -38,9 +38,8 @@ h4 {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 110px;
   align-items: center;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 .containerH4 {
@@ -51,8 +50,15 @@ h4 {
 }
 
 .tituloH4 {
-  font-size: 60px;
+  font-size: 55px;
   color: white;
+  font-family: monospace;
+  line-height: 95%;
+}
+
+.generoH4 {
+  font-size: 20px;
+  color: #e34c16;
   font-family: monospace;
   line-height: 95%;
 }
@@ -119,7 +125,7 @@ h4 {
 .containerInfo {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   width: 100%;
 }
@@ -175,9 +181,10 @@ h4 {
 
 .reparto {
   width: 70%;
-  white-space: nowrap;
+  /* white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
+  height: auto;
 }
 
 .videoIframe {
@@ -331,8 +338,14 @@ h4 {
   }
 
   .tituloH4 {
-    font-size: 40px;
+    font-size: 38px;
   }
+
+  
+  .generoH4 {
+    font-size: 16px;
+  }
+
 
   .videoIframe {
     width: 95%;
@@ -385,7 +398,15 @@ h4 {
   }
 
   .tituloH4 {
-    font-size: 35px;
+    font-size: 31px;
+  }
+
+  .generoH4 {
+    font-size: 17px;
+  }
+
+  .containerTitulo {
+    margin-top: 5%;
   }
 
   .videoIframe {
@@ -471,7 +492,15 @@ h4 {
   }
 
   .tituloH4 {
-    font-size: 30px;
+    font-size: 27px;
+  }
+
+  .containerTitulo {
+    margin-top: 5%;
+  }
+
+  .generoH4 {
+    font-size: 15px;
   }
 
   .videoIframe {
@@ -563,8 +592,17 @@ h4 {
   }
 
   .tituloH4 {
-    font-size: 23px;
+    font-size: 20px;
   }
+
+  .generoH4 {
+    font-size: 12px;
+  }
+
+  .containerTitulo {
+    margin-top: 5%;
+  }
+  
 
   .videoIframe {
     width: 95%;
