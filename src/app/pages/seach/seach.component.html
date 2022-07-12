@@ -8,7 +8,7 @@
       <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
       <app-view-crash [datosPelicula]="data$" [Css]="true" [clases]="'containerCarhView'"></app-view-crash>
       <div class="containerSinResultado" *ngIf="data$[0] === undefined">
-          <p class="text">No se han encontrado resultados para tu búsqueda <strong>({{peliTitulo}})</strong></p>
+          <p class="text">No se han encontrado resultados para tu búsqueda: <strong>({{peliTitulo}})</strong></p>
       </div>
     </div>
 </div>
