@@ -11,7 +11,6 @@
         <img src="../../../assets/img/icon/jugar.png" alt="" class="iconImg" />
       </div>
     </div>
-    <!-- routerLink="/pelis/movies/{{item?._id}}" -->
     <div class="containerInfo" *ngIf="item">
       <p class="tituloCarh" [routerLink]="['/pelis/movies/', item?._id ]">
         {{ item?.titulo }}
