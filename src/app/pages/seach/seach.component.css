@@ -47,6 +47,7 @@
 }
 
 strong {
+  font-size: 55px;
   color: red;
 }
 
@@ -57,8 +58,17 @@ strong {
     height: 30px;
   }
 
+  .text {
+    font-size: 45px;
+    width: 80%;
+  }
+
+  strong {
+    font-size: 45px;
+  }
+
   .textResult {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .containerResultado {
@@ -73,8 +83,17 @@ strong {
     height: 30px;
   }
 
+  .text {
+    font-size: 35px;
+    width: 100%;
+  }
+
+  strong {
+    font-size: 35px;
+  }
+
   .textResult {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .containerResultado {
@@ -89,8 +108,17 @@ strong {
     height: 30px;
   }
 
+  .text {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  strong {
+    font-size: 30px;
+  }
+
   .textResult {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .containerResultado {
