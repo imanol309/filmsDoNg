@@ -15,7 +15,7 @@
   </div>
   <div class="seccionesCuenta">
     <div class="containerImg">
-      <img src="../../../assets/img/secciones/buscar.png" alt="" class="imgSecciones"
+      <img src="../../../assets/img/secciones/{{abrirBuscador ? 'remove.png' : 'buscar.png' }}" alt="" class="imgSecciones"
         (click)="abrirBuscador = !abrirBuscador">
     </div>
     <div class="seccioneUsuario" *ngIf="!datoUsuario" (click)="sideRight.toggle()">
