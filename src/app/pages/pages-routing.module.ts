@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VigilanteDobleGuard } from '../guard/vigilante-doble.guard';
+import { PagesComponent } from './pages/pages.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: PagesComponent,
     children: [
       {
         path: 'home',
@@ -24,7 +26,7 @@ const routes: Routes = [
           import('./genre/genre.module').then((m) => m.GenreModule),
       },
       {
-        path: 'moreView',
+        path: 'more/view',
         loadChildren: () =>
           import('./more-view/more-view.module').then((m) => m.MoreViewModule),
       },
@@ -43,7 +45,8 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'home',
+        pathMatch: 'full',
+        redirectTo: '/error404',
       },
     ],
   },

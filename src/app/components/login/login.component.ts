@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SubSink } from 'subsink';
 import { GenericService } from '../../services/generic.service';
-import { RegistrationComponent } from '../Registration/Registration.component';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-login',
@@ -93,24 +92,5 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.is_sendmail = false;
         }
       );
-  }
-
-  OpenModalResgistrar() {
-    let width = '70vw';
-    let height = '80%';
-
-    if (window.innerWidth < 500) {
-      width = '100vw';
-      height = '100%';
-    }
-
-    const dialogRef = this.matDialog.open(RegistrationComponent, {
-      width: width,
-      maxWidth: '100vw',
-      height: height,
-    });
-    this.subs.sink = dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
   }
 }

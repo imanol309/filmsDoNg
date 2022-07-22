@@ -5,15 +5,14 @@ import {
   ViewChild,
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
 import { GenericService } from 'src/app/services/generic.service';
 
 @Component({
-  selector: 'app-Registration',
-  templateUrl: './Registration.component.html',
-  styleUrls: ['./Registration.component.css'],
+  selector: 'app-signUp',
+  templateUrl: './signUp.component.html',
+  styleUrls: ['./signUp.component.css']
 })
-export class RegistrationComponent implements OnInit {
+export class SignUpComponent implements OnInit {
   @ViewChild('imgPerfil') img: ElementRef;
   formRegistre: FormGroup;
   logo: any = ['fantasma', 'extraterrestre', 'ladron', 'momia', 'muerte'];
@@ -23,7 +22,6 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private genericService: GenericService,
-    public dialogRef: MatDialogRef<RegistrationComponent>
   ) {
     this.formRegistre = this.fb.group({
       name: ['', [Validators.required]],
@@ -50,10 +48,6 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {}
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
   eligueUno(datos) {
     this.imgPerfil = datos
     this.link = `../../../../../assets/img/perfil/${this.imgPerfil}.png`
@@ -68,7 +62,6 @@ export class RegistrationComponent implements OnInit {
         this.mensaje = datos?.mensaje;
         this.formRegistre.reset();  
         setInterval(() => {
-          this.dialogRef.close();
           }, 2000);
       }),
       (_error) => {
