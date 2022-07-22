@@ -1,6 +1,6 @@
 <div class="{{ Css ? 'containerPelisInfoCenter' : 'containerPelisInfoStart' }}">
   <app-spinner-loading *ngIf="loanding"></app-spinner-loading>
-  <div class="{{clases || 'containerCarh'}}"
+  <div class="{{ clases || 'containerCarh'}}"
     *ngFor="let item of datosPelicula | slice: 0:viewing || numSlice; let top = index">
     <div class="Carh" [routerLink]="['/movies/', item?._id ]" *ngIf="item">
       <div class="containerTop" *ngIf="MasVistas">

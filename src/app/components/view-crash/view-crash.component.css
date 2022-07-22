@@ -22,20 +22,20 @@
 .containerCarh {
   height: 20%;
   width: 15%;
-  animation: square-animation 1s ease-in;
+  animation: squareAnimation 1s ease-in;
   padding-bottom: 3%;
 }
 
 .containerCarhView {
   height: 20%;
   width: 20%;
-  animation: square-animation 1s ease-in;
+  animation: squareAnimation 1s ease-in;
   padding-bottom: 3%;
 }
 
-@keyframes square-animation {
+@keyframes squareAnimation {
   0% {
-    margin-top: 10%;
+    margin-top: 8%;
   }
 
   100% {
@@ -130,7 +130,7 @@
 .tituloCarh {
   color: #fafafa;
   font-size: 17px;
-  width: 70%;
+  width: 90%;
   font-family: monospace;
   transition: 0.5s linear;
   letter-spacing: 0.1em;
@@ -182,7 +182,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100px;
+  width: 100%;
+  height: auto;
 }
 
 .btnCargar {
@@ -192,8 +193,8 @@
   font-family: Monospace;
   cursor: pointer;
   font-size: 15px;
-  width: 25%;
-  height: 35%;
+  width: 20%;
+  height: 35px;
   background-color: #fafafa;
   color: rgb(0, 0, 0);
   border: 1px solid #17c3b200;
@@ -268,8 +269,8 @@
 
   .btnCargar {
     font-size: 15px;
-    width: 55%;
-    height: 35%;
+    width: 25%;
+    height: 30px;
   }
 
   .h4Top {
@@ -308,8 +309,8 @@
 
   .btnCargar {
     font-size: 13px;
-    width: 55%;
-    height: 35%;
+    width: 25%;
+    height: 30px;
   }
 
   .h4Top {
@@ -335,7 +336,6 @@
     height: 20%;
     width: 30%;
   }
-  
 }
 
 /* Para 600px */
@@ -362,8 +362,8 @@
 
   .btnCargar {
     font-size: 12px;
-    width: 55%;
-    height: 40%;
+    width: 35%;
+    height: 27px;
   }
 
   .h4Top {
@@ -421,8 +421,8 @@
 
   .btnCargar {
     font-size: 13px;
-    width: 55%;
-    height: 40%;
+    width: 50%;
+    height: 25px;
   }
 
   .btnCargar:hover {
@@ -459,7 +459,6 @@
     height: 20%;
     width: 40%;
   }
-  
 }
 
 /* Para 320px */
@@ -486,8 +485,8 @@
 
   .btnCargar {
     font-size: 11px;
-    width: 55%;
-    height: 40%;
+    width: 50%;
+    height: 23px;
   }
 
   .btnCargar:hover {
