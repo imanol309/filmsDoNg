@@ -18,6 +18,11 @@ const routes: Routes = [
       import('./pages/pages.module').then((m) => m.pagesModule),
   },
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home',
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: '/error404',

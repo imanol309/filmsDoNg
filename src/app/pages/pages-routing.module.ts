@@ -44,6 +44,11 @@ const routes: Routes = [
           import('./seach/seach.module').then((m) => m.SeachModule),
       },
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
         path: '**',
         pathMatch: 'full',
         redirectTo: '/error404',
