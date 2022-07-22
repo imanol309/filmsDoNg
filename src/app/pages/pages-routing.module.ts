@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VigilanteDobleGuard } from '../guard/vigilante-doble.guard';
+import { PagesComponent } from './pages/pages.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: PagesComponent,
     children: [
       {
         path: 'home',
@@ -43,7 +45,8 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'home',
+        pathMatch: 'full',
+        redirectTo: '/error404',
       },
     ],
   },

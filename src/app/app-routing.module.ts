@@ -3,19 +3,24 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'pelis',
+    path: 'auth',
     loadChildren: () =>
-      import('./pages/pages.module').then((m) => m.pagesModule),
+      import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: 'error404',
     loadChildren: () =>
-      import('./pages/error404/error404.module').then((m) => m.Error404Module),
+      import('./modules/errors/errors.module').then((m) => m.ErrorsModule),
+  },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pages/pages.module').then((m) => m.pagesModule),
   },
   {
     path: '**',
     pathMatch: 'full',
-    redirectTo: 'pelis',
+    redirectTo: '/error404',
   },
 ];
 

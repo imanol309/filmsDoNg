@@ -13,6 +13,7 @@ import {MatMenuModule} from '@angular/material/menu'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoutComponent } from './components/logout/logout.component';
 import { pagesModule } from './pages/pages.module';
+import { PagesComponent } from './pages/pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { pagesModule } from './pages/pages.module';
     MovieSectionsComponent,
     LoginComponent,
     NavBarComponent,
-    LogoutComponent
+    LogoutComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,9 @@ import { CommentsComponent } from '../components/comments/comments.component';
     SpinnerLoadingComponent,
     RegistrationComponent,
     FooterComponent,
-    CommentsComponent
+    CommentsComponent,
+    
+    
   ],
   imports: [
     CommonModule,

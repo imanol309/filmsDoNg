@@ -36,15 +36,15 @@ export class ModalSeekerComponent implements OnInit, OnDestroy {
         .map((v) => v[0]?.toUpperCase() + v.substr(1))
         .join(' ');
     }
-    this.router.navigate(['/pelis/seach/', capitalizeWords(value)]);
+    this.router.navigate(['/seach/', capitalizeWords(value)]);
     if (value === '') {
-      this.router.navigate(['/pelis/home']);
+      this.router.navigate(['/home']);
     }
   }
 
   borrar() {
     this.src = '';
     this.data$ = [];
-    this.router.navigate(['/pelis/home']);
+    this.router.navigate(['/home']);
   }
 }
