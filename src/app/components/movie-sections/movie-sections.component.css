@@ -163,7 +163,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 8px;
   width: auto;
   margin-right: 8%;
   cursor: pointer;

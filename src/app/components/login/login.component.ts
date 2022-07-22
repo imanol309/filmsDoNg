@@ -94,23 +94,4 @@ export class LoginComponent implements OnInit, OnDestroy {
         }
       );
   }
-
-  OpenModalResgistrar() {
-    let width = '70vw';
-    let height = '80%';
-
-    if (window.innerWidth < 500) {
-      width = '100vw';
-      height = '100%';
-    }
-
-    const dialogRef = this.matDialog.open(RegistrationComponent, {
-      width: width,
-      maxWidth: '100vw',
-      height: height,
-    });
-    this.subs.sink = dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
-  }
 }

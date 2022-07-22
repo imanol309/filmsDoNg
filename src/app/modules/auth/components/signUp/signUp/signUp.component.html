@@ -1,3 +1,83 @@
-<p>
-  signUp works!
-</p>
+<div class="movieSectionsContainer containerRegistration">
+  <div class="containerCLose">
+    <img src="../../../assets/img/icon/rollo-de-pelicula.png" alt="" class="imgLogo" />
+    <img src="../../../assets/img/icon/letra-x.png" alt="" class="imgClose" routerLink="/home" />
+  </div>
+  <div class="containerRegistar">
+    <div class="ContainerTitulo">
+      <img src="{{
+          imgPerfil ? link : '../../../assets/img/icon/usuarioOneNew.png'
+        }}" alt="" class="imgPerfilDemo" />
+      <h4 class="titulo">Formulario</h4>
+    </div>
+    <form [formGroup]="formRegistre" (ngSubmit)="registrarUsuario()" class="containerForm">
+      <div class="containerInput">
+        <div class="containerInputText">
+          <input type="text" placeholder="Nombre" class="input" formControlName="name" />
+          <mat-error *ngIf="
+              formRegistre.controls['name'].touched &&
+              formRegistre.controls['name'].hasError('required')
+            " class="matFalse">
+            Nombre Requerido
+          </mat-error>
+          <input type="email" placeholder="Email" class="input" formControlName="email" />
+          <mat-error *ngIf="
+              formRegistre.controls['email'].touched &&
+              formRegistre.controls['email'].hasError('required')
+            " class="matFalse">
+            Correo Requerido.
+          </mat-error>
+          <mat-error *ngIf="
+              formRegistre.controls['email'].touched &&
+              formRegistre.controls['email'].hasError('pattern')
+            " class="matFalse">
+            Correo inválido, tiene que tener @ Y.com
+          </mat-error>
+          <input type="password" placeholder="Contraseña" class="input" formControlName="password" />
+          <mat-error *ngIf="
+              formRegistre.controls['password'].touched &&
+              formRegistre.controls['password'].hasError('required')
+            " class="matFalse">
+            Contraseña Requerida.
+          </mat-error>
+          <mat-error *ngIf="
+              formRegistre.controls['password'].touched &&
+              formRegistre.controls['password'].invalid
+            " class="matFalse">
+            Esta contraseña no cumple con el tamaño,tiene que ser minimo 3 y
+            maximo 15 caracteres.
+          </mat-error>
+        </div>
+        <div class="containerLogo">
+          <div class="containerEligue">
+            <h4 class="Eligue">Dale click:</h4>
+          </div>
+          <div class="containerLogoImg">
+            <div *ngFor="let LogoPerfil of logo">
+              <img src="../../../assets/img/perfil/{{ LogoPerfil }}.png" alt="logo Pefil" class="imgPerfil" #imgPerfil
+                (click)="eligueUno(LogoPerfil)" placeholder="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="containerButton">
+        <mat-error *ngIf="mensaje" class="matTrue">
+          {{ mensaje }}
+        </mat-error>
+        <button class="buttonCrear" type="submit" [disabled]="formRegistre.invalid">
+          Crear
+        </button>
+      </div>
+    </form>
+    <div class="containerTerminos">
+      <div class="Terminos">
+        <p>
+          Al registrarte, has aceptado los
+          <strong class="strongTerminos">términos de uso y la política de privacidad</strong>
+          de FilmsDo.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>

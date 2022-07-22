@@ -4,9 +4,13 @@ import { AuthComponent } from './auth.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'registration',
     component: AuthComponent,
   },
+  {
+    path: '',
+    redirectTo: 'registration'
+  }
 ];
 
 @NgModule({

@@ -5,7 +5,6 @@ import { pagesRoutingModule } from './pages-routing.module';
 import { ViewCrashComponent } from '../components/view-crash/view-crash.component';
 import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ViewCrashRowComponent } from '../components/view-crash-row/view-crash-row.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-loading.component';
 import { RegistrationComponent } from '../components/Registration/Registration.component';
@@ -16,7 +15,6 @@ import { CommentsComponent } from '../components/comments/comments.component';
   declarations: [
     ViewCrashComponent,
     ModalSeekerComponent,
-    ViewCrashRowComponent,
     SpinnerLoadingComponent,
     RegistrationComponent,
     FooterComponent,
@@ -34,7 +32,6 @@ import { CommentsComponent } from '../components/comments/comments.component';
   exports: [
     ViewCrashComponent,
     ModalSeekerComponent,
-    ViewCrashRowComponent,
     MatSidenavModule,
     SpinnerLoadingComponent,
     RegistrationComponent,

@@ -26,7 +26,7 @@ const routes: Routes = [
           import('./genre/genre.module').then((m) => m.GenreModule),
       },
       {
-        path: 'moreView',
+        path: 'more/view',
         loadChildren: () =>
           import('./more-view/more-view.module').then((m) => m.MoreViewModule),
       },

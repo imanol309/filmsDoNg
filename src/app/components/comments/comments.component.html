@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="containerNocuenta" *ngIf="!datosUsuario">
-    <h4 class="textoCondiciones">Inicia seccion o registrate si quieres hacer un comentario</h4>
+    <h4 class="textoCondiciones" routerLink="/auth/registration">Inicia seccion o registrate si quieres hacer un comentario</h4>
   </div>
   <div class="comentarios" *ngFor="let comments of datosComentarios.comments">
     <div class="imgUsuarios">
