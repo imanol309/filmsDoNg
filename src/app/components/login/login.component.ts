@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SubSink } from 'subsink';
 import { GenericService } from '../../services/generic.service';
-import { RegistrationComponent } from '../Registration/Registration.component';
 import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-login',

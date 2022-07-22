@@ -7,7 +7,6 @@ import { ModalSeekerComponent } from '../components/modal-seeker/modal-seeker.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SpinnerLoadingComponent } from '../components/spinner-loading/spinner-loading.component';
-import { RegistrationComponent } from '../components/Registration/Registration.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { CommentsComponent } from '../components/comments/comments.component';
 
@@ -16,11 +15,8 @@ import { CommentsComponent } from '../components/comments/comments.component';
     ViewCrashComponent,
     ModalSeekerComponent,
     SpinnerLoadingComponent,
-    RegistrationComponent,
     FooterComponent,
     CommentsComponent,
-    
-    
   ],
   imports: [
     CommonModule,
@@ -34,9 +30,8 @@ import { CommentsComponent } from '../components/comments/comments.component';
     ModalSeekerComponent,
     MatSidenavModule,
     SpinnerLoadingComponent,
-    RegistrationComponent,
     FooterComponent,
-    CommentsComponent
+    CommentsComponent,
   ],
 })
 export class pagesModule {}
