@@ -49,6 +49,16 @@ const routes: Routes = [
         redirectTo: 'home',
       },
       {
+        path: 'pelis/home',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
+        path: 'app/home',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
         path: '**',
         pathMatch: 'full',
         redirectTo: '/error404',
