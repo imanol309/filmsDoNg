@@ -4,7 +4,7 @@
     <div class="containerTitulo">
       <div class="containerH4" #myPrincipal>
         <h4 class="tituloH4">{{datos?.titulo}}</h4>
-        <h4 class="generoH4">{{datos?.genero?.split("_").join(" · ")}}</h4>
+        <h4 class="generoH4">{{datos?.genero?.split("-").join("/")}}</h4>
       </div>
     </div>
     <div class="containerIframe">
@@ -46,7 +46,7 @@
             </div>
             <div class="containerInfo">
               <h4 class="colorGris">Generos:</h4>
-              <h4 class="h4white">{{ datos?.genero }}</h4>
+              <h4 class="h4white">{{ datos?.genero.split("-").join("/")  }}</h4>
             </div>
             <div class="containerInfo">
               <h4 class="colorGris">Idioma:</h4>

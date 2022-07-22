@@ -53,7 +53,6 @@ export class ViewingMoviesComponent implements OnInit, AfterViewInit {
   funcion() {
     this.rutaActiva.paramMap.subscribe((params) => {
       this.peliID = params.get('idpeli');
-      console.log(this.peliID)
       this.datosUnicos(this.peliID);
     });
   }
@@ -81,6 +80,7 @@ export class ViewingMoviesComponent implements OnInit, AfterViewInit {
 
   getPeliculas() {
     let genero = this.peliDato[0]?.genero;
+    console.log(genero)
     this.viewingMoviesService.getGenre(genero).subscribe((datos) => {
       this.datosPeliculas = datos;
       this.datosPeliculas.sort((a, b) => Math.random() - 0.5);

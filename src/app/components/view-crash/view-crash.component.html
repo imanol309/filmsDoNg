@@ -22,7 +22,7 @@
             {{ item?.year?.slice(0, 4) || "2013" }} -
             {{ item?.time || "90" }} Min
           </p>
-          <p class="generoCarh">{{ item?.genero?.split("_").join(" · ") }}
+          <p class="generoCarh">{{ item?.genero?.split("-").join("/") }}
             <strong *ngIf="item?.recaudacion" class="strongRecaudacion">
               - {{ item?.recaudacion || "" }}
             </strong>
